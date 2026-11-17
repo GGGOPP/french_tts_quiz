@@ -1,0 +1,29 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Node / Vite
+node_modules/
+dist/
+*.local
+
+# Pipeline scratch output (regenerable)
+pipeline/bakeoff_out/
+pipeline/qa_out/
+pipeline/.cache/
+
+# LLM grader benchmark report (regenerable)
+web/bench_out/
+
+# Secrets (e.g. OPENROUTER_API_KEY for the benchmark)
+.env
+.env.*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+*.log
+.playwright-mcp/
