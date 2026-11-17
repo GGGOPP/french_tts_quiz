@@ -98,7 +98,16 @@ Status key: `[not started]` · `[in progress]` · `[done]`. Each step is committ
 ### Phase 1: Scaffold
 1. `[done]` `git init` with the repo-local identity for the French project's GitHub account (see step 21: asked when it's needed, before the first commit), `.gitignore` (venv, node_modules, `pipeline/.cache/`, bake-off/QA/bench outputs), README, and this plan copied to `.ai/PLAN.md`.
     *Result:* The repo is on `main`, with the repo-local identity `GGGOPP <357542562+GGGOPP@users.noreply.github.com>`. The global identity is still the Greek account, so any new clone of this repo needs the local identity set again. `.gitignore` is the Greek one plus `web/bench_out/` and `.env.*`, and `.gitattributes` keeps LF line endings with mp3 as binary.
-2. `[not started]` `pipeline/` as a uv project (Python 3.12): edge-tts, faster-whisper, pyyaml, pytest. Port `tts.py` + `clip.py` with their tests, and add `rate` to `synthesize`.
+2. `[done]` `pipeline/` as a uv project (Python 3.12): edge-tts, faster-whisper, pyyaml, pytest. Port `tts.py` + `clip.py` with their tests, and add `rate` to `synthesize`.
+   *Result:*
+   - `clip.py` and its tests are ported unchanged.
+   - `tts.py` has the five fr-FR edge-tts voices: denise, eloise, henri, remy, vivienne.
+   - `synthesize(text, voice, rate="+0%")` checks `rate` (`^[+-]\d+%$`) before any request and records it on `Synthesis`.
+   - `config.py` holds placeholder defaults (denise, `+0%`, `-25%`) until step 5.
+   - New `test_tts.py` uses a fake `edge_tts.Communicate` to cover voice lookup, rate checking, that rate is passed through, and retry/give-up.
+   - 21 tests pass.
+   - The real edge-tts call works: at `-25%` a sentence's last word ends at 3.42 s vs 2.58 s (1.33×), and both clips normalise to about −18.5 LUFS.
+   - On the CLI, `--rate=-25%` needs the `=`, because argparse reads a bare `-25%` as a flag.
 3. `[not started]` `web/` with Vite vanilla-ts + Vitest (+ `tsx` for scripts). Port the guarded storage and the style tokens.
 
 ### Phase 2: TTS bake-off (checkpoint)
