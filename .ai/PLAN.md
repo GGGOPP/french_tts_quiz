@@ -117,7 +117,15 @@ Status key: `[not started]` · `[in progress]` · `[done]`. Each step is committ
    - **npm audit:** it reports a high-severity ReDoS in picomatch. That code only runs in the dev and build tooling, and npm's only fix is downgrading to Vite 6, so it is left as is.
 
 ### Phase 2: TTS bake-off (checkpoint)
-4. `[not started]` `bakeoff.py`: about 20 tricky sentences (liaison `les_amis`, elision, `est-ce que` questions, 70–99, `ils_ont`/`ils sont`, `-ent` endings, `plus`) × voices (fr-FR Denise, Henri, plus one or two more such as Vivienne or Remy multilingual) × rate (0%, −25%) → a listening page.
+4. `[done]` `bakeoff.py`: about 20 tricky sentences (liaison `les_amis`, elision, `est-ce que` questions, 70–99, `ils_ont`/`ils sont`, `-ent` endings, `plus`) × voices (fr-FR Denise, Henri, plus one or two more such as Vivienne or Remy multilingual) × rate (0%, −25%) → a listening page.
+   *Result:*
+   - **Sentences:** 22. Besides the planned cases, they cover `tous` [tus], the aspirated h (`des | haricots`), `six œufs`/`dix pommes`, `neuf euros`, and two sentences written with digits (`19 h 30`, `1995`) to hear how the voices read numerals. That matters for step 26.
+   - **Voices:** denise, henri, vivienne and remy. Eloise is left out because it is a child voice.
+   - **Processing:** each clip goes through `process_clip`, so the volumes match.
+   - **CLI:** `--voices=` and `--rates=` override the defaults, for example to try −20% or −30%.
+   - **Page:** every sentence row shows the French, the English and what to listen for. Each cell shows the clip length, and a footer row gives the total time per column. Only one player plays at a time.
+   - **Real run:** 176/176 clips in about 50–80 s. The slow rate makes speech about 1.29× longer on average (normal 34.5–38.0 s vs slow 44.5–48.9 s per voice), slightly less than the nominal 1.33×. Vivienne is the fastest voice and Denise the slowest.
+   - **Checks:** 27 pytest tests pass, with 6 new ones using a fake backend: the rate is passed through, trailing silence is trimmed, stale clips are removed, a failed cell is shown on the page, and HTML is escaped. In a browser, all 176 players load and there are no console errors.
 5. `[not started]` **Checkpoint:** the user picks the voices (the default is two voices, alternating by item) and the slow rate, which are recorded in `config.py`.
 
 ### Phase 3: Content (checkpoint)

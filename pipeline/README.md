@@ -23,6 +23,7 @@ Run a module with `uv run python -m french_tts.<module>`. Modules are added to t
 | `config` | Defaults: voice **denise**, normal rate `+0%`, slow rate `-25%`. These are placeholders until the bake-off (plan steps 4–5). An item's `voice` override in the YAML takes precedence. |
 | `tts` | The TTS backend interface and its edge-tts implementation. It returns MP3 bytes and per-word timings in seconds. `rate` is a signed percentage (`-25%` is 25% slower). The voices are `denise`, `eloise` and `vivienne` (female) and `henri` and `remy` (male). Try it: `uv run python -m french_tts.tts "Je voudrais un café." --voice henri --rate=-25% --out sample.mp3`. The `=` is needed: without it, argparse reads `-25%` as a flag. |
 | `clip` | Post-processing with ffmpeg. It can cut at a timestamp, keeping a 40 ms lead-in and a click-free fade. It trims trailing silence, keeping 150 ms. It normalises loudness to -18 LUFS in two passes. Try it: `uv run python -m french_tts.clip in.mp3 out.mp3`. |
+| `bakeoff` | Renders 22 sentences that are hard for French TTS (liaison, elision, silent `-ent`, `plus`/`tous`, 70–99, digits) in each voice at each rate, through `process_clip`. It writes `bakeoff_out/index.html`, a table of players with clip lengths and a per-column total. The defaults are denise, henri, vivienne and remy at `+0%` and `-25%`. Override them with `--voices=denise,henri --rates=+0%,-20%,-30%`. |
 
 ## Tests
 
