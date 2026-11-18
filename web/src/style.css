@@ -1,0 +1,172 @@
+/*
+ * Mobile-first: the base rules are for a phone (~360–400px wide); wider and
+ * taller screens get more room via min-width / min-height queries.
+ * Colours are tokens on :root, redefined for dark mode.
+ */
+:root {
+  color-scheme: light dark;
+  font: 16px/1.5 system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --surface-hover: #eef1f5;
+  --fg: #1b1e24;
+  --muted: #5d6470;
+  --border: #d5d9e0;
+  --border-strong: #9aa2ad;
+  --accent: #1a5fd0;
+  --accent-hover: #164fae;
+  --accent-text: #1a5fd0;
+  --accent-soft: color-mix(in srgb, #1a5fd0 12%, transparent);
+  --on-accent: #ffffff;
+  --right: #1e7a34;
+  --wrong: #c0392b;
+  --warn: #b26a00;
+  --focus: color-mix(in srgb, #1a5fd0 55%, transparent);
+  --radius: 0.6rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16181d;
+    --surface: #1f232a;
+    --surface-hover: #2a2f38;
+    --fg: #e8eaed;
+    --muted: #9aa3ae;
+    --border: #353b45;
+    --border-strong: #5a626e;
+    --accent: #2f6fd6;
+    --accent-hover: #3d7fe6;
+    --accent-text: #7aaeff;
+    --accent-soft: color-mix(in srgb, #5b9dff 18%, transparent);
+    --on-accent: #ffffff;
+    --right: #5cc976;
+    --wrong: #ff7b6e;
+    --warn: #f0b04a;
+    --focus: color-mix(in srgb, #7aaeff 60%, transparent);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Elements given display: flex/grid below must still hide when [hidden]. */
+[hidden] {
+  display: none !important;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+main {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 1rem 1rem 1.5rem;
+}
+
+@media (min-width: 40rem) {
+  main {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+h1 {
+  font-size: clamp(1.6rem, 1.2rem + 2vw, 2.1rem);
+  line-height: 1.2;
+  margin: 0.5rem 0 0.75rem;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* Buttons: secondary by default, .primary for the main action on each screen. */
+button {
+  font: inherit;
+  color: inherit;
+  min-height: 2.75rem;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  cursor: pointer;
+  touch-action: manipulation; /* no double-tap-zoom delay */
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    background-color 0.15s,
+    border-color 0.15s,
+    transform 0.1s;
+}
+
+@media (hover: hover) {
+  button:hover:not(:disabled) {
+    background: var(--surface-hover);
+    border-color: var(--border-strong);
+  }
+}
+
+button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
+  font-weight: 600;
+}
+
+@media (hover: hover) {
+  .primary:hover:not(:disabled) {
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
+  }
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0;
+  accent-color: var(--accent);
+  flex: none;
+}
+
+.error {
+  color: var(--wrong);
+}
+
+.lede {
+  margin: 0 0 1.25rem;
+  color: var(--muted);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}

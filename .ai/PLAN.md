@@ -108,7 +108,13 @@ Status key: `[not started]` · `[in progress]` · `[done]`. Each step is committ
    - 21 tests pass.
    - The real edge-tts call works: at `-25%` a sentence's last word ends at 3.42 s vs 2.58 s (1.33×), and both clips normalise to about −18.5 LUFS.
    - On the CLI, `--rate=-25%` needs the `=`, because argparse reads a bare `-25%` as a flag.
-3. `[not started]` `web/` with Vite vanilla-ts + Vitest (+ `tsx` for scripts). Port the guarded storage and the style tokens.
+3. `[done]` `web/` with Vite vanilla-ts + Vitest (+ `tsx` for scripts). Port the guarded storage and the style tokens.
+   *Result:*
+   - **Setup:** `web/` was written by hand rather than from the template's demo code: Vite 8, Vitest 5, TypeScript 7 and tsx, with the Greek `tsconfig.json`. `index.html` is titled "French Practice" and has a tricolour "fr" favicon. `main.ts` shows a placeholder screen.
+   - **`storage.ts`:** split into `guardedStorage()`, a never-throwing JSON `read`/`write`, plus the helpers `validEntries`, `isRecord` and `isStringArray`. `createStore()` is built on top of it with per-card stats under `french-quiz:v1:stats`. Card ids are strings like `resto-03:dictee`; the exact format is fixed at step 15. The start choice, lists, learn set, settings and LLM cache add their keys there at their own steps, because they depend on modules that don't exist yet.
+   - **`style.css`:** the Greek tokens with dark mode, the reset, and the button, `.primary`, `.error`, `.lede` and `.sr-only` rules.
+   - **Checks:** 13 Vitest tests pass from PowerShell, and `npm run build` (tsc + vite) is clean. `tsx` runs app modules. The dev server page at 400px looks right in light and dark, with no console errors.
+   - **npm audit:** it reports a high-severity ReDoS in picomatch. That code only runs in the dev and build tooling, and npm's only fix is downgrading to Vite 6, so it is left as is.
 
 ### Phase 2: TTS bake-off (checkpoint)
 4. `[not started]` `bakeoff.py`: about 20 tricky sentences (liaison `les_amis`, elision, `est-ce que` questions, 70–99, `ils_ont`/`ils sont`, `-ent` endings, `plus`) × voices (fr-FR Denise, Henri, plus one or two more such as Vivienne or Remy multilingual) × rate (0%, −25%) → a listening page.
