@@ -181,13 +181,13 @@ Status key: `[not started]` · `[in progress]` · `[done]`. Each step is committ
    - **Hints:** English cues (`the`, `some`, `my`, `your (tu)`), the infinitive, or `not + verb` for negation. `article` marks the general-sense le/la/les after aimer and détester.
 8. `[done]` **Checkpoint:** the user reviews batch 1.
    *Result:* reviewed on a proofreading page (an Artifact built from `load_data()`, with blanks highlighted and Good/Flag marks). No changes. The user found the items too easy and asked for longer sentences and, later, B1. That feedback shaped batch 2 and step 9b.
-9. `[in progress]` **Batch 2:**
+9. `[done]` **Batch 2:**
    - **Grammar points:** imparfait vs passé composé; reflexive verbs; le/la/lui/leur; y and en; futur simple; comparatives and superlatives; qui/que/où; depuis/pendant/il y a; imperative; je voudrais / conditional.
    - **Topic sentences:** about 100 more (travel & hotel, health, work, weather, hobbies, family, appointments).
    - **Longer sentences:** many items have two clauses (parce que, quand, mais, alors, si) and combine points.
    - **Review:** the user reviews batch 2 (this can overlap with Phase 5).
 
-   *Result (drafted, review pending):*
+   *Result (reviewed by the user on the batch-2 proofreading page; no changes):*
    - **Totals:** 591 items (375 cloze; A1 294, A2 297), all valid. Batch 2 adds 281 items, averaging 10.4 words against 5.5 in batch 1.
    - **Grammar:** the three stubs now have drills (`reflexive-verbs`, `imperative`, `conditional-politeness`, the last retitled "Polite requests and advice" with on pourrait / tu devrais / il faudrait). New points: `imparfait`, `imparfait-vs-passe-compose`, `object-pronouns`, `y-en`, `futur-simple`, `comparatives`, `relative-pronouns`, `depuis-pendant-il-y-a`. That's 175 drills, 15–16 per point.
    - **Topics:** 106 sentences in `travel`, `health`, `work`, `weather`, `hobbies`, `family` and `appointments`.
