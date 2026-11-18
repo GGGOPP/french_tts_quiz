@@ -38,8 +38,6 @@ export interface StartHandlers {
 export interface StartOptions {
   /** A `?list=` link's items, given only to the first start screen of a visit. */
   linked?: LinkedList
-  /** A line to show at the top, e.g. the last session's score. */
-  message?: string
 }
 
 function escapeHtml(text: string): string {
@@ -106,11 +104,11 @@ export function summaryText(available: number, count: QuestionCount | undefined,
 }
 
 export function renderStart(root: HTMLElement, bank: ItemBank, store: StartStore, handlers: StartHandlers, options: StartOptions = {}): void {
-  const { linked, message } = options
+  const { linked } = options
   const known = new Set(bank.items.map((i) => i.id))
   const initial = initialChoice(bank, store.startChoice(), linked)
   const initialItems = new Set(initial.items)
-  const notice = linked ? linkNotice(linked) : (message ?? '')
+  const notice = linked ? linkNotice(linked) : ''
 
   const radio = (name: string, value: string, label: string, checked: boolean, extra = '') => `
       <label class="pill"${extra}>

@@ -110,6 +110,16 @@ export function keysText(phase: 'asking' | 'marking' | 'feedback', withAudio: bo
   return [...replay, ...enter, 'Enter with nothing typed if you don’t know'].join(' · ')
 }
 
+/**
+ * How far to scroll down to show the feedback: enough to bring its bottom into
+ * view, but never so far that the answer row (with Check / Next) leaves the top.
+ * `overflow`: how far the feedback's bottom is below the visible area;
+ * `anchorTop`: the answer row's top, from the top of the visible area.
+ */
+export function revealScroll(overflow: number, anchorTop: number): number {
+  return Math.max(0, Math.min(overflow, anchorTop))
+}
+
 export type QuizStore = Pick<Store, 'record'>
 
 export interface QuizHandlers {
@@ -298,6 +308,7 @@ export function renderQuiz(
     listen.hidden = !audioNow()
     setHint('')
     keys.textContent = keysText('asking', module.audioWhen === 'ask', boxes.length)
+    window.scrollTo(0, 0) // the last card's feedback may have scrolled the page
     focusAnswer()
 
     if (module.audioWhen === 'ask') {
@@ -376,13 +387,29 @@ export function renderQuiz(
     markWrong.setAttribute('aria-pressed', 'false')
     feedbackBody.replaceChildren()
     graded.show(feedbackBody)
-    feedback.scrollIntoView?.({ block: 'nearest' })
+    revealFeedback()
 
     if (listen.hidden) {
       listen.hidden = false
       play() // the clip was held back while asking
     }
     if (!boxes.includes(document.activeElement as HTMLInputElement)) focusAnswer()
+  }
+
+  /**
+   * Scroll the feedback into view, keeping Check / Next on screen: a long panel
+   * (an open rule card) is then read by scrolling down, not up to find Next.
+   * Measured against the visual viewport, which the phone keyboard shrinks.
+   */
+  function revealFeedback(): void {
+    const view = window.visualViewport
+    const top = view ? view.offsetTop : 0
+    const bottom = view ? view.offsetTop + view.height : window.innerHeight
+    const margin = 8
+    const overflow = feedback.getBoundingClientRect().bottom + margin - bottom
+    const anchorTop = $('.answer-row').getBoundingClientRect().top - margin - top
+    const by = revealScroll(overflow, anchorTop)
+    if (by > 0) window.scrollBy(0, by)
   }
 
   /** Mark your own answer. It can be changed until you move on. */

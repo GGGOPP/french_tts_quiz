@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { audioUrl, keysText, replayKey, selfMarkKey, tone, VERDICTS } from './quiz'
+import { audioUrl, keysText, replayKey, revealScroll, selfMarkKey, tone, VERDICTS } from './quiz'
 
 const key = (key: string, code: string, mods: Partial<Record<'ctrlKey' | 'metaKey' | 'altKey' | 'shiftKey', boolean>> = {}) => ({
   key,
@@ -84,5 +84,20 @@ describe('selfMarkKey', () => {
     expect(selfMarkKey(key('Enter', 'Enter'))).toBeUndefined()
     expect(selfMarkKey(key('n', 'KeyN', { ctrlKey: true }))).toBeUndefined()
     expect(selfMarkKey(key('y', 'KeyY', { altKey: true }))).toBeUndefined()
+  })
+})
+
+describe('revealScroll', () => {
+  it('scrolls just enough to show the whole feedback when the answer row stays on screen', () => {
+    expect(revealScroll(120, 300)).toBe(120)
+  })
+
+  it('stops with the answer row at the top when the feedback is taller than the screen', () => {
+    expect(revealScroll(900, 250)).toBe(250)
+  })
+
+  it('never scrolls up', () => {
+    expect(revealScroll(-40, 300)).toBe(0) // the feedback already fits
+    expect(revealScroll(200, -10)).toBe(0) // the answer row is already above the top
   })
 })

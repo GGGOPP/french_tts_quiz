@@ -8,10 +8,11 @@ import { createMeaningMode } from './modes/meaning'
 import { createProduceMode } from './modes/produce'
 import { renderQuiz, type Modes } from './quiz'
 import { renderRules } from './rules'
-import { DEFAULT_COUNT, pointCounts, pointDrills } from './selection'
-import { scoreText, tally } from './session'
+import { DEFAULT_COUNT, pointCounts, pointDrills, shuffle } from './selection'
+import type { CardResult } from './session'
 import { renderStart } from './start'
 import { store } from './storage'
+import { renderSummary } from './summary'
 
 const app = document.querySelector<HTMLDivElement>('#app')!
 const RULES_HASH = '#rules'
@@ -30,7 +31,7 @@ interface App {
   modes: Modes
 }
 
-function showStart(ctx: App, options: { linked?: LinkedList; message?: string } = {}): void {
+function showStart(ctx: App, options: { linked?: LinkedList } = {}): void {
   show(() =>
     renderStart(
       app,
@@ -68,15 +69,35 @@ function showRules(ctx: App): void {
   )
 }
 
-/** Run a session, then go back to the screen it was started from. */
-function showQuiz(ctx: App, cards: Card[], from: 'start' | 'rules'): void {
-  const back = (message?: string) => (from === 'rules' ? showRules(ctx) : showStart(ctx, { message }))
+/** Where a session was started from, and so where it returns to. */
+type From = 'start' | 'rules'
+
+function backTo(ctx: App, from: From): void {
+  if (from === 'rules') showRules(ctx)
+  else showStart(ctx)
+}
+
+/** Run a session, show its summary, then go back to the screen it was started from. */
+function showQuiz(ctx: App, cards: Card[], from: From): void {
   show(() =>
     renderQuiz(app, cards, ctx.modes, store, {
-      // Until the summary screen (plan step 20), the score is shown on the start screen.
-      onFinish: (results) => back(`Last session: ${scoreText(tally(results))}`),
-      onQuit: () => back(),
+      onFinish: (results) => showSummary(ctx, results, from),
+      onQuit: () => backTo(ctx, from),
     }),
+  )
+}
+
+function showSummary(ctx: App, results: CardResult[], from: From): void {
+  show(() =>
+    renderSummary(
+      app,
+      results,
+      {
+        onRetry: (cards) => showQuiz(ctx, shuffle(cards), from),
+        onDone: () => backTo(ctx, from),
+      },
+      { doneLabel: from === 'rules' ? 'Back to rules' : 'New session' },
+    ),
   )
 }
 

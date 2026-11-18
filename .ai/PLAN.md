@@ -364,7 +364,25 @@ Status key: `[not started]` · `[in progress]` · `[done]`. Each step is committ
         - starting a dictée session, Quit restoring every choice, and finishing a 1-question session showing the score;
         - `?list=` with an unknown id, the rule browser (Practise → Quit → back to the rules, its Back button, and the browser's back/forward), and opening `#rules` directly.
       - Light and dark at 400 px and 1280 px, with no horizontal scroll and no console errors or warnings.
-20. `[not started]` Feedback, summary and retry-missed (ported), plus responsive styling checked at 400px and on desktop, in light and dark.
+20. `[done]` Feedback, summary and retry-missed (ported), plus responsive styling checked at 400px and on desktop, in light and dark.
+    *Result:*
+    - **`summary.ts`** (ported from the Greek app): finishing a session now shows a summary screen instead of the score line on the start screen.
+      - **Header:** the mode, "Session done", the headline ("7 of 10 right (70%)") and a breakdown line ("2 only off by accents · 1 didn’t know · 3 marked by you"), or "Nothing missed. Bravo !".
+      - **Actions:** "Retry missed (n)" (focused, so Enter starts it) and a leave button: "New session", or "Back to rules" for a session started from the rule browser. Retry shuffles the missed cards into a new session with the same origin, so retries can chain.
+      - **Missed list:** each missed card in the order asked, with ▶ and 🐢 (the button lights while its clip plays), shown much as its feedback was. `missedDetail` re-grades from what was typed. A cloze shows its marked sentence; a dictée shows the word diff; meaning shows the French, "You wrote" and the answer; production shows the English, then the diff against the closest model answer, or "You wrote" / "Answer" when the diff wouldn't help. A tag says "Accents" (amber), "Didn’t know" or "Marked wrong".
+    - **`session.ts`:** `missed`, `summaryText`, `breakdownText` and `missedTag`. **`cloze.ts`** exports `markedCloze` for the summary. The start screen's `message` option, the stand-in for the summary, is removed.
+    - **Short screens (the step 15 issue):** at 400×440 a wrong cloze's open rule card made the feedback taller than the screen, and `scrollIntoView` put its top at the top of the viewport, so Next, the answer and ▶ were off-screen. `revealFeedback` now scrolls just enough to show the feedback, but never past the answer row, so Next stays at the top and the rest is read by scrolling down. It measures against `visualViewport`, which the phone keyboard shrinks. Each new card scrolls back to the top.
+    - **Quit** still goes straight back without a summary, as in the Greek app.
+    - **Checks:**
+      - 299 Vitest tests pass (9 new: `missed`, `summaryText`, `breakdownText`, `missedTag`, `revealScroll`), and `tsc` and `npm run build` are clean.
+      - In Chromium via Playwright at 400×800:
+        - a dictée session with a right answer, an accent slip, a wrong word and an extra word, and don't-know: the summary shows 1 of 4, the breakdown, three rows with the right marks and tags, and Retry focused;
+        - Retry by Enter (3 questions), all right → "Nothing missed", then New session back to the start screen;
+        - cloze (accent-only, wrong, don't-know), meaning (two self-marked wrong, one don't-know) and production (an accent slip, a self-marked miss with "You wrote" / "Answer") summaries;
+        - ▶ and 🐢 in a row playing `<id>.mp3` and `<id>.slow.mp3` and lighting up;
+        - Practise from the rule browser → summary with "Back to rules" → `#rules`, then Back → the start screen.
+      - At 400×440: three wrong subjunctive drills, each with Next at the top of the screen and the verdict and sentence below it, and each new card starting at the top. At 400×800 a short feedback doesn't scroll.
+      - Light and dark at 400 px and 1280 px, with no horizontal scroll and no console errors or warnings.
 21. `[not started]` Deploy workflow → GitHub Pages. **This uses a different GitHub account from the Greek app.**
     - The repo gets a local git identity (`git config user.name` / `user.email` for that account, not the global one).
     - It pushes through either an SSH host alias (e.g. `github-fr` in `~/.ssh/config` with that account's key) or HTTPS with `credential.username` set per repo, so Git Credential Manager keeps the two accounts apart.

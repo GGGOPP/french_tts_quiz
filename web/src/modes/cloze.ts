@@ -82,6 +82,15 @@ function markedBlank(mark: BlankMark): HTMLElement {
   return span
 }
 
+/** The cloze sentence with each blank marked, as in the feedback. */
+export function markedCloze(parts: readonly ClozePart[], marks: readonly BlankMark[]): HTMLElement {
+  const sentence = el('p', 'cloze-result')
+  sentence.lang = 'fr'
+  let b = 0
+  for (const part of parts) sentence.append(typeof part === 'string' ? part : markedBlank(marks[b++]))
+  return sentence
+}
+
 /** A hint's first word, and the rest (with its leading space), e.g. "(your," + " vous)". */
 export function splitHint(hint: string): [string, string] {
   const at = hint.indexOf(' ')
@@ -163,11 +172,7 @@ export function createClozeMode(points: readonly GrammarPoint[]): ModeModule {
             if (graded[i]) graded[i].dataset.verdict = mark.verdict
           })
 
-          const sentence = el('p', 'cloze-result')
-          sentence.lang = 'fr'
-          let b = 0
-          for (const part of parts) sentence.append(typeof part === 'string' ? part : markedBlank(marks[b++]))
-          body.append(sentence)
+          body.append(markedCloze(parts, marks))
 
           const also = marks.filter((m) => m.verdict !== 'correct' && m.others.length > 0).flatMap((m) => m.others)
           if (also.length > 0) {
