@@ -205,7 +205,14 @@ Status key: `[not started]` · `[in progress]` · `[done]`. Each step is committ
    - **Validator:** B1 is a level. A new check rejects a space after an apostrophe, including once blanks are filled. It caught opr-06 and opr-14 (`{l'|it} ai` read "l' ai"), now `{l'|it}ai`.
 
 ### Phase 4: Audio + QA (checkpoint)
-10. `[not started]` `generate.py`: YAML → `audio/<id>.mp3` + `<id>.slow.mp3` + `items.json`, with a cache keyed on (text, voice, rate, version).
+10. `[done]` `generate.py`: YAML → `audio/<id>.mp3` + `<id>.slow.mp3` + `items.json`, with a cache keyed on (text, voice, rate, version).
+    *Result:*
+    - **Run:** 687 items → 1374 clips in 539 s, none failed (34 MB in `web/public/audio/`, committed like the Greek app's). A second run copies everything from the cache in 16 s and synthesises nothing.
+    - **Voices:** the item's `voice` override, otherwise denise or henri chosen from a hash of the id rather than by position, so adding or reordering items doesn't change existing voices or invalidate the cache. The split is denise 349, henri 338. Both clips of an item use the same voice.
+    - **Clips:** normal mean 2.6 s (max 4.4 s), slow 1.30× longer. Spot check: the trim keeps the full sentence (last word ends at 3.35 s, clip 3.50 s).
+    - **Failures:** if either clip of an item fails, the item is left out of `items.json` and both of its clips are deleted. A re-run retries only the missing clip. Orphan cleanup only sweeps the top of `audio/`, so `audio/num/` (step 26) is safe.
+    - **`items.json`:** `{version: 1, topics: [{id, title}], grammarPoints: [{id, title, level, rule}], items: [...]}`. Each item has `id, fr` (blanks filled in), `cloze?`, `en, altFr, level, topic | point, grammar, register?, explain?, notes?, audio, audioSlow`. `cloze` is pre-parsed into alternating text runs and blanks (`["Hier, elle ", {answers: ["est allée"], hint: "aller"}, " au marché."]`), so the app needs no markup parser. `tts_text` and `voice` stay pipeline-only. Absent optional fields are omitted, not null.
+    - **Tests:** 100 pass (9 new, with a fake backend): voice stability, override and balance; both rates with the same text and voice; the cache and `--force`; regenerating only an edited item; orphan removal that leaves `audio/num/` alone; a failed slow clip dropping the item, then the retry; `cloze` parts; the `items.json` shape; every real cloze rebuilding to `fr`.
 11. `[not started]` `qa.py` with Whisper `language="fr"`. The comparison ignores accents, case and punctuation, and treats digits and number words as equal. It writes the flagged list with players.
 12. `[not started]` **Checkpoint:** the user listens to the flagged clips and fixes them with per-item `tts_text` / `voice` overrides.
 
