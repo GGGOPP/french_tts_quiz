@@ -1,0 +1,132 @@
+topic: Appointments & plans
+items:
+  - id: appt-01
+    fr: Tu es libre samedi soir ?
+    en:
+      - Are you free on Saturday evening?
+      - Are you free Saturday night?
+    alt_fr:
+      - Est-ce que tu es libre samedi soir ?
+    level: A1
+    register: informal
+    grammar: [questions]
+
+  - id: appt-02
+    fr: On se retrouve devant le cinéma à huit heures ?
+    en:
+      - Shall we meet in front of the cinema at eight?
+      - Shall we meet outside the movie theater at eight?
+    level: A1
+    grammar: [reflexive-verbs, questions]
+
+  - id: appt-03
+    fr: Jeudi, ce n'est pas possible pour moi, j'ai déjà quelque chose de prévu.
+    en:
+      - Thursday isn't possible for me, I've already got something planned.
+      - Thursday doesn't work for me, I already have plans.
+    level: A2
+    grammar: [negation]
+
+  - id: appt-04
+    fr: Est-ce qu'on peut déplacer notre rendez-vous à la semaine prochaine ?
+    en:
+      - Can we move our appointment to next week?
+      - Can we reschedule our meeting for next week?
+    level: A2
+    grammar: [questions, possessives]
+
+  - id: appt-05
+    fr: J'ai rendez-vous chez le coiffeur mardi à quatorze heures trente.
+    en:
+      - I have an appointment at the hairdresser's on Tuesday at two thirty.
+      - I've got a hairdresser's appointment on Tuesday at half past two.
+    level: A1
+
+  - id: appt-06
+    fr: Quel jour est-ce que ça t'arrange ?
+    en:
+      - Which day suits you?
+      - What day works for you?
+    alt_fr:
+      - Quel jour ça t'arrange ?
+    level: A2
+    register: informal
+    grammar: [questions, object-pronouns]
+
+  - id: appt-07
+    fr: Je t'appelle quand j'arrive à la gare.
+    en:
+      - I'll call you when I get to the station.
+      - I'll ring you when I arrive at the station.
+    level: A1
+    register: informal
+    grammar: [object-pronouns]
+
+  - id: appt-08
+    fr: Je serai un peu en retard, commencez sans moi.
+    en:
+      - I'll be a bit late, start without me.
+      - I will be a little late, start without me.
+    level: A2
+    grammar: [futur-simple, imperative]
+
+  - id: appt-09
+    fr: Pourriez-vous confirmer le rendez-vous par e-mail, s'il vous plaît ?
+    en:
+      - Could you confirm the appointment by email, please?
+    alt_fr:
+      - Est-ce que vous pourriez confirmer le rendez-vous par e-mail, s'il vous plaît ?
+    level: A2
+    register: formal
+    grammar: [conditional-politeness]
+
+  - id: appt-10
+    fr: Il faut annuler le dîner de vendredi, ma fille est malade.
+    en:
+      - We have to cancel Friday's dinner, my daughter is ill.
+      - We need to cancel dinner on Friday, my daughter is sick.
+    level: A2
+
+  - id: appt-11
+    fr: Le dentiste m'a donné un rendez-vous dans trois semaines.
+    en:
+      - The dentist gave me an appointment in three weeks.
+      - The dentist gave me an appointment three weeks from now.
+    level: A2
+    grammar: [object-pronouns, passe-compose-avoir]
+
+  - id: appt-12
+    fr: Ça te dirait de venir dîner à la maison samedi prochain ?
+    en:
+      - Would you like to come for dinner at our place next Saturday?
+      - How about coming over for dinner next Saturday?
+    level: A2
+    register: informal
+    grammar: [conditional-politeness]
+
+  - id: appt-13
+    fr: Marc a oublié notre rendez-vous, je l'ai attendu pendant une heure.
+    en:
+      - Marc forgot our appointment, I waited for him for an hour.
+      - Marc forgot about our meeting, I waited an hour for him.
+    level: A2
+    grammar: [object-pronouns, depuis-pendant-il-y-a, passe-compose-avoir]
+
+  - id: appt-14
+    fr: Quand tu sortiras du travail, envoie-moi un message et on ira boire un verre.
+    en:
+      - When you leave work, send me a message and we'll go for a drink.
+      - When you get out of work, text me and we'll go for a drink.
+    level: A2
+    register: informal
+    grammar: [futur-simple, imperative]
+
+  - id: appt-15
+    fr: Le rendez-vous est à quelle heure ? À dix heures et quart.
+    en:
+      - What time is the appointment? At a quarter past ten.
+      - What time is the appointment? At ten fifteen.
+    alt_fr:
+      - À quelle heure est le rendez-vous ? À dix heures et quart.
+    level: A1
+    grammar: [questions]

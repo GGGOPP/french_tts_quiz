@@ -1,0 +1,143 @@
+point: futur-simple
+title: The futur simple
+level: A2
+rule: |
+  The futur simple says what **will** happen. Take the infinitive (-re verbs drop their final -e) and add these endings:
+
+  | | parler | finir | prendre |
+  |---|---|---|---|
+  | je | parlerai | finirai | prendrai |
+  | tu | parleras | finiras | prendras |
+  | il/elle/on | parlera | finira | prendra |
+  | nous | parlerons | finirons | prendrons |
+  | vous | parlerez | finirez | prendrez |
+  | ils/elles | parleront | finiront | prendront |
+
+  **Irregular stems** take the same endings:
+  être → **ser-**, avoir → **aur-**, aller → **ir-**, faire → **fer-**, venir → **viendr-**, pouvoir → **pourr-**, vouloir → **voudr-**, voir → **verr-**, devoir → **devr-**, savoir → **saur-**, envoyer → **enverr-**, il faut → il **faudra**, il pleut → il **pleuvra**.
+
+  - After **quand** about the future, French uses the futur where English uses the present: Quand j'**aurai** le temps, je t'appellerai.
+  - **si** + present, then the futur: Si tu viens, nous **irons** au parc.
+  - The futur proche (je vais partir) is more common in speech for plans and things about to happen.
+items:
+  - id: fut-01
+    fr: L'été prochain, mes cousins {viendront|venir} nous voir à Marseille.
+    en:
+      - Next summer my cousins will come and see us in Marseille.
+      - Next summer my cousins will visit us in Marseille.
+    explain: venir has the stem viendr-. ils → -ont.
+
+  - id: fut-02
+    fr: Demain, il {fera|faire} beau dans le sud, mais il {pleuvra|pleuvoir} dans le nord.
+    en:
+      - Tomorrow it will be sunny in the south, but it will rain in the north.
+      - Tomorrow the weather will be nice in the south, but it'll rain in the north.
+    explain: faire → fer-, pleuvoir → pleuvr-. il → -a.
+
+  - id: fut-03
+    fr: Quand j'{aurai|avoir} le temps, je t'appellerai.
+    en:
+      - When I have time, I'll call you.
+      - I'll call you when I have time.
+    register: informal
+    explain: After quand about the future, French uses the futur where English uses the present. avoir → aur-.
+
+  - id: fut-04
+    fr: Nous {partirons|partir} à six heures pour éviter les embouteillages.
+    en:
+      - We'll leave at six to avoid the traffic jams.
+      - We will leave at six to avoid the traffic.
+    explain: A regular -ir verb keeps its infinitive → partir + -ons.
+
+  - id: fut-05
+    fr: Est-ce que tu {seras|être} à la maison ce soir ?
+    en:
+      - Will you be at home tonight?
+      - Will you be home this evening?
+    register: informal
+    grammar: [questions]
+    explain: être → ser-. tu → -as.
+
+  - id: fut-06
+    fr: Les magasins {seront|être} fermés lundi parce que c'est un jour férié.
+    en:
+      - The shops will be closed on Monday because it's a public holiday.
+      - The stores will be closed Monday because it's a holiday.
+    explain: être → ser-. ils → -ont.
+
+  - id: fut-07
+    fr: Si tu travailles bien, tu {réussiras|réussir} ton examen.
+    en:
+      - If you work hard, you'll pass your exam.
+      - If you work well, you will pass your exam.
+    register: informal
+    explain: si + present, then the futur for the result. réussir + -as.
+
+  - id: fut-08
+    fr: Je te {rendrai|rendre} ton livre la semaine prochaine.
+    en:
+      - I'll give you your book back next week.
+      - I'll return your book next week.
+    register: informal
+    grammar: [object-pronouns]
+    explain: -re verbs drop the final -e → rendr- + -ai.
+
+  - id: fut-09
+    fr: Dans dix ans, les voitures {pourront|pouvoir} peut-être rouler toutes seules.
+    en:
+      - In ten years, cars may be able to drive themselves.
+      - In ten years' time, cars will maybe be able to drive on their own.
+    explain: pouvoir → pourr-. ils → -ont.
+
+  - id: fut-10
+    fr: Vous {verrez|voir}, la vue du sommet est magnifique.
+    en:
+      - You'll see, the view from the top is magnificent.
+      - You'll see, the view from the summit is stunning.
+    explain: voir → verr-. vous → -ez.
+
+  - id: fut-11
+    fr: Quand Léa {aura|avoir} dix-huit ans, elle {ira|aller} étudier à Paris.
+    en:
+      - When Léa is eighteen, she'll go and study in Paris.
+      - When Léa turns eighteen, she will go to Paris to study.
+    explain: quand about the future → futur in both halves. avoir → aur-, aller → ir-.
+
+  - id: fut-12
+    fr: Il {faudra|falloir} réserver l'hôtel avant la fin du mois.
+    en:
+      - We'll need to book the hotel before the end of the month.
+      - The hotel will have to be booked before the end of the month.
+    explain: il faut → il faudra in the future.
+
+  - id: fut-13
+    fr: Mes amis {feront|faire} une grande fête pour leurs trente ans.
+    en:
+      - My friends will have a big party for their thirtieth birthday.
+      - My friends will throw a big party for their 30th.
+    explain: faire → fer-. ils → -ont.
+
+  - id: fut-14
+    fr: Je {saurai|savoir} les résultats vendredi, je t'enverrai un message.
+    en:
+      - I'll know the results on Friday, I'll send you a message.
+      - I'll know the results on Friday, I'll text you.
+    register: informal
+    explain: savoir → saur-. envoyer is irregular too → enverr-.
+
+  - id: fut-15
+    fr: Ne t'inquiète pas, nous {arriverons|arriver} avant minuit.
+    en:
+      - Don't worry, we'll arrive before midnight.
+      - Don't worry, we'll get there before midnight.
+    alt_fr:
+      - Ne t'inquiète pas, on arrivera avant minuit.
+    register: informal
+    explain: -er verbs keep the infinitive → arriver + -ons. The e of -erons is barely pronounced.
+
+  - id: fut-16
+    fr: Elle {voudra|vouloir} sûrement voir la tour Eiffel quand elle viendra à Paris.
+    en:
+      - She'll surely want to see the Eiffel Tower when she comes to Paris.
+      - She will definitely want to see the Eiffel Tower when she comes to Paris.
+    explain: vouloir → voudr-. quand about the future → elle viendra.

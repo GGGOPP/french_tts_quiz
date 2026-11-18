@@ -1,0 +1,143 @@
+point: object-pronouns
+title: Object pronouns le, la, les, lui, leur
+level: A2
+rule: |
+  Object pronouns replace a noun so you don't repeat it. They go **before the verb**.
+
+  | | direct (no à) | indirect (à + a person) |
+  |---|---|---|
+  | him, it (masc.) | le | lui |
+  | her, it (fem.) | la | lui |
+  | them | les | leur |
+
+  - me, te, nous and vous work for both: il **me** parle, je **te** vois.
+  - le and la become **l'** before a vowel: je **l'**aime.
+  - **Direct:** je regarde **le film** → je **le** regarde.
+  - **Indirect:** verbs with **à** + a person (parler à, téléphoner à, donner à, dire à, répondre à, écrire à): je téléphone **à Marie** → je **lui** téléphone.
+  - **Negative:** ne goes before the pronoun: je **ne le** connais **pas**.
+  - **With an infinitive**, the pronoun goes before the infinitive: je vais **le** faire.
+  - **Passé composé:** the pronoun goes before avoir: je **l'**ai vu. With le, la, l' or les, the participle agrees with the pronoun: la lettre → je l'ai écrit**e**.
+
+  Careful: **leur** (to them) never takes an -s. **leurs** is the possessive (their).
+items:
+  - id: opr-01
+    fr: Tu connais Julien ? Oui, je {le|him} connais depuis l'école.
+    en:
+      - Do you know Julien? Yes, I've known him since school.
+      - Do you know Julien? Yes, I have known him since we were at school.
+    register: informal
+    grammar: [depuis-pendant-il-y-a]
+    explain: connaître takes a direct object → le (him), before the verb.
+
+  - id: opr-02
+    fr: Cette robe est très jolie, je {la|it} prends.
+    en:
+      - This dress is very pretty, I'll take it.
+      - This dress is really pretty, I'll take it.
+    explain: la robe is feminine and a direct object → la.
+
+  - id: opr-03
+    fr: Où sont mes clés ? Je ne {les|them} trouve pas.
+    en:
+      - Where are my keys? I can't find them.
+    grammar: [negation]
+    explain: mes clés → les. In the negative, ne goes before the pronoun.
+
+  - id: opr-04
+    fr: Je {lui|to her} ai téléphoné ce matin, mais elle n'a pas répondu.
+    en:
+      - I phoned her this morning, but she didn't answer.
+      - I called her this morning but she didn't reply.
+    grammar: [passe-compose-avoir]
+    explain: téléphoner à quelqu'un takes an indirect object → lui. It goes before avoir.
+
+  - id: opr-05
+    fr: Mes parents habitent loin, alors je {leur|to them} écris souvent.
+    en:
+      - My parents live far away, so I often write to them.
+    explain: écrire à takes an indirect object. Plural → leur, never leurs.
+
+  - id: opr-06
+    fr: Le dernier film de ce réalisateur ? Je {l'|it} ai vu deux fois.
+    en:
+      - That director's latest film? I've seen it twice.
+      - The director's latest movie? I saw it twice.
+    grammar: [passe-compose-avoir]
+    explain: le film → le, which becomes l' before ai.
+
+  - id: opr-07
+    fr: Ta valise ? Je {l'ai mise|mettre} dans la voiture.
+    en:
+      - Your suitcase? I put it in the car.
+    register: informal
+    grammar: [passe-compose-avoir]
+    explain: l' stands for la valise (feminine). With avoir, the participle agrees with a direct object placed before it → mise, and you can hear the s.
+
+  - id: opr-08
+    fr: Quand je vois mes grands-parents, je {leur|to them} donne toujours des nouvelles de la famille.
+    en:
+      - When I see my grandparents, I always give them news of the family.
+      - When I see my grandparents, I always tell them the family news.
+    explain: donner à quelqu'un takes an indirect object. Plural → leur.
+
+  - id: opr-09
+    fr: Si tu vois Claire, est-ce que tu peux {lui|to her} dire de m'appeler ?
+    en:
+      - If you see Claire, can you tell her to call me?
+      - If you see Claire, could you tell her to ring me?
+    register: informal
+    explain: dire à quelqu'un → lui. With an infinitive, the pronoun goes before the infinitive.
+
+  - id: opr-10
+    fr: Ce gâteau a l'air délicieux, je vais {le|it} goûter tout de suite.
+    en:
+      - This cake looks delicious, I'm going to try it right away.
+      - This cake looks delicious, I'm going to taste it straight away.
+    grammar: [futur-proche]
+    explain: With aller + infinitive, the pronoun goes before the infinitive.
+
+  - id: opr-11
+    fr: Les enfants dorment, ne {les|them} réveille pas !
+    en:
+      - The children are asleep, don't wake them!
+      - The kids are sleeping, don't wake them up!
+    register: informal
+    grammar: [imperative]
+    explain: les enfants → les. In a negative imperative, the pronoun stays before the verb.
+
+  - id: opr-12
+    fr: Le professeur {nous|us} explique la grammaire avec beaucoup de patience.
+    en:
+      - The teacher explains the grammar to us very patiently.
+      - The teacher explains grammar to us with a lot of patience.
+    explain: nous works as a direct or indirect object, and it goes before the verb.
+
+  - id: opr-13
+    fr: Tu as répondu à Marc ? Non, je ne {lui|to him} ai pas encore répondu.
+    en:
+      - Did you reply to Marc? No, I haven't replied to him yet.
+      - Have you answered Marc? No, I haven't answered him yet.
+    register: informal
+    grammar: [negation, passe-compose-avoir]
+    explain: répondre à → lui. In the negative, ne goes before the pronoun and pas after avoir.
+
+  - id: opr-14
+    fr: J'adore cette chanson, je {l'|it} écoute tous les jours.
+    en:
+      - I love this song, I listen to it every day.
+    explain: écouter takes a direct object in French (no à), so la chanson → la → l'. English says "listen to".
+
+  - id: opr-15
+    fr: Mes voisins sont très gentils, je {les|them} invite souvent à dîner.
+    en:
+      - My neighbours are very nice, I often invite them to dinner.
+      - My neighbors are really kind, I often have them over for dinner.
+    explain: inviter quelqu'un takes a direct object → les.
+
+  - id: opr-16
+    fr: Je {vous|you} remercie pour votre aide.
+    en:
+      - Thank you for your help.
+      - I thank you for your help.
+    register: formal
+    explain: remercier takes a direct object. vous goes before the verb.

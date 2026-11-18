@@ -1,0 +1,141 @@
+topic: Travel & hotel
+items:
+  - id: trav-01
+    fr: J'ai réservé une chambre double pour deux nuits.
+    en:
+      - I've booked a double room for two nights.
+      - I booked a double room for two nights.
+    level: A1
+    grammar: [passe-compose-avoir]
+
+  - id: trav-02
+    fr: À quelle heure est le petit déjeuner, s'il vous plaît ?
+    en:
+      - What time is breakfast, please?
+    level: A1
+    register: formal
+    grammar: [questions]
+
+  - id: trav-03
+    fr: Est-ce que le petit déjeuner est compris dans le prix ?
+    en:
+      - Is breakfast included in the price?
+    alt_fr:
+      - Le petit déjeuner est compris dans le prix ?
+    level: A1
+    grammar: [questions]
+
+  - id: trav-04
+    fr: Le train pour Bordeaux part de quelle voie ?
+    en:
+      - Which platform does the train to Bordeaux leave from?
+      - What platform does the Bordeaux train leave from?
+    alt_fr:
+      - De quelle voie part le train pour Bordeaux ?
+    level: A1
+    grammar: [questions]
+
+  - id: trav-05
+    fr: Je voudrais un aller-retour pour Nice, en deuxième classe.
+    en:
+      - I'd like a return ticket to Nice, second class.
+      - I would like a round trip to Nice, in second class.
+    level: A1
+    grammar: [conditional-politeness]
+
+  - id: trav-06
+    fr: Notre vol a deux heures de retard à cause de la neige.
+    en:
+      - Our flight is two hours late because of the snow.
+      - Our flight is delayed by two hours because of the snow.
+    level: A2
+    grammar: [possessives]
+
+  - id: trav-07
+    fr: La chambre est jolie, mais la climatisation ne marche pas.
+    en:
+      - The room is nice, but the air conditioning doesn't work.
+      - The room is pretty, but the air conditioning isn't working.
+    level: A2
+    grammar: [negation]
+
+  - id: trav-08
+    fr: Est-ce que vous pourriez nous appeler un taxi pour demain matin ?
+    en:
+      - Could you call us a taxi for tomorrow morning?
+      - Could you call a taxi for us for tomorrow morning?
+    alt_fr:
+      - Pourriez-vous nous appeler un taxi pour demain matin ?
+    level: A2
+    register: formal
+    grammar: [conditional-politeness, object-pronouns]
+
+  - id: trav-09
+    fr: N'oubliez pas votre passeport, vous en aurez besoin à l'aéroport.
+    en:
+      - Don't forget your passport, you'll need it at the airport.
+    level: A2
+    register: formal
+    grammar: [imperative, y-en, futur-simple]
+
+  - id: trav-10
+    fr: Quand mes amis sont arrivés à l'hôtel, leur chambre n'était pas encore prête.
+    en:
+      - When my friends got to the hotel, their room wasn't ready yet.
+      - When my friends arrived at the hotel, their room was not ready yet.
+    level: A2
+    grammar: [imparfait-vs-passe-compose]
+
+  - id: trav-11
+    fr: Il faut valider son billet avant de monter dans le bus.
+    en:
+      - You have to validate your ticket before getting on the bus.
+      - You must validate your ticket before you get on the bus.
+    level: A2
+
+  - id: trav-12
+    fr: L'année prochaine, nous irons en Bretagne et nous louerons une petite maison près de la plage.
+    en:
+      - Next year we'll go to Brittany and rent a little house near the beach.
+      - Next year we will go to Brittany and we will rent a small house near the beach.
+    alt_fr:
+      - L'année prochaine, on ira en Bretagne et on louera une petite maison près de la plage.
+    level: A2
+    grammar: [futur-simple]
+
+  - id: trav-13
+    fr: Excusez-moi, où est-ce que je peux laisser mes bagages ?
+    en:
+      - Excuse me, where can I leave my luggage?
+      - Excuse me, where can I leave my bags?
+    level: A1
+    register: formal
+    grammar: [questions]
+
+  - id: trav-14
+    fr: Le musée est fermé le mardi, alors nous y irons mercredi.
+    en:
+      - The museum is closed on Tuesdays, so we'll go there on Wednesday.
+      - The museum is shut on Tuesdays, so we'll go on Wednesday.
+    alt_fr:
+      - Le musée est fermé le mardi, alors on y ira mercredi.
+    level: A2
+    grammar: [y-en, futur-simple]
+
+  - id: trav-15
+    fr: Pendant notre voyage en Italie, il a fait beau tous les jours sauf le dernier.
+    en:
+      - During our trip to Italy, the weather was good every day except the last.
+      - During our trip to Italy, it was sunny every day except the last one.
+    level: A2
+    grammar: [depuis-pendant-il-y-a]
+
+  - id: trav-16
+    fr: C'est l'hôtel où nous avons dormi la dernière fois, il est calme et pas trop cher.
+    en:
+      - That's the hotel we stayed at last time, it's quiet and not too expensive.
+      - It's the hotel where we slept last time, it's quiet and not too expensive.
+    alt_fr:
+      - C'est l'hôtel où on a dormi la dernière fois, il est calme et pas trop cher.
+    level: A2
+    grammar: [relative-pronouns]

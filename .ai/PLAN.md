@@ -179,11 +179,24 @@ Status key: `[not started]` · `[in progress]` · `[done]`. Each step is committ
    - **Batch-2 stubs:** `conditional-politeness`, `reflexive-verbs` and `imperative` are rule cards with `items: []`, so topic sentences (je voudrais, je me lève, tournez à gauche) can carry those tags now. Step 9 adds their drills.
    - **Dictée rule:** every sentence's spelling must follow from the audio. So there is no *il parle* / *ils parlent* ambiguity, and no gendered agreement after je, tu, nous or vous. This is now written down in `data/README.md`. The PyYAML `?]` flow-list pitfall is documented there too.
    - **Hints:** English cues (`the`, `some`, `my`, `your (tu)`), the infinitive, or `not + verb` for negation. `article` marks the general-sense le/la/les after aimer and détester.
-8. `[not started]` **Checkpoint:** the user reviews batch 1.
-9. `[not started]` **Batch 2:**
+8. `[done]` **Checkpoint:** the user reviews batch 1.
+   *Result:* reviewed on a proofreading page (an Artifact built from `load_data()`, with blanks highlighted and Good/Flag marks). No changes. The user found the items too easy and asked for longer sentences and, later, B1. That feedback shaped batch 2 and step 9b.
+9. `[in progress]` **Batch 2:**
    - **Grammar points:** imparfait vs passé composé; reflexive verbs; le/la/lui/leur; y and en; futur simple; comparatives and superlatives; qui/que/où; depuis/pendant/il y a; imperative; je voudrais / conditional.
    - **Topic sentences:** about 100 more (travel & hotel, health, work, weather, hobbies, family, appointments).
+   - **Longer sentences:** many items have two clauses (parce que, quand, mais, alors, si) and combine points.
    - **Review:** the user reviews batch 2 (this can overlap with Phase 5).
+
+   *Result (drafted, review pending):*
+   - **Totals:** 591 items (375 cloze; A1 294, A2 297), all valid. Batch 2 adds 281 items, averaging 10.4 words against 5.5 in batch 1.
+   - **Grammar:** the three stubs now have drills (`reflexive-verbs`, `imperative`, `conditional-politeness`, the last retitled "Polite requests and advice" with on pourrait / tu devrais / il faudrait). New points: `imparfait`, `imparfait-vs-passe-compose`, `object-pronouns`, `y-en`, `futur-simple`, `comparatives`, `relative-pronouns`, `depuis-pendant-il-y-a`. That's 175 drills, 15–16 per point.
+   - **Topics:** 106 sentences in `travel`, `health`, `work`, `weather`, `hobbies`, `family` and `appointments`.
+   - **Dictée:** the imparfait's -ais/-ait/-aient sound alike, so plural subjects are audible (mes grands-parents avaient, ils_avaient). Past participles after je/nous are avoided as before, using names or plural nouns instead.
+9b. `[not started]` **Batch 3 (B1):** a small batch of high-value B1 points, agreed with the user after batch 1.
+   - **Points:** the subjunctive after il faut que / vouloir que; si + imparfait with the conditional; the plus-que-parfait; dont and ce qui / ce que; double pronouns (je le lui ai donné); the gérondif.
+   - **Format change:** add `B1` to `LEVELS` in `data.py`, `data/README.md` and the level filter (step 19).
+   - **Dictée:** subjunctive -er forms sound like the present (qu'il parle), and the conditional je -rais sounds close to the future je -rai. These are fine when the grammar decides, as with si + imparfait.
+   - **Review:** the user reviews it on the proofreading page.
 
 ### Phase 4: Audio + QA (checkpoint)
 10. `[not started]` `generate.py`: YAML → `audio/<id>.mp3` + `<id>.slow.mp3` + `items.json`, with a cache keyed on (text, voice, rate, version).

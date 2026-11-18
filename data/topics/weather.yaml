@@ -1,0 +1,127 @@
+topic: Weather
+items:
+  - id: weather-01
+    fr: Quel temps fait-il aujourd'hui ?
+    en:
+      - What's the weather like today?
+      - What is the weather like today?
+    alt_fr:
+      - Il fait quel temps aujourd'hui ?
+    level: A1
+    grammar: [questions]
+
+  - id: weather-02
+    fr: Il fait beau et chaud, on peut manger dehors.
+    en:
+      - It's nice and warm, we can eat outside.
+      - The weather's nice and hot, we can eat outdoors.
+    alt_fr:
+      - Il fait beau et chaud, nous pouvons manger dehors.
+    level: A1
+
+  - id: weather-03
+    fr: Prends ton parapluie, il va pleuvoir cet après-midi.
+    en:
+      - Take your umbrella, it's going to rain this afternoon.
+    level: A1
+    register: informal
+    grammar: [imperative, futur-proche]
+
+  - id: weather-04
+    fr: Il neige beaucoup en montagne en hiver.
+    en:
+      - It snows a lot in the mountains in winter.
+      - It snows a lot in the mountains in the winter.
+    level: A1
+
+  - id: weather-05
+    fr: Il fait moins froid qu'hier, mais il y a beaucoup de vent.
+    en:
+      - It's less cold than yesterday, but it's very windy.
+      - It's not as cold as yesterday, but there's a lot of wind.
+    level: A2
+    grammar: [comparatives]
+
+  - id: weather-06
+    fr: D'après la météo, il fera vingt-cinq degrés demain.
+    en:
+      - According to the forecast, it will be twenty-five degrees tomorrow.
+      - According to the weather forecast, it'll be 25 degrees tomorrow.
+    level: A2
+    grammar: [futur-simple]
+
+  - id: weather-07
+    fr: Quand le match a commencé, il pleuvait très fort.
+    en:
+      - When the match started, it was raining very hard.
+      - When the game began, it was raining really hard.
+    level: A2
+    grammar: [imparfait-vs-passe-compose]
+
+  - id: weather-08
+    fr: Le ciel est gris, mais il ne pleut pas encore.
+    en:
+      - The sky is grey, but it's not raining yet.
+      - The sky is gray but it isn't raining yet.
+    level: A1
+    grammar: [negation]
+
+  - id: weather-09
+    fr: Il a fait très chaud pendant tout le mois de juillet.
+    en:
+      - It was very hot for the whole of July.
+      - It was really hot all through July.
+    level: A2
+    grammar: [depuis-pendant-il-y-a]
+
+  - id: weather-10
+    fr: En été, il fait souvent plus de trente degrés dans le sud.
+    en:
+      - In summer it's often over thirty degrees in the south.
+      - In the summer it is often more than 30 degrees in the south.
+    level: A2
+    grammar: [comparatives]
+
+  - id: weather-11
+    fr: Il y a du brouillard ce matin, faites attention sur la route.
+    en:
+      - It's foggy this morning, be careful on the road.
+      - There's fog this morning, take care on the road.
+    level: A2
+    register: formal
+    grammar: [imperative, partitive]
+
+  - id: weather-12
+    fr: Quand j'étais enfant, il neigeait tous les hivers dans mon village.
+    en:
+      - When I was a child, it snowed every winter in my village.
+      - When I was a kid, it used to snow every winter in my village.
+    level: A2
+    grammar: [imparfait]
+
+  - id: weather-13
+    fr: S'il fait beau dimanche, nous irons à la plage.
+    en:
+      - If the weather's nice on Sunday, we'll go to the beach.
+      - If it's sunny on Sunday, we will go to the beach.
+    alt_fr:
+      - S'il fait beau dimanche, on ira à la plage.
+    level: A2
+    grammar: [futur-simple]
+
+  - id: weather-14
+    fr: Quel beau temps ! Le soleil brille depuis ce matin.
+    en:
+      - What lovely weather! The sun has been shining since this morning.
+      - What beautiful weather! The sun's been shining since this morning.
+    level: A2
+    grammar: [depuis-pendant-il-y-a]
+
+  - id: weather-15
+    fr: Il y a de l'orage, ferme les fenêtres, s'il te plaît.
+    en:
+      - There's a storm, close the windows, please.
+      - It's stormy, shut the windows please.
+    level: A2
+    register: informal
+    grammar: [imperative, partitive]

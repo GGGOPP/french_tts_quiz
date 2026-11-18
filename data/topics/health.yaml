@@ -1,0 +1,126 @@
+topic: Health
+items:
+  - id: health-01
+    fr: J'ai mal à la tête depuis ce matin.
+    en:
+      - I've had a headache since this morning.
+      - My head has been hurting since this morning.
+    level: A1
+    grammar: [depuis-pendant-il-y-a]
+
+  - id: health-02
+    fr: Elle a mal au ventre, elle a trop mangé hier soir.
+    en:
+      - She has a stomach ache, she ate too much last night.
+      - Her stomach hurts, she ate too much last night.
+    level: A1
+    grammar: [a-de-contractions, passe-compose-avoir]
+
+  - id: health-03
+    fr: Je voudrais prendre rendez-vous avec le docteur Martin, s'il vous plaît.
+    en:
+      - I'd like to make an appointment with Doctor Martin, please.
+      - I would like to book an appointment with Dr Martin, please.
+    level: A1
+    register: formal
+    grammar: [conditional-politeness]
+
+  - id: health-04
+    fr: Vous avez de la fièvre ? Oui, trente-huit et demi.
+    en:
+      - Do you have a temperature? Yes, thirty-eight and a half.
+      - Have you got a fever? Yes, thirty-eight point five.
+    level: A1
+    register: formal
+    grammar: [partitive, questions]
+
+  - id: health-05
+    fr: Mon fils tousse beaucoup la nuit et il ne dort pas bien.
+    en:
+      - My son coughs a lot at night and doesn't sleep well.
+      - My son is coughing a lot at night and isn't sleeping well.
+    level: A1
+    grammar: [negation]
+
+  - id: health-06
+    fr: Est-ce qu'il y a une pharmacie ouverte le dimanche près d'ici ?
+    en:
+      - Is there a pharmacy open on Sundays near here?
+      - Is there a chemist's open on Sunday nearby?
+    level: A1
+    grammar: [questions]
+
+  - id: health-07
+    fr: Prenez ce médicament trois fois par jour, après les repas.
+    en:
+      - Take this medicine three times a day, after meals.
+      - Take this medication three times a day, after eating.
+    level: A2
+    register: formal
+    grammar: [imperative]
+
+  - id: health-08
+    fr: Ma sœur est tombée dans l'escalier et elle a mal au genou.
+    en:
+      - My sister fell down the stairs and her knee hurts.
+      - My sister fell on the stairs and has a sore knee.
+    level: A2
+    grammar: [passe-compose-etre]
+
+  - id: health-09
+    fr: Tu devrais rester au lit et boire beaucoup d'eau.
+    en:
+      - You should stay in bed and drink lots of water.
+      - You should stay in bed and drink plenty of water.
+    level: A2
+    register: informal
+    grammar: [conditional-politeness]
+
+  - id: health-10
+    fr: Le médecin m'a dit de faire plus de sport et de manger moins de sucre.
+    en:
+      - The doctor told me to do more exercise and eat less sugar.
+      - The doctor told me to do more sport and to eat less sugar.
+    level: A2
+    grammar: [comparatives, object-pronouns]
+
+  - id: health-11
+    fr: Quand j'étais enfant, j'étais souvent malade en hiver.
+    en:
+      - When I was a child, I was often ill in winter.
+      - When I was a kid, I was often sick in the winter.
+    level: A2
+    grammar: [imparfait]
+
+  - id: health-12
+    fr: Si la douleur ne passe pas, revenez me voir dans une semaine.
+    en:
+      - If the pain doesn't go away, come back and see me in a week.
+      - If the pain doesn't go, come back to see me in a week.
+    level: A2
+    register: formal
+    grammar: [imperative, negation]
+
+  - id: health-13
+    fr: Je ne peux pas venir travailler aujourd'hui, j'ai de la fièvre depuis hier soir.
+    en:
+      - I can't come to work today, I've had a fever since last night.
+      - I can't come in to work today, I've had a temperature since last night.
+    level: A2
+    grammar: [depuis-pendant-il-y-a, partitive]
+
+  - id: health-14
+    fr: Ça va mieux aujourd'hui ? Oui, je me sens beaucoup mieux, merci.
+    en:
+      - Are you feeling better today? Yes, I feel much better, thanks.
+      - Is it better today? Yes, I feel a lot better, thank you.
+    level: A2
+    grammar: [comparatives, reflexive-verbs]
+
+  - id: health-15
+    fr: Il faut se laver les mains avant de manger.
+    en:
+      - You must wash your hands before eating.
+      - You have to wash your hands before you eat.
+    level: A1
+    grammar: [reflexive-verbs]

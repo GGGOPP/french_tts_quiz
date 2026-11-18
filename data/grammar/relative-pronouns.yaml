@@ -1,0 +1,144 @@
+point: relative-pronouns
+title: Relative pronouns qui, que, où
+level: A2
+rule: |
+  Relative pronouns join two sentences. They mean who, which, that or where.
+  - **qui** is the **subject** of the next verb: J'ai un ami **qui** habite à Rome. (The friend lives in Rome.)
+  - **que** is the **object**: Le livre **que** je lis est génial. (I am reading the book.) que becomes **qu'** before a vowel.
+  - **où** is for a **place** or a **time**: la ville **où** elle est née, le jour **où** il est parti.
+
+  **Quick test:** if a verb comes next, use qui. If a subject (je, tu, Marie...) comes next, use que.
+
+  - qui never becomes qu'.
+  - English often drops "that" (the book I read), but French never drops que.
+  - **ce que** means "what" as an object: Ce **que** je préfère, c'est le fromage.
+items:
+  - id: rel-01
+    fr: J'ai une amie {qui|relative} habite à Rome depuis dix ans.
+    en:
+      - I have a friend who has lived in Rome for ten years.
+      - I've got a friend who's been living in Rome for ten years.
+    grammar: [depuis-pendant-il-y-a]
+    explain: The friend is the subject of habite → qui.
+
+  - id: rel-02
+    fr: Le livre {que|relative} tu m'as prêté était vraiment intéressant.
+    en:
+      - The book you lent me was really interesting.
+      - The book that you lent me was very interesting.
+    register: informal
+    explain: tu is the subject, and the book is the object → que.
+
+  - id: rel-03
+    fr: C'est le restaurant {où|relative} nous avons mangé l'été dernier.
+    en:
+      - That's the restaurant where we ate last summer.
+      - It's the restaurant we ate at last summer.
+    alt_fr:
+      - C'est le restaurant où on a mangé l'été dernier.
+    explain: A place → où.
+
+  - id: rel-04
+    fr: Le train {qui|relative} part à huit heures est direct pour Bordeaux.
+    en:
+      - The train that leaves at eight goes straight to Bordeaux.
+      - The train leaving at eight is a direct train to Bordeaux.
+    explain: The train is the subject of part → qui.
+
+  - id: rel-05
+    fr: La femme {que|relative} tu as vue hier est ma professeure de français.
+    en:
+      - The woman you saw yesterday is my French teacher.
+      - The woman that you saw yesterday is my French teacher.
+    register: informal
+    grammar: [passe-compose-avoir]
+    explain: tu is the subject, and la femme is the object → que. vue agrees with que, which stands for la femme.
+
+  - id: rel-06
+    fr: Je me souviens du jour {où|relative} j'ai rencontré ta mère.
+    en:
+      - I remember the day I met your mother.
+      - I remember the day when I met your mum.
+    register: informal
+    grammar: [reflexive-verbs]
+    explain: où also works for time. le jour où means the day when.
+
+  - id: rel-07
+    fr: Les gens {qui|relative} travaillent ici sont très sympathiques.
+    en:
+      - The people who work here are very nice.
+      - The people working here are really friendly.
+    explain: A verb comes next and les gens is its subject → qui.
+
+  - id: rel-08
+    fr: Voici la maison {où|relative} mes grands-parents habitaient.
+    en:
+      - Here's the house where my grandparents used to live.
+      - This is the house my grandparents lived in.
+    grammar: [imparfait]
+    explain: A place → où.
+
+  - id: rel-09
+    fr: C'est un film {qu'|relative}il faut absolument voir.
+    en:
+      - It's a film you absolutely have to see.
+      - It's a must-see movie.
+    explain: The film is the object of voir → que, which becomes qu' before il.
+
+  - id: rel-10
+    fr: J'ai acheté le pull {que|relative} tu m'as montré samedi.
+    en:
+      - I bought the jumper you showed me on Saturday.
+      - I bought the sweater that you showed me on Saturday.
+    register: informal
+    grammar: [passe-compose-avoir]
+    explain: tu is the subject, and le pull is the object → que.
+
+  - id: rel-11
+    fr: Mon frère a un chien {qui|relative} a peur des chats.
+    en:
+      - My brother has a dog that's afraid of cats.
+      - My brother has a dog which is scared of cats.
+    explain: The dog is the subject of a → qui.
+
+  - id: rel-12
+    fr: Paris est la ville {où|relative} elle est née.
+    en:
+      - Paris is the city where she was born.
+      - Paris is the town she was born in.
+    grammar: [passe-compose-etre]
+    explain: A place → où.
+
+  - id: rel-13
+    fr: Les photos {que|relative} nous avons prises en vacances sont magnifiques.
+    en:
+      - The photos we took on holiday are beautiful.
+      - The pictures that we took on vacation are gorgeous.
+    alt_fr:
+      - Les photos qu'on a prises en vacances sont magnifiques.
+    grammar: [passe-compose-avoir]
+    explain: nous is the subject, and les photos is the object → que. prises agrees with que, which stands for les photos.
+
+  - id: rel-14
+    fr: Tu connais quelqu'un {qui|relative} parle italien ?
+    en:
+      - Do you know anyone who speaks Italian?
+      - Do you know someone who speaks Italian?
+    register: informal
+    grammar: [questions]
+    explain: A verb comes next → qui.
+
+  - id: rel-15
+    fr: Ce {que|relative} je préfère à Paris, ce sont les petits cafés.
+    en:
+      - What I like best about Paris is the little cafés.
+      - What I prefer in Paris is the little cafés.
+    explain: ce que means "what" as an object. je is the subject → que.
+
+  - id: rel-16
+    fr: Il a neigé le jour {où|relative} mes parents sont partis en vacances.
+    en:
+      - It snowed the day my parents went on holiday.
+      - It snowed on the day my parents left on vacation.
+    grammar: [passe-compose-etre]
+    explain: le jour où means the day when.

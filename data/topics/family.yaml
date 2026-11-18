@@ -1,0 +1,121 @@
+topic: Family
+items:
+  - id: fam-01
+    fr: J'ai deux frères et une sœur.
+    en:
+      - I have two brothers and a sister.
+      - I've got two brothers and one sister.
+    level: A1
+
+  - id: fam-02
+    fr: Ma sœur aînée est mariée et elle a trois enfants.
+    en:
+      - My older sister is married and has three children.
+      - My big sister is married with three kids.
+    level: A1
+    grammar: [possessives]
+
+  - id: fam-03
+    fr: Mes grands-parents habitent dans un petit village en Normandie.
+    en:
+      - My grandparents live in a small village in Normandy.
+      - My grandparents live in a little village in Normandy.
+    level: A1
+    grammar: [possessives, adjectives]
+
+  - id: fam-04
+    fr: Comment s'appelle ton cousin ?
+    en:
+      - What's your cousin's name?
+      - What is your cousin called?
+    alt_fr:
+      - Ton cousin s'appelle comment ?
+    level: A1
+    register: informal
+    grammar: [reflexive-verbs, questions]
+
+  - id: fam-05
+    fr: Mon oncle est le frère de ma mère.
+    en:
+      - My uncle is my mother's brother.
+      - My uncle is my mum's brother.
+    level: A1
+    grammar: [possessives]
+
+  - id: fam-06
+    fr: Nos enfants vont à l'école à pied, elle est juste à côté.
+    en:
+      - Our children walk to school, it's just next door.
+      - Our kids walk to school, it's right nearby.
+    level: A1
+    grammar: [possessives, a-de-contractions]
+
+  - id: fam-07
+    fr: Ma fille ressemble beaucoup à son père, mais elle a les yeux de sa mère.
+    en:
+      - My daughter looks a lot like her father, but she has her mother's eyes.
+      - My daughter really looks like her dad, but she has her mum's eyes.
+    level: A2
+    grammar: [possessives]
+
+  - id: fam-08
+    fr: Le dimanche, toute la famille déjeune chez mes parents.
+    en:
+      - On Sundays the whole family has lunch at my parents' house.
+      - On Sundays the whole family has lunch at my parents'.
+    level: A1
+
+  - id: fam-09
+    fr: Mes parents se sont mariés en mille neuf cent quatre-vingt-dix.
+    en:
+      - My parents got married in 1990.
+      - My parents got married in nineteen ninety.
+    level: A2
+    grammar: [reflexive-verbs, passe-compose-etre]
+
+  - id: fam-10
+    fr: Quand mon père était jeune, il habitait avec ses six frères et sœurs dans une petite maison.
+    en:
+      - When my father was young, he lived with his six brothers and sisters in a small house.
+      - When my dad was young, he lived with his six siblings in a little house.
+    level: A2
+    grammar: [imparfait]
+
+  - id: fam-11
+    fr: Mon petit frère est plus grand que moi maintenant.
+    en:
+      - My little brother is taller than me now.
+      - My younger brother is taller than I am now.
+    level: A2
+    grammar: [comparatives]
+
+  - id: fam-12
+    fr: Ma nièce est née il y a trois semaines, je vais la voir ce week-end.
+    en:
+      - My niece was born three weeks ago, I'm going to see her this weekend.
+    level: A2
+    grammar: [passe-compose-etre, depuis-pendant-il-y-a, object-pronouns]
+
+  - id: fam-13
+    fr: Je téléphone à ma grand-mère tous les dimanches, elle me raconte sa semaine.
+    en:
+      - I call my grandmother every Sunday, she tells me about her week.
+      - I phone my grandma every Sunday and she tells me about her week.
+    level: A2
+    grammar: [object-pronouns]
+
+  - id: fam-14
+    fr: Mes cousins qui habitent au Canada viendront nous voir à Noël.
+    en:
+      - My cousins who live in Canada will come and see us at Christmas.
+      - My cousins who live in Canada will visit us at Christmas.
+    level: A2
+    grammar: [relative-pronouns, futur-simple]
+
+  - id: fam-15
+    fr: Leurs enfants sont très polis, ils disent toujours bonjour et merci.
+    en:
+      - Their children are very polite, they always say hello and thank you.
+      - Their kids are really polite, they always say hello and thanks.
+    level: A2
+    grammar: [possessives]

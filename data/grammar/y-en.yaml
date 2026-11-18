@@ -1,0 +1,147 @@
+point: y-en
+title: The pronouns y and en
+level: A2
+rule: |
+  **y** replaces a place, or **à** + a thing:
+  - Tu vas à Lyon ? Oui, j'**y** vais. (y = à Lyon)
+  - Je pense à mon examen → j'**y** pense.
+  - Fixed expressions: **on y va** (let's go), **il y a** (there is).
+
+  **en** replaces **de** + a thing, and nouns with a quantity:
+  - Tu veux **du** pain ? Oui, j'**en** veux. (en = du pain)
+  - Il a **trois** enfants → il **en** a trois. The number stays at the end.
+  - J'ai besoin **d'**une voiture → j'**en** ai besoin.
+  - il y a dix étudiants → il **y en a** dix.
+
+  Like other object pronouns, they go before the verb: je n'**y** vais pas, je n'**en** veux plus. In the passé composé they go before avoir or être: j'**y** suis allé.
+items:
+  - id: yen-01
+    fr: Je connais bien Lyon, j'{y|there} vais souvent pour le travail.
+    en:
+      - I know Lyon well, I often go there for work.
+    explain: y replaces a place (à Lyon) and goes before the verb.
+
+  - id: yen-02
+    fr: Si tu veux du fromage, j'{en|some} ai acheté ce matin.
+    en:
+      - If you want some cheese, I bought some this morning.
+      - If you'd like some cheese, I bought some this morning.
+    register: informal
+    grammar: [passe-compose-avoir]
+    explain: en replaces du fromage (de + a thing).
+
+  - id: yen-03
+    fr: Combien de frères est-ce que tu as ? J'{en|of them} ai deux.
+    en:
+      - How many brothers do you have? I have two.
+      - How many brothers have you got? I've got two.
+    register: informal
+    grammar: [questions]
+    explain: With a number, en replaces the noun and the number stays at the end.
+
+  - id: yen-04
+    fr: Tu vas à la piscine demain ? Non, je n'{y|there} vais pas, je travaille.
+    en:
+      - Are you going to the pool tomorrow? No, I'm not going, I'm working.
+      - Are you going to the swimming pool tomorrow? No, I'm not, I'm working.
+    register: informal
+    grammar: [negation]
+    explain: y replaces à la piscine. In the negative, n' goes before y.
+
+  - id: yen-05
+    fr: Il n'y a plus de lait ? Si, il {en|some} reste un peu dans le frigo.
+    en:
+      - Is there no milk left? Yes, there's a little left in the fridge.
+      - Isn't there any milk left? Yes, there's still a bit in the fridge.
+    grammar: [negation]
+    explain: en replaces du lait. il en reste means there is some left.
+    notes: Si means yes when you contradict a negative question.
+
+  - id: yen-06
+    fr: Ma sœur adore Paris, elle {y|there} habite depuis cinq ans.
+    en:
+      - My sister loves Paris, she's lived there for five years.
+      - My sister loves Paris, she has been living there for five years.
+    grammar: [depuis-pendant-il-y-a]
+    explain: y replaces à Paris.
+
+  - id: yen-07
+    fr: Des pommes ? Oui, j'{en|some} voudrais un kilo, s'il vous plaît.
+    en:
+      - Apples? Yes, I'd like a kilo, please.
+      - Apples? Yes, I'd like a kilo of them, please.
+    register: formal
+    grammar: [conditional-politeness]
+    explain: en replaces des pommes. The quantity, un kilo, stays after the verb.
+
+  - id: yen-08
+    fr: Mon examen est demain, j'{y|about it} pense tout le temps.
+    en:
+      - My exam is tomorrow, I think about it all the time.
+      - My exam is tomorrow, I keep thinking about it.
+    explain: penser à quelque chose → y.
+
+  - id: yen-09
+    fr: Le café ici est excellent, tu {en|some} veux un peu ?
+    en:
+      - The coffee here is excellent, do you want some?
+      - The coffee here is excellent, would you like a bit?
+    register: informal
+    explain: en replaces du café.
+
+  - id: yen-10
+    fr: On {y|there} va ? Le film commence dans dix minutes.
+    en:
+      - Shall we go? The film starts in ten minutes.
+      - Shall we go? The movie starts in ten minutes.
+    explain: on y va (shall we go, let's go) is a fixed expression with y.
+
+  - id: yen-11
+    fr: Il y a combien d'étudiants dans ta classe ? Il y {en|of them} a quinze.
+    en:
+      - How many students are there in your class? There are fifteen.
+    register: informal
+    grammar: [questions]
+    explain: il y a + a number → il y en a quinze.
+
+  - id: yen-12
+    fr: Ton frère est déjà allé au Canada ? Oui, il {y|there} est allé l'année dernière.
+    en:
+      - Has your brother been to Canada? Yes, he went there last year.
+      - Has your brother ever been to Canada? Yes, he went last year.
+    register: informal
+    grammar: [passe-compose-etre]
+    explain: y replaces au Canada. In the passé composé, y goes before être.
+
+  - id: yen-13
+    fr: Je n'ai pas de voiture, mais j'{en|one} ai besoin pour aller au travail.
+    en:
+      - I don't have a car, but I need one to get to work.
+      - I haven't got a car, but I need one for getting to work.
+    grammar: [negation]
+    explain: avoir besoin de → en.
+
+  - id: yen-14
+    fr: Tu as des photos de tes vacances ? Oui, j'{en|some} ai pris beaucoup.
+    en:
+      - Do you have any photos from your holiday? Yes, I took lots.
+      - Have you got photos from your vacation? Yes, I took a lot.
+    register: informal
+    grammar: [passe-compose-avoir]
+    explain: en replaces des photos. The participle never agrees with en → pris.
+
+  - id: yen-15
+    fr: Les enfants sont au parc, ils {y|there} jouent depuis deux heures.
+    en:
+      - The children are at the park, they've been playing there for two hours.
+      - The kids are in the park, they have been playing there for two hours.
+    grammar: [depuis-pendant-il-y-a]
+    explain: y replaces au parc.
+
+  - id: yen-16
+    fr: Merci pour le gâteau, mais je n'{en|any} veux plus, j'ai trop mangé.
+    en:
+      - Thanks for the cake, but I don't want any more, I've eaten too much.
+      - Thank you for the cake, but I don't want any more, I ate too much.
+    grammar: [negation]
+    explain: en replaces du gâteau. ne ... plus means no more.

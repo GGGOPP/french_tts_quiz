@@ -1,0 +1,146 @@
+point: depuis-pendant-il-y-a
+title: depuis, pendant and il y a
+level: A2
+rule: |
+  **depuis** + present: something started in the past and **is still going on**. English uses "have been ...ing" or "have ...".
+  - J'habite ici **depuis** trois ans. (I've lived here for three years.)
+  - Il pleut **depuis** lundi. (It's been raining since Monday.)
+  - Questions: **Depuis combien de temps** ... ? (how long) **Depuis quand** ... ? (since when)
+
+  **pendant**: for or during a period that is **finished**, or fixed in advance.
+  - J'ai dormi **pendant** dix heures. **Pendant** les vacances, je lis beaucoup.
+
+  **il y a** + a length of time: **ago**, with a past tense.
+  - Elle est arrivée **il y a** deux jours.
+
+  Careful: for something still going on, use depuis + the **present**: J'apprends le français depuis un an (not j'ai appris).
+items:
+  - id: dep-01
+    fr: Mon frère apprend l'espagnol {depuis|for} six mois et il le parle déjà assez bien.
+    en:
+      - My brother has been learning Spanish for six months and he already speaks it quite well.
+      - My brother has been learning Spanish for six months and already speaks it pretty well.
+    grammar: [object-pronouns]
+    explain: The action is still going on → depuis + present.
+
+  - id: dep-02
+    fr: Nous avons attendu le bus {pendant|for} quarante minutes, puis nous avons pris un taxi.
+    en:
+      - We waited for the bus for forty minutes, then we took a taxi.
+      - We waited forty minutes for the bus, then we got a taxi.
+    alt_fr:
+      - On a attendu le bus pendant quarante minutes, puis on a pris un taxi.
+    grammar: [passe-compose-avoir]
+    explain: A finished period in the past → pendant.
+
+  - id: dep-03
+    fr: J'ai vu ce film {il y a|ago} deux semaines.
+    en:
+      - I saw this film two weeks ago.
+      - I saw that movie two weeks ago.
+    grammar: [passe-compose-avoir]
+    explain: il y a + a length of time means ago. It goes before the time.
+
+  - id: dep-04
+    fr: Mes parents sont mariés {depuis|for} trente-cinq ans.
+    en:
+      - My parents have been married for thirty-five years.
+      - My parents have been married for 35 years.
+    explain: They are still married → depuis + present.
+
+  - id: dep-05
+    fr: Il pleut {depuis|since} lundi, et la météo dit que ça va continuer.
+    en:
+      - It's been raining since Monday, and the forecast says it will go on.
+      - It has been raining since Monday, and the weather forecast says it's going to continue.
+    grammar: [futur-proche]
+    explain: depuis also means since + a starting point. It is still raining → present.
+
+  - id: dep-06
+    fr: "{Depuis combien de temps|how long} est-ce que vous habitez ici ?"
+    en:
+      - How long have you lived here?
+      - How long have you been living here?
+    alt_fr:
+      - Depuis combien de temps habitez-vous ici ?
+      - Vous habitez ici depuis combien de temps ?
+    grammar: [questions]
+    explain: Depuis combien de temps (how long) asks about something still going on, so the verb is in the present.
+
+  - id: dep-07
+    fr: "{Pendant|during} les vacances, mes enfants dorment jusqu'à dix heures."
+    en:
+      - During the holidays, my children sleep until ten.
+      - In the holidays my kids sleep till ten.
+    explain: pendant means during.
+
+  - id: dep-08
+    fr: Elle est partie au Japon {il y a|ago} six mois et elle n'est pas encore revenue.
+    en:
+      - She left for Japan six months ago and she hasn't come back yet.
+      - She went to Japan six months ago and hasn't returned yet.
+    grammar: [passe-compose-etre, negation]
+    explain: il y a + a length of time means ago, with a past tense.
+
+  - id: dep-09
+    fr: Je n'ai pas vu Thomas {depuis|since} son mariage.
+    en:
+      - I haven't seen Thomas since his wedding.
+    grammar: [negation, passe-compose-avoir]
+    explain: depuis means since. In the negative, the passé composé is normal, as in English.
+
+  - id: dep-10
+    fr: Il a travaillé dans cette entreprise {pendant|for} vingt ans, puis il a pris sa retraite.
+    en:
+      - He worked for this company for twenty years, then he retired.
+      - He worked at this firm for twenty years and then retired.
+    grammar: [passe-compose-avoir]
+    explain: A finished period → pendant + passé composé. He no longer works there.
+
+  - id: dep-11
+    fr: Le magasin a ouvert {il y a|ago} un mois, et il y a déjà beaucoup de clients.
+    en:
+      - The shop opened a month ago, and it already has lots of customers.
+      - The store opened a month ago and there are already a lot of customers.
+    grammar: [passe-compose-avoir]
+    explain: il y a + a length of time means ago. Later in the sentence, il y a means there is or there are.
+
+  - id: dep-12
+    fr: Je vous attends {depuis|for} une demi-heure !
+    en:
+      - I've been waiting for you for half an hour!
+    grammar: [object-pronouns]
+    explain: Still waiting → depuis + present. English says "have been waiting".
+
+  - id: dep-13
+    fr: "{Depuis quand|since when} est-ce que tu as mal à la tête ?"
+    en:
+      - Since when have you had a headache?
+      - How long have you had a headache?
+    alt_fr:
+      - Tu as mal à la tête depuis quand ?
+    register: informal
+    grammar: [questions]
+    explain: Depuis quand asks for the starting point. It still hurts → present.
+
+  - id: dep-14
+    fr: J'ai dormi {pendant|during} tout le voyage en train.
+    en:
+      - I slept during the whole train journey.
+      - I slept for the whole train trip.
+    grammar: [passe-compose-avoir]
+    explain: pendant means during. The journey is over → passé composé.
+
+  - id: dep-15
+    fr: Ma fille joue du violon {depuis|since} l'âge de six ans.
+    en:
+      - My daughter has played the violin since she was six.
+      - My daughter has been playing the violin since the age of six.
+    explain: She still plays → depuis + present.
+
+  - id: dep-16
+    fr: Mes parents se sont rencontrés {il y a|ago} quarante ans, dans un café à Lille.
+    en:
+      - My parents met forty years ago, in a café in Lille.
+    grammar: [reflexive-verbs, passe-compose-etre]
+    explain: il y a + a length of time means ago.

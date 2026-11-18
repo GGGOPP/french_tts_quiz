@@ -6,8 +6,119 @@ rule: |
   - **Prenez** la deuxième rue à droite. **Tournez** à gauche.
   - **Viens** ici ! **Allons** au parc !
 
-  - For -er verbs, the tu form loses its -s: tu regardes → **regarde** !
-  - Irregular forms: être → sois, soyez; avoir → aie, ayez.
+  - For -er verbs (and aller), the tu form loses its -s: tu regardes → **regarde** !, tu vas → **va** !
+  - Irregular forms: être → sois, soyons, soyez; avoir → aie, ayons, ayez.
   - Negative: **ne** tournez **pas** ici.
-# Drills come in batch 2 (plan step 9). Topic items can already be tagged with this point.
-items: []
+  - Reflexive verbs: the pronoun goes after the verb, and te becomes toi: **dépêche-toi**, **asseyez-vous**. In the negative it stays in front: ne t'inquiète pas.
+items:
+  - id: imp-01
+    fr: "{Tournez|tourner (vous)} à droite après la pharmacie."
+    en:
+      - Turn right after the pharmacy.
+      - Turn right after the chemist's.
+    explain: The vous imperative is the vous form without the pronoun → tournez.
+
+  - id: imp-02
+    fr: "{Prenez|prendre (vous)} la deuxième rue à gauche, puis continuez tout droit."
+    en:
+      - Take the second street on the left, then carry on straight ahead.
+      - Take the second road on the left, then go straight on.
+    explain: vous prenez → prenez.
+
+  - id: imp-03
+    fr: "{Regarde|regarder (tu)} ! Il neige !"
+    en:
+      - Look! It's snowing!
+    explain: Regular -er verbs lose the -s in the tu imperative → regarde, not regardes.
+
+  - id: imp-04
+    fr: "{Ne mange pas|not + manger (tu)} trop de chocolat avant le dîner."
+    en:
+      - Don't eat too much chocolate before dinner.
+    grammar: [negation]
+    explain: ne + verb + pas around the imperative. manger is an -er verb, so the tu form has no -s.
+
+  - id: imp-05
+    fr: "{Allons|aller (nous)} au cinéma ce soir !"
+    en:
+      - Let's go to the cinema tonight!
+      - Let's go to the movies tonight!
+    explain: The nous imperative means "let's" → allons.
+
+  - id: imp-06
+    fr: "{Viens|venir (tu)} ici, s'il te plaît !"
+    en:
+      - Come here, please!
+    explain: tu viens → viens. Only -er verbs and aller drop the -s.
+
+  - id: imp-07
+    fr: "{Sois|être (tu)} sage chez ta grand-mère !"
+    en:
+      - Be good at your grandmother's!
+      - Behave yourself at your grandma's!
+    explain: être has an irregular imperative → sois (tu), soyez (vous).
+
+  - id: imp-08
+    fr: "{Soyez|être (vous)} à l'heure demain, s'il vous plaît, parce que le bus part à huit heures."
+    en:
+      - Please be on time tomorrow, because the bus leaves at eight.
+      - Be on time tomorrow, please, because the bus leaves at eight o'clock.
+    explain: être has an irregular imperative → soyez for vous.
+
+  - id: imp-09
+    fr: N'{ayez pas|not + avoir (vous)} peur, le chien est très gentil.
+    en:
+      - Don't be afraid, the dog is very friendly.
+      - Don't be scared, the dog is really nice.
+    grammar: [negation]
+    explain: avoir has an irregular imperative → aie, ayez. ne becomes n' before a vowel.
+
+  - id: imp-10
+    fr: "{Va|aller (tu)} chercher du pain, s'il te plaît."
+    en:
+      - Go and get some bread, please.
+      - Go get some bread, please.
+    explain: aller drops the -s like an -er verb → va.
+
+  - id: imp-11
+    fr: "{Faites|faire (vous)} attention, la route est glissante quand il pleut."
+    en:
+      - Be careful, the road is slippery when it rains.
+      - Watch out, the road is slippery when it's raining.
+    explain: vous faites → faites. faire attention means to be careful.
+
+  - id: imp-12
+    fr: Si tu as froid, {mets|mettre (tu)} ton manteau.
+    en:
+      - If you're cold, put your coat on.
+      - If you are cold, put on your coat.
+    explain: tu mets → mets. Only -er verbs drop the -s, so mettre keeps it.
+
+  - id: imp-13
+    fr: "{Attendez|attendre (vous)} ici, je reviens dans cinq minutes."
+    en:
+      - Wait here, I'll be back in five minutes.
+      - Wait here, I'm coming back in five minutes.
+    explain: vous attendez → attendez.
+
+  - id: imp-14
+    fr: "{Finissons|finir (nous)} ce travail ce soir, comme ça nous serons libres demain."
+    en:
+      - Let's finish this work tonight, so we'll be free tomorrow.
+      - Let's finish this job this evening, that way we'll be free tomorrow.
+    grammar: [futur-simple]
+    explain: nous finissons → finissons, meaning "let's finish".
+
+  - id: imp-15
+    fr: "{Écoutez|écouter (vous)} bien et {répétez|répéter (vous)} après moi."
+    en:
+      - Listen carefully and repeat after me.
+    explain: Two vous imperatives → écoutez, répétez.
+
+  - id: imp-16
+    fr: "{Dépêche-toi|se dépêcher (tu)}, le train part dans dix minutes !"
+    en:
+      - Hurry up, the train leaves in ten minutes!
+      - Hurry up, the train is leaving in ten minutes!
+    grammar: [reflexive-verbs]
+    explain: In a positive imperative, the pronoun goes after the verb with a hyphen, and te becomes toi → dépêche-toi.

@@ -1,0 +1,152 @@
+point: imparfait
+title: The imparfait
+level: A2
+rule: |
+  The imparfait describes the past as a background: what was going on, what things were like, and what used to happen.
+
+  **Forming it:** take the nous form of the present, drop -ons, and add the endings.
+
+  | | parler (nous parlons) | finir (nous finissons) | prendre (nous prenons) |
+  |---|---|---|---|
+  | je | parlais | finissais | prenais |
+  | tu | parlais | finissais | prenais |
+  | il/elle/on | parlait | finissait | prenait |
+  | nous | parlions | finissions | prenions |
+  | vous | parliez | finissiez | preniez |
+  | ils/elles | parlaient | finissaient | prenaient |
+
+  The only irregular stem is être → **ét-**: j'étais, nous étions.
+
+  **Listening:** -ais, -ait and -aient all sound the same. You hear the plural only in the subject or in a liaison: il avait, ils_avaient.
+
+  **Uses:**
+  - Descriptions and the weather: il faisait beau, la maison était grande.
+  - Habits: tous les étés, nous **allions** à la mer.
+  - States and feelings: j'**avais** faim, elle **voulait** partir.
+  - Age and time: il **avait** dix ans, il **était** minuit.
+items:
+  - id: impf-01
+    fr: Mon grand-père {travaillait|travailler} dans une usine quand il était jeune.
+    en:
+      - My grandfather worked in a factory when he was young.
+      - My grandfather used to work in a factory when he was young.
+    explain: A past situation that lasted → imparfait. nous travaillons → travaill- + -ait.
+
+  - id: impf-02
+    fr: Quand ma mère était petite, elle {allait|aller} chez sa grand-mère tous les étés.
+    en:
+      - When my mother was little, she went to her grandmother's every summer.
+      - When my mum was a child, she used to go to her grandmother's every summer.
+    explain: tous les étés shows a repeated habit → imparfait. nous allons → all- + -ait.
+
+  - id: impf-03
+    fr: Hier, il {faisait|faire} très beau, alors nous avons mangé dans le jardin.
+    en:
+      - Yesterday the weather was lovely, so we ate in the garden.
+      - It was really nice yesterday, so we ate in the garden.
+    alt_fr:
+      - Hier, il faisait très beau, alors on a mangé dans le jardin.
+    grammar: [passe-compose-avoir]
+    explain: The weather as background → imparfait. nous faisons → fais- + -ait.
+
+  - id: impf-04
+    fr: Quand j'{étais|être} enfant, j'avais peur des chiens.
+    en:
+      - When I was a child, I was afraid of dogs.
+      - When I was a kid, I was scared of dogs.
+    explain: être is the only irregular stem → ét-. je → étais.
+
+  - id: impf-05
+    fr: Avant, nous {prenions|prendre} le bus, mais maintenant nous allons au travail à vélo.
+    en:
+      - We used to take the bus, but now we cycle to work.
+      - Before, we took the bus, but now we go to work by bike.
+    alt_fr:
+      - Avant, on prenait le bus, mais maintenant on va au travail à vélo.
+    explain: avant + a former habit → imparfait. nous prenons → pren- + -ions.
+
+  - id: impf-06
+    fr: Mes grands-parents {avaient|avoir} une petite maison au bord de la mer.
+    en:
+      - My grandparents had a little house by the sea.
+      - My grandparents had a small house at the seaside.
+    explain: A past state → imparfait. ils → -aient, which sounds like -ait.
+
+  - id: impf-07
+    fr: À cette époque, tu {connaissais|connaître} déjà Julien ?
+    en:
+      - At that time, did you already know Julien?
+      - Did you already know Julien back then?
+    register: informal
+    grammar: [questions]
+    explain: nous connaissons → connaiss- + -ais.
+
+  - id: impf-08
+    fr: Il {était|être} minuit et toutes les rues étaient vides.
+    en:
+      - It was midnight and all the streets were empty.
+    explain: Time and description in the past → imparfait. être → ét- + -ait.
+
+  - id: impf-09
+    fr: Vous {aviez|avoir} quel âge quand vous avez appris le français ?
+    en:
+      - How old were you when you learned French?
+      - How old were you when you learnt French?
+    alt_fr:
+      - Quel âge aviez-vous quand vous avez appris le français ?
+    grammar: [questions, passe-compose-avoir]
+    explain: Age in the past → imparfait. vous → -iez.
+
+  - id: impf-10
+    fr: Le samedi, mon père {lisait|lire} le journal pendant que nous jouions dans le jardin.
+    en:
+      - On Saturdays my father read the paper while we played in the garden.
+      - On Saturdays my dad used to read the newspaper while we played in the garden.
+    explain: le samedi means every Saturday, a habit → imparfait. nous lisons → lis- + -ait.
+
+  - id: impf-11
+    fr: Elle {voulait|vouloir} devenir médecin, mais finalement elle a choisi le droit.
+    en:
+      - She wanted to become a doctor, but in the end she chose law.
+      - She wanted to be a doctor, but she chose law in the end.
+    grammar: [passe-compose-avoir]
+    explain: A wish or state of mind in the past → imparfait. nous voulons → voul- + -ait.
+
+  - id: impf-12
+    fr: Quand nous étions étudiants, nous {sortions|sortir} tous les vendredis soirs.
+    en:
+      - When we were students, we went out every Friday night.
+      - When we were students, we used to go out every Friday evening.
+    explain: tous les vendredis shows a habit → imparfait. nous sortons → sort- + -ions.
+
+  - id: impf-13
+    fr: Il {pleuvait|pleuvoir} depuis trois jours et la rivière était très haute.
+    en:
+      - It had been raining for three days and the river was very high.
+    grammar: [depuis-pendant-il-y-a]
+    explain: An ongoing situation → imparfait. pleuvoir → il pleuvait. depuis + imparfait means "had been ...ing".
+
+  - id: impf-14
+    fr: Les enfants {dormaient|dormir} déjà quand leurs parents sont rentrés.
+    en:
+      - The children were already asleep when their parents came home.
+      - The kids were already sleeping when their parents got home.
+    grammar: [passe-compose-etre]
+    explain: An action already in progress → imparfait. nous dormons → dorm- + -aient.
+
+  - id: impf-15
+    fr: Tu {savais|savoir} que Léa parlait japonais ?
+    en:
+      - Did you know that Léa spoke Japanese?
+      - Did you know Léa spoke Japanese?
+    register: informal
+    grammar: [questions]
+    explain: Knowing is a state → imparfait. nous savons → sav- + -ais.
+
+  - id: impf-16
+    fr: Autrefois, on {faisait|faire} les courses au marché, il n'y avait pas de supermarché.
+    en:
+      - In the past, people did their shopping at the market, there was no supermarket.
+      - In the old days we did our shopping at the market, there weren't any supermarkets.
+    grammar: [negation]
+    explain: autrefois (in the past) signals old habits → imparfait. on → -ait.

@@ -11,5 +11,137 @@ rule: |
 
   - **Negative:** ne goes before the pronoun: je **ne** me lève **pas**.
   - **Passé composé:** reflexive verbs take être, and the participle agrees with the subject: elle **s'est levée**.
-# Drills come in batch 2 (plan step 9). Topic items can already be tagged with this point.
-items: []
+  - With a plural subject, se can also mean "each other": ils **s'aiment**.
+items:
+  - id: refl-01
+    fr: Je {me lève|se lever} à sept heures pendant la semaine.
+    en:
+      - I get up at seven during the week.
+      - I get up at seven on weekdays.
+    explain: se lever with je → me lève. The pronoun me matches je.
+
+  - id: refl-02
+    fr: Tu {te couches|se coucher} toujours très tard.
+    en:
+      - You always go to bed very late.
+    register: informal
+    explain: tu → te, and the -er ending for tu is -es.
+
+  - id: refl-03
+    fr: Mon père {se rase|se raser} tous les matins.
+    en:
+      - My father shaves every morning.
+      - My dad shaves every morning.
+    explain: il → se. Regular -er ending → rase.
+
+  - id: refl-04
+    fr: Nous {nous promenons|se promener} au parc le dimanche.
+    en:
+      - We go for a walk in the park on Sundays.
+      - We walk in the park on Sundays.
+    alt_fr:
+      - On se promène au parc le dimanche.
+    explain: nous → nous promenons. The pronoun repeats the subject.
+
+  - id: refl-05
+    fr: Vous {vous appelez|s'appeler} comment ?
+    en:
+      - What's your name?
+      - What is your name?
+    alt_fr:
+      - Comment vous appelez-vous ?
+      - Comment est-ce que vous vous appelez ?
+    register: formal
+    grammar: [questions]
+    explain: vous → vous appelez. appeler has one l with vous and two in je m'appelle.
+
+  - id: refl-06
+    fr: Mes enfants {s'habillent|s'habiller} seuls maintenant.
+    en:
+      - My children get dressed by themselves now.
+      - My kids dress themselves now.
+    explain: ils → se, which becomes s' before a vowel. The ending -ent is silent.
+
+  - id: refl-07
+    fr: Je {m'appelle|s'appeler} Claire et j'habite à Lyon depuis deux ans.
+    en:
+      - My name is Claire and I've lived in Lyon for two years.
+      - My name's Claire and I have been living in Lyon for two years.
+    grammar: [depuis-pendant-il-y-a]
+    explain: me → m' before a vowel. appeler doubles the l in je m'appelle.
+
+  - id: refl-08
+    fr: Le soir, elle {se repose|se reposer} un peu avant de préparer le dîner.
+    en:
+      - In the evening she rests a little before making dinner.
+      - In the evening she has a little rest before cooking dinner.
+    level: A2
+    explain: elle → se repose.
+
+  - id: refl-09
+    fr: Le dimanche, je {ne me lève pas|not + se lever} avant dix heures.
+    en:
+      - On Sundays I don't get up before ten.
+      - On Sundays I don't get up until ten.
+    grammar: [negation]
+    explain: ne goes before the reflexive pronoun, and pas after the verb.
+
+  - id: refl-10
+    fr: Pourquoi est-ce que tu {ne te reposes pas|not + se reposer} un peu ?
+    en:
+      - Why don't you rest a bit?
+      - Why don't you have a little rest?
+    register: informal
+    grammar: [negation, questions]
+    explain: ne + te + verb + pas.
+
+  - id: refl-11
+    fr: Ce matin, Sophie {s'est réveillée|se réveiller} très tôt.
+    en:
+      - This morning Sophie woke up very early.
+      - Sophie woke up very early this morning.
+    level: A2
+    grammar: [passe-compose-etre]
+    explain: Reflexive verbs take être in the passé composé. Sophie is feminine → réveillée.
+
+  - id: refl-12
+    fr: Hier soir, les enfants {se sont couchés|se coucher} à neuf heures parce qu'ils étaient fatigués.
+    en:
+      - Last night the children went to bed at nine because they were tired.
+      - The kids went to bed at nine last night because they were tired.
+    level: A2
+    grammar: [passe-compose-etre, imparfait]
+    explain: être + a participle that agrees with les enfants (masculine plural) → couchés.
+
+  - id: refl-13
+    fr: Paul {s'est douché|se doucher} et il est parti au travail sans prendre son petit déjeuner.
+    en:
+      - Paul had a shower and left for work without having breakfast.
+      - Paul showered and went to work without eating breakfast.
+    level: A2
+    grammar: [passe-compose-etre]
+    explain: se doucher takes être. Paul is masculine singular → douché, with no ending.
+
+  - id: refl-14
+    fr: Mes voisins {se disputent|se disputer} souvent, mais ils s'aiment beaucoup.
+    en:
+      - My neighbours often argue, but they love each other a lot.
+      - My neighbors argue a lot, but they really love each other.
+    level: A2
+    explain: ils → se. With a plural subject, se can mean "each other", as in ils s'aiment.
+
+  - id: refl-15
+    fr: Elle {s'intéresse|s'intéresser} beaucoup à l'histoire de France.
+    en:
+      - She is very interested in French history.
+      - She's really interested in the history of France.
+    level: A2
+    explain: s'intéresser à means to be interested in. elle → s' before a vowel.
+
+  - id: refl-16
+    fr: Vous {vous souvenez|se souvenir} de notre premier voyage en Italie ?
+    en:
+      - Do you remember our first trip to Italy?
+    level: A2
+    grammar: [questions]
+    explain: se souvenir de means to remember. It is conjugated like venir → vous vous souvenez.

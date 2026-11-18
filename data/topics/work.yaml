@@ -1,0 +1,124 @@
+topic: Work
+items:
+  - id: work-01
+    fr: Je travaille dans une banque depuis cinq ans.
+    en:
+      - I've worked in a bank for five years.
+      - I have been working at a bank for five years.
+    level: A1
+    grammar: [depuis-pendant-il-y-a]
+
+  - id: work-02
+    fr: Qu'est-ce que vous faites dans la vie ? Je suis infirmière.
+    en:
+      - What do you do for a living? I'm a nurse.
+      - What do you do? I am a nurse.
+    alt_fr:
+      - Qu'est-ce que vous faites dans la vie ? Je suis infirmier.
+    level: A1
+    register: formal
+    grammar: [questions]
+    notes: No article before a job after être → je suis infirmière, not je suis une infirmière.
+
+  - id: work-03
+    fr: Mon bureau est au troisième étage, à côté de la salle de réunion.
+    en:
+      - My office is on the third floor, next to the meeting room.
+    level: A1
+    grammar: [a-de-contractions, possessives]
+
+  - id: work-04
+    fr: J'ai une réunion importante à dix heures, je ne peux pas être en retard.
+    en:
+      - I have an important meeting at ten, I can't be late.
+      - I've got an important meeting at ten o'clock, I can't be late.
+    level: A1
+    grammar: [negation, adjectives]
+
+  - id: work-05
+    fr: Ma collègue est en congé maternité jusqu'en septembre.
+    en:
+      - My colleague is on maternity leave until September.
+    level: A2
+    grammar: [possessives]
+
+  - id: work-06
+    fr: Est-ce que je pourrais partir plus tôt vendredi ? J'ai un rendez-vous chez le dentiste.
+    en:
+      - Could I leave earlier on Friday? I have a dentist's appointment.
+      - Could I leave early on Friday? I've got an appointment at the dentist's.
+    level: A2
+    grammar: [conditional-politeness, comparatives]
+
+  - id: work-07
+    fr: Je vous envoie le rapport par e-mail avant ce soir.
+    en:
+      - I'll send you the report by email before tonight.
+      - I'm sending you the report by email before this evening.
+    level: A2
+    register: formal
+    grammar: [object-pronouns]
+
+  - id: work-08
+    fr: Mon patron m'a demandé de finir le projet avant la fin du mois.
+    en:
+      - My boss asked me to finish the project before the end of the month.
+    level: A2
+    grammar: [object-pronouns, passe-compose-avoir]
+
+  - id: work-09
+    fr: Avant, je prenais la voiture pour aller au travail, mais maintenant je prends le métro.
+    en:
+      - I used to drive to work, but now I take the metro.
+      - Before, I took the car to work, but now I take the underground.
+    level: A2
+    grammar: [imparfait]
+
+  - id: work-10
+    fr: Elle a trouvé un nouveau travail mieux payé, elle commencera le mois prochain.
+    en:
+      - She's found a new, better-paid job, she'll start next month.
+      - She found a new job that pays better, she starts next month.
+    level: A2
+    grammar: [futur-simple, comparatives]
+
+  - id: work-11
+    fr: L'entreprise où je travaille a trois cents employés.
+    en:
+      - The company I work for has three hundred employees.
+      - The company where I work has 300 employees.
+    level: A2
+    grammar: [relative-pronouns]
+
+  - id: work-12
+    fr: Excusez mon retard, il y avait beaucoup de circulation ce matin.
+    en:
+      - Sorry I'm late, there was a lot of traffic this morning.
+      - Excuse my lateness, there was a lot of traffic this morning.
+    level: A2
+    register: formal
+    grammar: [imparfait, imperative]
+
+  - id: work-13
+    fr: On fait une pause café ? Il est déjà onze heures.
+    en:
+      - Shall we have a coffee break? It's already eleven.
+      - Shall we take a coffee break? It's already eleven o'clock.
+    level: A1
+    grammar: [questions]
+
+  - id: work-14
+    fr: J'ai envoyé mon CV à plusieurs entreprises, mais je n'ai pas encore eu de réponse.
+    en:
+      - I've sent my CV to several companies, but I haven't had an answer yet.
+      - I sent my résumé to several companies, but I haven't heard back yet.
+    level: A2
+    grammar: [passe-compose-avoir, negation]
+
+  - id: work-15
+    fr: En août, le bureau est fermé pendant deux semaines.
+    en:
+      - In August the office is closed for two weeks.
+      - The office is closed for two weeks in August.
+    level: A1
+    grammar: [depuis-pendant-il-y-a]

@@ -1,0 +1,133 @@
+point: imparfait-vs-passe-compose
+title: Imparfait or passé composé
+level: A2
+rule: |
+  Both are past tenses, but they do different jobs.
+  - **Passé composé:** an event, a completed action. Something happened. *Il est sorti. J'ai mangé.*
+  - **Imparfait:** the background. What was going on, what things were like, what used to happen. *Il pleuvait. J'avais faim.*
+
+  A common pattern: the imparfait sets the scene and the passé composé interrupts it.
+  - Je **lisais** quand le téléphone **a sonné**. (I was reading when the phone rang.)
+
+  **Clue words:**
+  - Passé composé: hier, soudain, tout à coup, une fois, trois fois, ce jour-là, pendant + a set length of time.
+  - Imparfait: tous les jours, souvent, d'habitude, autrefois, quand j'étais enfant, pendant que.
+
+  The same verb can take either tense: elle **jouait** du piano tous les jours (a habit), but elle **a joué** du piano à Paris l'année dernière (one occasion).
+items:
+  - id: ipc-01
+    fr: Il {pleuvait|pleuvoir} quand Paul {est sorti|sortir} du bureau.
+    en:
+      - It was raining when Paul left the office.
+    explain: pleuvait is the background (imparfait). Paul leaving is the event (passé composé, with être).
+
+  - id: ipc-02
+    fr: Je {lisais|lire} tranquillement quand le téléphone {a sonné|sonner}.
+    en:
+      - I was reading quietly when the phone rang.
+      - I was quietly reading when the phone rang.
+    explain: An action in progress (imparfait) is interrupted by an event (passé composé).
+
+  - id: ipc-03
+    fr: Nous {regardions|regarder} un film quand nos amis {sont arrivés|arriver}.
+    en:
+      - We were watching a film when our friends arrived.
+      - We were watching a movie when our friends turned up.
+    alt_fr:
+      - On regardait un film quand nos amis sont arrivés.
+    explain: regardions is the ongoing background. sont arrivés is the event, and nos amis is masculine plural → arrivés.
+
+  - id: ipc-04
+    fr: Hier, Marc {a pris|prendre} le train de sept heures parce que sa voiture {était|être} en panne.
+    en:
+      - Yesterday Marc took the seven o'clock train because his car had broken down.
+      - Marc took the seven o'clock train yesterday because his car wasn't working.
+    explain: a pris is a completed event. était describes the situation at the time.
+
+  - id: ipc-05
+    fr: Quand elle était jeune, elle {jouait|jouer} du piano tous les jours.
+    en:
+      - When she was young, she played the piano every day.
+      - When she was young, she used to play the piano every day.
+    explain: tous les jours shows a habit → imparfait.
+
+  - id: ipc-06
+    fr: L'année dernière, elle {a joué|jouer} du piano devant cinq cents personnes.
+    en:
+      - Last year she played the piano in front of five hundred people.
+    explain: One specific occasion → passé composé. Compare elle jouait (a habit).
+
+  - id: ipc-07
+    fr: Il {faisait|faire} froid et il {neigeait|neiger}, alors les enfants {sont restés|rester} à la maison.
+    en:
+      - It was cold and snowing, so the children stayed at home.
+      - It was cold and it was snowing, so the kids stayed indoors.
+    explain: faisait and neigeait describe the weather (imparfait). sont restés is what happened next (passé composé).
+
+  - id: ipc-08
+    fr: Soudain, le chat {a sauté|sauter} sur la table.
+    en:
+      - Suddenly the cat jumped onto the table.
+      - All of a sudden the cat jumped on the table.
+    explain: soudain marks a sudden event → passé composé.
+
+  - id: ipc-09
+    fr: Pendant que je {faisais|faire} la cuisine, le téléphone {a sonné|sonner} trois fois.
+    en:
+      - While I was cooking, the phone rang three times.
+      - While I was making dinner, the phone rang three times.
+    explain: pendant que + an action in progress → imparfait. trois fois counts the events → passé composé.
+
+  - id: ipc-10
+    fr: Quand Julie {est arrivée|arriver} à l'hôtel, la réception {était|être} déjà fermée.
+    en:
+      - When Julie got to the hotel, reception was already closed.
+      - When Julie arrived at the hotel, the reception desk was already closed.
+    explain: est arrivée is the event (être, feminine → arrivée). était fermée is the state she found.
+
+  - id: ipc-11
+    fr: J'{avais|avoir} très faim, alors j'{ai mangé|manger} tout le gâteau.
+    en:
+      - I was very hungry, so I ate the whole cake.
+      - I was really hungry, so I ate all the cake.
+    explain: A feeling (imparfait), then what I did about it (passé composé).
+
+  - id: ipc-12
+    fr: D'habitude, il {se levait|se lever} à six heures, mais ce jour-là, il {s'est levé|se lever} à midi.
+    en:
+      - He usually got up at six, but that day he got up at noon.
+      - He used to get up at six, but that day he got up at midday.
+    grammar: [reflexive-verbs]
+    explain: d'habitude shows a habit (imparfait). ce jour-là is one occasion (passé composé, with être).
+
+  - id: ipc-13
+    fr: Le restaurant {était|être} complet, donc nous {avons mangé|manger} une pizza à la maison.
+    en:
+      - The restaurant was full, so we had a pizza at home.
+      - The restaurant was fully booked, so we ate pizza at home.
+    alt_fr:
+      - Le restaurant était complet, donc on a mangé une pizza à la maison.
+    explain: était describes the situation. avons mangé is what we did about it.
+
+  - id: ipc-14
+    fr: Ils {ont habité|habiter} à Paris pendant dix ans, puis ils sont partis à Nantes.
+    en:
+      - They lived in Paris for ten years, then they moved to Nantes.
+      - They lived in Paris for ten years and then left for Nantes.
+    grammar: [depuis-pendant-il-y-a]
+    explain: pendant dix ans gives a finished, measured period → passé composé, even though it lasted a long time.
+
+  - id: ipc-15
+    fr: Quand j'{ai ouvert|ouvrir} la porte, il y {avait|avoir} un paquet devant la maison.
+    en:
+      - When I opened the door, there was a parcel in front of the house.
+      - When I opened the door, there was a package outside the house.
+    explain: ai ouvert is the event (ouvrir → ouvert). il y avait describes what was there (imparfait).
+
+  - id: ipc-16
+    fr: Ma grand-mère me {racontait|raconter} souvent des histoires quand j'étais enfant.
+    en:
+      - My grandmother often told me stories when I was a child.
+      - My grandma used to tell me stories when I was little.
+    grammar: [object-pronouns]
+    explain: souvent shows a repeated past action → imparfait.

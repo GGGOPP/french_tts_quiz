@@ -1,0 +1,122 @@
+topic: Hobbies & free time
+items:
+  - id: hob-01
+    fr: Le week-end, j'aime faire du vélo à la campagne.
+    en:
+      - At the weekend I like cycling in the countryside.
+      - On weekends I like riding my bike in the country.
+    level: A1
+    grammar: [partitive]
+
+  - id: hob-02
+    fr: Je joue du piano depuis l'âge de huit ans.
+    en:
+      - I've played the piano since I was eight.
+      - I have been playing piano since the age of eight.
+    level: A1
+    grammar: [depuis-pendant-il-y-a, a-de-contractions]
+
+  - id: hob-03
+    fr: Mon frère joue au football tous les samedis avec ses amis.
+    en:
+      - My brother plays football every Saturday with his friends.
+      - My brother plays soccer with his friends every Saturday.
+    level: A1
+    grammar: [a-de-contractions, possessives]
+
+  - id: hob-04
+    fr: Qu'est-ce que tu fais pendant ton temps libre ?
+    en:
+      - What do you do in your free time?
+      - What do you do in your spare time?
+    level: A1
+    register: informal
+    grammar: [questions]
+
+  - id: hob-05
+    fr: J'adore lire, surtout les romans policiers.
+    en:
+      - I love reading, especially crime novels.
+      - I love to read, especially detective novels.
+    level: A1
+    grammar: [articles-gender]
+
+  - id: hob-06
+    fr: On va au cinéma ce soir ? Il y a un nouveau film français.
+    en:
+      - Shall we go to the cinema tonight? There's a new French film.
+      - Shall we go to the movies tonight? There's a new French movie.
+    level: A1
+    grammar: [questions, adjectives]
+
+  - id: hob-07
+    fr: Elle fait de la natation deux fois par semaine pour rester en forme.
+    en:
+      - She goes swimming twice a week to stay in shape.
+      - She swims twice a week to keep fit.
+    level: A1
+    grammar: [partitive]
+
+  - id: hob-08
+    fr: Quand j'étais jeune, je jouais de la guitare dans un groupe.
+    en:
+      - When I was young, I played guitar in a band.
+      - When I was young, I used to play the guitar in a band.
+    level: A2
+    grammar: [imparfait]
+
+  - id: hob-09
+    fr: J'ai commencé à faire du yoga il y a six mois, et je me sens beaucoup mieux.
+    en:
+      - I started doing yoga six months ago, and I feel much better.
+      - I took up yoga six months ago and I feel a lot better.
+    level: A2
+    grammar: [depuis-pendant-il-y-a, comparatives]
+
+  - id: hob-10
+    fr: Le livre que je lis en ce moment est un peu long, mais l'histoire est passionnante.
+    en:
+      - The book I'm reading at the moment is a bit long, but the story is gripping.
+      - The book that I'm reading right now is a little long, but the story is fascinating.
+    level: A2
+    grammar: [relative-pronouns]
+
+  - id: hob-11
+    fr: Mes amis font de la randonnée en montagne chaque été.
+    en:
+      - My friends go hiking in the mountains every summer.
+    level: A1
+    grammar: [partitive]
+
+  - id: hob-12
+    fr: Je préfère regarder les matchs au stade plutôt qu'à la télé.
+    en:
+      - I prefer watching matches at the stadium rather than on TV.
+      - I'd rather watch games at the stadium than on TV.
+    level: A2
+    grammar: [a-de-contractions]
+
+  - id: hob-13
+    fr: Si tu veux, je t'apprendrai à jouer aux échecs.
+    en:
+      - If you like, I'll teach you to play chess.
+      - If you want, I'll teach you how to play chess.
+    level: A2
+    register: informal
+    grammar: [futur-simple, object-pronouns]
+
+  - id: hob-14
+    fr: Ma grand-mère fait de la peinture, elle a déjà vendu plusieurs tableaux.
+    en:
+      - My grandmother paints, she has already sold several paintings.
+      - My grandma does painting, she's already sold several pictures.
+    level: A2
+    grammar: [partitive, passe-compose-avoir]
+
+  - id: hob-15
+    fr: Ce week-end, je vais visiter une exposition de photos avec ma cousine.
+    en:
+      - This weekend I'm going to visit a photo exhibition with my cousin.
+      - This weekend I'm going to see a photography exhibition with my cousin.
+    level: A1
+    grammar: [futur-proche]

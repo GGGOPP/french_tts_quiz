@@ -1,0 +1,132 @@
+point: comparatives
+title: Comparatives and superlatives
+level: A2
+rule: |
+  **Comparing adjectives and adverbs:**
+  - **plus** ... **que** (more ... than): Le train est **plus** rapide **que** le bus.
+  - **moins** ... **que** (less ... than): Lyon est **moins** grand **que** Paris.
+  - **aussi** ... **que** (as ... as): Elle est **aussi** grande **que** sa mère.
+
+  The adjective still agrees: Ma sœur est plus grand**e** que moi.
+
+  - **With nouns:** plus de, moins de, autant de: J'ai **plus de** travail **que** toi.
+  - **With verbs:** plus, moins, autant after the verb: Il travaille **autant que** moi.
+
+  **Superlative:** le, la, les + plus or moins + adjective: C'est **la plus** belle ville **de** France. After a superlative, "in" is **de**.
+
+  **Irregular:**
+  - bon → **meilleur** (better), **le meilleur** (the best). Never plus bon.
+  - bien → **mieux** (better), **le mieux** (the best). Never plus bien.
+
+  After que, use moi, toi, lui, elle, nous, vous, eux.
+items:
+  - id: comp-01
+    fr: Le train est {plus rapide|faster} que le bus, mais il coûte beaucoup plus cher.
+    en:
+      - The train is faster than the bus, but it costs much more.
+      - The train is quicker than the bus, but it's a lot more expensive.
+    explain: plus + adjective + que means more ... than.
+
+  - id: comp-02
+    fr: Ma sœur est {plus grande|taller} que moi, mais elle est plus jeune.
+    en:
+      - My sister is taller than me, but she's younger.
+      - My sister is taller than I am, but she is younger.
+    explain: plus grande que. The adjective agrees with ma sœur → grande.
+
+  - id: comp-03
+    fr: Ce restaurant est {moins cher|less expensive} que l'autre, et la cuisine est {meilleure|better}.
+    en:
+      - This restaurant is cheaper than the other one, and the food is better.
+      - This restaurant is less expensive than the other, and the cooking is better.
+    explain: moins cher que means less expensive than. bon → meilleur, and la cuisine is feminine → meilleure.
+
+  - id: comp-04
+    fr: Mon frère parle anglais {mieux|better} que moi.
+    en:
+      - My brother speaks English better than me.
+      - My brother speaks English better than I do.
+    explain: bien (well) → mieux (better). Never plus bien.
+
+  - id: comp-05
+    fr: Ton appartement est {aussi grand|as big} que le mien.
+    en:
+      - Your flat is as big as mine.
+      - Your apartment is as big as mine.
+    register: informal
+    explain: aussi + adjective + que means as ... as.
+
+  - id: comp-06
+    fr: Marseille est {la plus grande|the biggest} ville du sud de la France.
+    en:
+      - Marseille is the biggest city in the south of France.
+      - Marseille is the largest city in southern France.
+    explain: la plus + adjective. ville is feminine → la plus grande. After a superlative, "in" is de → du.
+
+  - id: comp-07
+    fr: C'est {le meilleur|the best} restaurant du quartier, il faut réserver longtemps à l'avance.
+    en:
+      - It's the best restaurant in the area, you have to book well in advance.
+      - It's the best restaurant in the neighbourhood, you need to book a long time ahead.
+    explain: bon → le meilleur. Never le plus bon.
+
+  - id: comp-08
+    fr: Cette année, j'ai {moins de|less} vacances que l'année dernière.
+    en:
+      - This year I have less holiday than last year.
+      - This year I've got fewer days off than last year.
+    explain: With a noun → moins de, with no article.
+
+  - id: comp-09
+    fr: Il y a {plus de|more} touristes en août qu'en mai.
+    en:
+      - There are more tourists in August than in May.
+    explain: plus de + a noun. que becomes qu' before a vowel.
+
+  - id: comp-10
+    fr: Je travaille {autant que|as much as} mon collègue, mais je gagne moins.
+    en:
+      - I work as much as my colleague, but I earn less.
+    explain: With a verb, "as much as" is autant que, not aussi.
+
+  - id: comp-11
+    fr: Elle court {plus vite|faster} que tous les autres enfants de sa classe.
+    en:
+      - She runs faster than all the other children in her class.
+      - She runs faster than all the other kids in her class.
+    explain: vite is an adverb → plus vite que.
+
+  - id: comp-12
+    fr: Ce sont {les meilleurs|the best} croissants de la ville.
+    en:
+      - These are the best croissants in town.
+      - They're the best croissants in the city.
+    explain: Masculine plural → les meilleurs.
+
+  - id: comp-13
+    fr: Février est {le plus court|the shortest} mois de l'année.
+    en:
+      - February is the shortest month of the year.
+    explain: le plus + adjective. "Of the year" → de l'année.
+
+  - id: comp-14
+    fr: Aujourd'hui, je me sens {mieux|better} qu'hier, merci.
+    en:
+      - Today I feel better than yesterday, thanks.
+      - I'm feeling better today than yesterday, thank you.
+    grammar: [reflexive-verbs]
+    explain: Feeling well is bien → mieux. Meilleur would be wrong here.
+
+  - id: comp-15
+    fr: Les chambres de cet hôtel sont {moins confortables|less comfortable} que sur les photos.
+    en:
+      - The rooms in this hotel are less comfortable than in the photos.
+      - This hotel's rooms are less comfortable than in the pictures.
+    explain: moins + adjective + que. The adjective agrees with les chambres → confortables, with a silent -s.
+
+  - id: comp-16
+    fr: Ma grand-mère cuisine {le mieux|the best} de toute la famille.
+    en:
+      - My grandmother cooks the best in the whole family.
+      - My grandma is the best cook in the whole family.
+    explain: With a verb, "the best" is le mieux (from bien).

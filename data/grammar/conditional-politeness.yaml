@@ -1,5 +1,5 @@
 point: conditional-politeness
-title: Polite requests with je voudrais
+title: Polite requests and advice (conditional)
 level: A1
 rule: |
   **Je voudrais** (I would like) is the polite way to ask for something. It is the conditional of vouloir.
@@ -10,6 +10,148 @@ rule: |
   **Other polite forms:**
   - **j'aimerais**: I'd like
   - **vous pourriez** / **pourriez-vous**: could you
+  - **vous auriez** ... ?: would you have ...?
   - **je veux bien**: yes please, I'd like that
-# Drills come in batch 2 (plan step 9). Topic items can already be tagged with this point.
-items: []
+
+  **Suggestions and advice:**
+  - **on pourrait**: we could
+  - **tu devrais** / **vous devriez**: you should
+  - **il faudrait**: we should, it would be best to
+
+  **Forming it:** the stem of the futur simple plus the imparfait endings:
+  je voudr**ais**, tu pourr**ais**, il aimer**ait**, nous voudr**ions**, vous pourr**iez**, ils voudr**aient**.
+items:
+  - id: cond-01
+    fr: Je {voudrais|vouloir (polite)} un croissant et un café, s'il vous plaît.
+    en:
+      - I'd like a croissant and a coffee, please.
+      - I would like a croissant and a coffee, please.
+    register: formal
+    explain: je voudrais is the conditional of vouloir, the polite way to ask for something.
+
+  - id: cond-02
+    fr: Bonjour, je {voudrais|vouloir (polite)} réserver une table pour quatre personnes ce soir.
+    en:
+      - Hello, I'd like to book a table for four tonight.
+      - Hello, I would like to reserve a table for four people this evening.
+    register: formal
+    explain: je voudrais + an infinitive means I'd like to.
+
+  - id: cond-03
+    fr: "{Pourriez-vous|pouvoir (vous, polite)} parler un peu plus lentement, s'il vous plaît ?"
+    en:
+      - Could you speak a bit more slowly, please?
+      - Could you speak a little slower, please?
+    alt_fr:
+      - Vous pourriez parler un peu plus lentement, s'il vous plaît ?
+    level: A2
+    register: formal
+    grammar: [comparatives]
+    explain: pourriez is the conditional of pouvoir. With inversion → pourriez-vous.
+
+  - id: cond-04
+    fr: Est-ce que tu {pourrais|pouvoir (polite)} m'aider avec mes valises ?
+    en:
+      - Could you help me with my suitcases?
+      - Could you help me with my bags?
+    level: A2
+    register: informal
+    explain: tu pourrais means could you. The conditional of pouvoir has the stem pourr- and the ending -ais.
+
+  - id: cond-05
+    fr: J'{aimerais|aimer (polite)} visiter le château cet après-midi, si c'est possible.
+    en:
+      - I'd like to visit the castle this afternoon, if possible.
+      - I would like to visit the castle this afternoon, if it's possible.
+    explain: j'aimerais means I'd like. The conditional of aimer is the infinitive + -ais.
+
+  - id: cond-06
+    fr: Nous {voudrions|vouloir (polite)} deux chambres pour trois nuits, s'il vous plaît.
+    en:
+      - We'd like two rooms for three nights, please.
+      - We would like two rooms for three nights, please.
+    alt_fr:
+      - On voudrait deux chambres pour trois nuits, s'il vous plaît.
+    level: A2
+    register: formal
+    explain: nous → voudrions. The conditional endings are -ais, -ais, -ait, -ions, -iez, -aient.
+
+  - id: cond-07
+    fr: Tu veux du thé ? Oui, je {veux bien|yes please}, merci.
+    en:
+      - Do you want some tea? Yes please, thanks.
+      - Would you like some tea? Yes, I'd love some, thank you.
+    register: informal
+    explain: je veux bien means yes please, I'd like that. It is softer than je veux.
+
+  - id: cond-08
+    fr: Excusez-moi, vous {pourriez|pouvoir (polite)} me dire où est la gare ?
+    en:
+      - Excuse me, could you tell me where the station is?
+    alt_fr:
+      - Excusez-moi, pourriez-vous me dire où est la gare ?
+    level: A2
+    register: formal
+    explain: vous pourriez means could you. It is more polite than vous pouvez.
+
+  - id: cond-09
+    fr: J'{aimerais|aimer (polite)} essayer cette veste en taille quarante.
+    en:
+      - I'd like to try on this jacket in a size forty.
+      - I would like to try this jacket in size 40.
+    explain: j'aimerais + an infinitive means I'd like to.
+
+  - id: cond-10
+    fr: Est-ce que vous {auriez|avoir (polite)} une chambre libre pour ce soir ?
+    en:
+      - Would you have a free room for tonight?
+      - Do you have a room available tonight?
+    alt_fr:
+      - Vous auriez une chambre libre pour ce soir ?
+    level: A2
+    register: formal
+    explain: vous auriez is the conditional of avoir, with the stem aur-. It softens avez-vous.
+
+  - id: cond-11
+    fr: Mes parents {voudraient|vouloir (polite)} une table près de la fenêtre.
+    en:
+      - My parents would like a table near the window.
+      - My parents would like a table by the window.
+    level: A2
+    explain: ils → voudraient. The ending -aient is pronounced like -ait.
+
+  - id: cond-12
+    fr: Je {voudrais|vouloir (polite)} savoir à quelle heure le musée ferme le dimanche.
+    en:
+      - I'd like to know what time the museum closes on Sundays.
+      - I would like to know when the museum closes on Sunday.
+    explain: je voudrais savoir (I'd like to know) is a polite way to ask a question.
+
+  - id: cond-13
+    fr: On {pourrait|pouvoir (suggestion)} aller au restaurant ce soir, qu'est-ce que tu en penses ?
+    en:
+      - We could go to a restaurant tonight, what do you think?
+      - We could eat out this evening, what do you think?
+    alt_fr:
+      - Nous pourrions aller au restaurant ce soir, qu'est-ce que tu en penses ?
+    level: A2
+    register: informal
+    explain: on pourrait means we could. The conditional makes a soft suggestion.
+
+  - id: cond-14
+    fr: Tu {devrais|devoir (advice)} te reposer un peu, tu travailles trop.
+    en:
+      - You should rest a little, you work too much.
+      - You should get some rest, you're working too hard.
+    level: A2
+    register: informal
+    grammar: [reflexive-verbs]
+    explain: tu devrais means you should. The conditional of devoir gives advice.
+
+  - id: cond-15
+    fr: Il {faudrait|falloir} réserver avant vendredi, parce que le restaurant est souvent complet.
+    en:
+      - We should book before Friday, because the restaurant is often full.
+      - It would be best to book before Friday, because the restaurant is often fully booked.
+    level: A2
+    explain: il faudrait is the conditional of il faut. It means we should, or it would be best to.
