@@ -192,13 +192,13 @@ Status key: `[not started]` · `[in progress]` · `[done]`. Each step is committ
    - **Grammar:** the three stubs now have drills (`reflexive-verbs`, `imperative`, `conditional-politeness`, the last retitled "Polite requests and advice" with on pourrait / tu devrais / il faudrait). New points: `imparfait`, `imparfait-vs-passe-compose`, `object-pronouns`, `y-en`, `futur-simple`, `comparatives`, `relative-pronouns`, `depuis-pendant-il-y-a`. That's 175 drills, 15–16 per point.
    - **Topics:** 106 sentences in `travel`, `health`, `work`, `weather`, `hobbies`, `family` and `appointments`.
    - **Dictée:** the imparfait's -ais/-ait/-aient sound alike, so plural subjects are audible (mes grands-parents avaient, ils_avaient). Past participles after je/nous are avoided as before, using names or plural nouns instead.
-9b. `[in progress]` **Batch 3 (B1):** a small batch of high-value B1 points, agreed with the user after batch 1.
+9b. `[done]` **Batch 3 (B1):** a small batch of high-value B1 points, agreed with the user after batch 1.
    - **Points:** the subjunctive after il faut que / vouloir que; si + imparfait with the conditional; the plus-que-parfait; dont and ce qui / ce que; double pronouns (je le lui ai donné); the gérondif.
    - **Format change:** add `B1` to `LEVELS` in `data.py`, `data/README.md` and the level filter (step 19).
    - **Dictée:** subjunctive -er forms sound like the present (qu'il parle), and the conditional je -rais sounds close to the future je -rai. These are fine when the grammar decides, as with si + imparfait.
    - **Review:** the user reviews it on the proofreading page.
 
-   *Drafted (awaiting the user's review):*
+   *Result (reviewed by the user on the batch-3 proofreading page; no changes):*
    - **Totals:** 687 items (471 cloze; A1 294, A2 297, B1 96), all valid. B1 drills average 12.6 words.
    - **Grammar:** `subjunctive`, `si-clauses` (with a few si + present contrasts), `plus-que-parfait`, `dont-ce-qui-ce-que` (with ce dont), `double-pronouns` (with positive and negative imperatives), `gerondif`. 16 drills each.
    - **Dictée:** the subjunctive drills mostly use forms you can hear (fasse, vienne, partions, attendiez). Plural possessives you can't hear (leur voyage / leurs voyages) were reworded.
