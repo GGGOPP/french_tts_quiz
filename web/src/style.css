@@ -448,6 +448,190 @@ input[type='radio'] {
   color: var(--tone);
 }
 
+/* ---------- Cloze ---------- */
+.cloze-sentence {
+  margin: 0;
+  line-height: 2;
+}
+
+/* A blank in the sentence: an underlined box that grows as you type (width set in cloze.ts). */
+.blank {
+  max-width: 100%;
+  font: inherit;
+  line-height: 1.3;
+  padding: 0.05em 0.25em;
+  border: none;
+  border-bottom: 2px solid var(--border-strong);
+  border-radius: 0.3rem 0.3rem 0 0;
+  background: var(--accent-soft);
+  color: var(--fg);
+  text-align: center;
+}
+
+.blank:focus {
+  border-bottom-color: var(--accent);
+}
+
+.blank:read-only {
+  color: var(--muted);
+}
+
+.blank[data-verdict='correct'] {
+  border-bottom-color: var(--right);
+}
+
+.blank[data-verdict='accent'] {
+  border-bottom-color: var(--warn);
+}
+
+.blank[data-verdict='wrong'],
+.blank[data-verdict='empty'] {
+  border-bottom-color: var(--wrong);
+}
+
+/* The box and the first word of its hint stay on one line (see cloze.ts). */
+.blank-wrap {
+  white-space: nowrap;
+}
+
+.blank-hint {
+  font-size: 0.8em;
+  color: var(--muted);
+}
+
+/* The sentence in the feedback, each blank marked. */
+.feedback .cloze-result {
+  font-size: 1.15rem;
+}
+
+.blank-mark {
+  font-weight: 600;
+}
+
+.blank-mark.correct,
+.blank-mark ins {
+  color: var(--right);
+  text-decoration: none;
+}
+
+/* A correction is underlined, so a missed blank stands apart from a right one. */
+.blank-mark:not(.correct) ins {
+  text-decoration: underline 2px var(--wrong);
+  text-underline-offset: 0.2em;
+}
+
+.blank-mark.accent ins {
+  text-decoration-color: var(--warn);
+}
+
+.blank-mark del {
+  color: var(--wrong);
+  font-weight: 400;
+  text-decoration-thickness: 2px;
+}
+
+.blank-mark.accent del {
+  color: var(--warn);
+}
+
+.feedback .translation,
+.feedback .also {
+  color: var(--muted);
+}
+
+/* ---------- Rule cards ---------- */
+.rule-card {
+  margin-top: 0.75rem;
+  border-top: 1px solid color-mix(in srgb, var(--tone, var(--border)) 35%, transparent);
+  padding-top: 0.5rem;
+}
+
+.rule-card summary {
+  min-height: 2.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Keep the disclosure triangle, which display: flex would drop in Safari. */
+.rule-card summary::before {
+  content: '▸';
+  flex: none;
+  color: var(--muted);
+  transition: transform 0.15s;
+}
+
+.rule-card[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.rule-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.level {
+  flex: none;
+  padding: 0 0.4em;
+  border: 1px solid var(--border-strong);
+  border-radius: 0.3rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.rule {
+  font-size: 0.95rem;
+}
+
+.rule p,
+.rule ul,
+.rule ol {
+  margin: 0.5rem 0;
+}
+
+.rule ul,
+.rule ol {
+  padding-left: 1.25rem;
+}
+
+.rule li + li {
+  margin-top: 0.2rem;
+}
+
+/* Wide tables scroll sideways inside the card rather than widening the page. */
+.table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 0.5rem 0;
+}
+
+.rule table {
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  overflow-wrap: normal;
+}
+
+.rule th,
+.rule td {
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.rule thead th {
+  background: color-mix(in srgb, var(--fg) 6%, transparent);
+}
+
+.rule tbody th {
+  font-weight: 600;
+  color: var(--muted);
+}
+
 .keys {
   margin: 0;
   font-size: 0.85rem;

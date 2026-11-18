@@ -263,7 +263,27 @@ Status key: `[not started]` · `[in progress]` · `[done]`. Each step is committ
     - **`accentbar.ts`:** `attachAccentBar` now takes several inputs and types into the one focused last. It ignores read-only inputs, so feedback can't be edited.
     - **`main.ts`:** loads the bank and shows its counts until the start screen exists.
     - **Checks:** 121 Vitest tests pass (36 new: parser, real-file integrity, card ids, outcomes, replay keys, keys help, tone), and `npm run build` is clean. In Chromium via Playwright, with throwaway mode modules: a dictée card (autoplay, ↓ slow then ↑ normal, Correct), a 2-blank cloze (no audio while asking, Enter to the next blank, the bar typing into blank 2, the clip played with the feedback), an async-graded card ("Checking…", a second Enter ignored), a 3-blank don't-know by Enter, an accent-only answer → amber "Check the accents", Quit, and the right `record` calls and `onFinish` results. No console errors and no horizontal scroll at 400 px, in light and dark. At 400×440 the feedback panel runs below the fold, so the page scrolls; that's for step 20.
-16. `[not started]` Cloze mode (text + hint → type the form → explain + rule card + audio).
+16. `[done]` Cloze mode (text + hint → type the form → explain + rule card + audio).
+    *Result:*
+    - **`modes/cloze.ts`:** `createClozeMode(grammarPoints)` returns the `ModeModule`. The instruction is "Complete the sentence", and audio comes with the feedback only.
+    - **Asking:** the blanks are inputs inside the sentence, each followed by its hint in brackets, e.g. `(aller)`. They start 5.5ch wide and grow as you type, so their size doesn't give away the answer's length. The box and the hint's first word never wrap apart. A phone keyboard shows "next" on the earlier blanks and "go" on the last. Each box has an `aria-label` like "Blank 1 of 2, hint: petit".
+    - **`gradeCloze`:** each blank goes through `compare()`. The marks are `correct`, `accent`, `wrong`, or `empty` (nothing typed). The card is right only if every blank is right. It's `accent` if the rest are right and at least one blank is off only by its accents. Otherwise it's wrong, and with nothing typed anywhere it's don't-know.
+    - **Feedback:**
+      - The sentence again with each blank marked: right answers in green; otherwise what you typed struck through, then the answer underlined in red (amber for accents).
+      - "Also accepted" lists a missed blank's other answers.
+      - The English, then `explain`.
+      - The grammar point's rule card, open after a wrong answer or don't-know and closed after a right answer or accent-only mistake.
+      - The boxes themselves get green, amber or red underlines.
+    - **`markdown.ts`:** a small renderer for rule cards. It handles paragraphs (a single newline is a line break, as the rules are written), `-` and numbered lists, pipe tables, `**bold**` and `*italic*`. Underscores are left alone because the rules use them for liaisons (`ils_avaient`). Text is parsed into blocks first, which is pure and tested, then built with DOM calls, never `innerHTML`. In a table whose top-left cell is empty, the first column becomes row headers. Tables sit in a wrapper that scrolls sideways on narrow screens.
+    - **`rules.ts`:** `ruleCard(point, open)` builds a `<details>` titled "Rule: …" with a level badge. Step 19's rule browser and step 25's summary links can reuse it.
+    - **`main.ts`:** until the start screen exists (step 19), the placeholder page has a "Try" button for each built mode, which runs 10 random cards and then shows the score.
+    - **Checks:**
+      - 173 Vitest tests pass (52 new), including every real drill graded right with its own answers (also with curly apostrophes and capitals) and wrong with junk, and all 29 real rule cards parsing with no `*` or `|` left and even table rows. `npm run build` is clean.
+      - In Chromium via Playwright:
+        - a random 10-card session (right, wrong, don't-know) with the clip hidden while asking and played with the feedback;
+        - chosen cards: 2 blanks with an alternative answer, 3 blanks with Enter moving between them, the accent bar typing into the focused blank, an accent-only miss (amber, rule closed), and a table rule card.
+      - All 471 drills render at 400 px with their longest answers typed, with no overflow and every hint beside its box. All 29 rule cards open at 400 px with no page scroll; the widest table scrolls inside its card.
+      - Light and dark at 400 px and 1280 px, with no console errors.
 17. `[not started]` Dictée mode (audio → type the French → word diff + English).
 18. `[not started]` Listen→meaning and English→French modes, with local matching and the self-mark fallback (the LLM is wired in at step 24).
 19. `[not started]` Start screen: pick the mode, then filter by topic, grammar point or level (A1/A2/B1), choose the question count, plus custom lists (ported from `lists.ts`). Rule-card browser screen.
