@@ -383,7 +383,12 @@ Status key: `[not started]` · `[in progress]` · `[done]`. Each step is committ
         - Practise from the rule browser → summary with "Back to rules" → `#rules`, then Back → the start screen.
       - At 400×440: three wrong subjunctive drills, each with Next at the top of the screen and the verdict and sentence below it, and each new card starting at the top. At 400×800 a short feedback doesn't scroll.
       - Light and dark at 400 px and 1280 px, with no horizontal scroll and no console errors or warnings.
-21. `[not started]` Deploy workflow → GitHub Pages. **This uses a different GitHub account from the Greek app.**
+21. `[in progress]` Deploy workflow → GitHub Pages. **This uses a different GitHub account from the Greek app.**
+    *Progress:*
+    - **Account:** GGGOPP (given by the user). The Greek repo pushes over HTTPS with Git Credential Manager (the system `credential.helper=manager`) and there are no SSH keys, so this repo uses HTTPS too: `origin` = `https://github.com/GGGOPP/french_tts_quiz.git`, with the repo-local `credential.username=GGGOPP` so GCM uses that account's token and not the Greek one. The README lists the repo-local settings a fresh clone needs.
+    - **Workflow:** `.github/workflows/deploy.yml` is the Greek one unchanged: on a push to `main` it runs `npm ci`, `npm test`, `npm run build -- --base=/<repo name>/`, then uploads `web/dist` and deploys it to Pages.
+    - **Checked locally:** a build with `--base=/french_tts_quiz/` served by `vite preview` loads the app, `items.json`, the favicon and both clips under the sub-path, with no failed requests. (In Git Bash, `--base=/x/` is rewritten into a Windows path; run it from PowerShell or with `MSYS_NO_PATHCONV=1`.)
+    - **Waiting for the checkpoint below:** the repo didn't exist yet on GitHub.
     - The repo gets a local git identity (`git config user.name` / `user.email` for that account, not the global one).
     - It pushes through either an SSH host alias (e.g. `github-fr` in `~/.ssh/config` with that account's key) or HTTPS with `credential.username` set per repo, so Git Credential Manager keeps the two accounts apart.
     - The user gives the account name at this step. Nothing about the other account is assumed beforehand.

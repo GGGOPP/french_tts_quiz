@@ -19,6 +19,18 @@ All audio is generated ahead of time by a Python pipeline (edge-tts) and served 
 | `pipeline/` | Python (uv) build step: TTS → normal and slow MP3s + `items.json`, plus a Whisper QA check |
 | `web/` | Vite + TypeScript static app, deployed to GitHub Pages |
 
+## Deployment
+
+`.github/workflows/deploy.yml` runs the web tests, builds `web/` and publishes it to GitHub Pages on every push to `main`. Vite's base is the repo's name, so the site is served at `https://gggopp.github.io/<repo>/`. One-time setup in the repo: Settings → Pages → Source: **GitHub Actions**.
+
+This repo belongs to the **GGGOPP** account, not the machine's global git account. A fresh clone needs the repo-local settings again:
+
+```sh
+git config user.name GGGOPP
+git config user.email 357542562+GGGOPP@users.noreply.github.com
+git config credential.username GGGOPP   # Git Credential Manager picks this account's token
+```
+
 ## Status
 
-Scaffolding. See `.ai/PLAN.md`.
+Core app done (cloze, dictée, meaning and production modes, start screen, summary); LLM grading, learn mode and numbers to come. See `.ai/PLAN.md`.
