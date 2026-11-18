@@ -332,7 +332,38 @@ Status key: `[not started]` · `[in progress]` · `[done]`. Each step is committ
         - Meaning: an exact match, a typo (wokring → "Spelled: working"), a self-mark with Enter blocked and then Y, N to change it, and the button, plus don't-know and the score.
         - Production: exact and alternative answers, an accent-only miss (amber, with the diff), and a near miss and a far-off answer going to self-marking. The register tag shows, and no clip plays while asking; it plays with the feedback.
         - 400×800 light and dark, plus 400×440 and 1280×800, with no horizontal scroll and no console errors.
-19. `[not started]` Start screen: pick the mode, then filter by topic, grammar point or level (A1/A2/B1), choose the question count, plus custom lists (ported from `lists.ts`). Rule-card browser screen.
+19. `[done]` Start screen: pick the mode, then filter by topic, grammar point or level (A1/A2/B1), choose the question count, plus custom lists (ported from `lists.ts`). Rule-card browser screen.
+    *Result:*
+    - **`start.ts`:** four sections:
+      - **Exercise:** the four modes as cards (2 × 2 on a phone, one row from 36rem), each with a one-line description.
+      - **Sentences:** a switch between By topic, By grammar and Custom list. Level pills (A1/A2/B1) narrow topic and grammar choices, but not a hand-picked list. Each topic and point shows its count for the current mode and levels, dimmed when it has none.
+      - **Questions:** 10 / 20 / All / Other.
+      - **Footer:** a sticky summary ("10 questions from 169 sentences. Grammar cloze.", or why Start is off) and Start.
+    - **Grammar points are grouped by level,** with "Tick all A1" toggles. **What a point selects depends on the mode** (`practisesPoint`): in cloze, only that point's own drills, since the blank tests that point. In the other modes, every sentence tagged with it, including topic sentences. The hint under the switch says which.
+    - **Cloze has no topic sentences,** so By topic is off in cloze. Switching to cloze moves a topic choice to By grammar. A custom list in cloze skips sentences without blanks, and the summary says how many it skipped.
+    - **Custom lists hold item ids, so one list works in every mode.** The picker groups all 687 items by topic and then by grammar point, in collapsed `<details>` groups showing "n ticked", inside their own scroll box.
+      - **Search** (`foldForSearch`) ignores accents, case, œ/æ, curly apostrophes and punctuation, and matches the French, `altFr` and English. A search opens the groups that have matches and closes them again when it's cleared.
+      - **Ported from the Greek app:** Tick shown, Ticked only, save/load/delete by name, "Changed since saved", and Get link (`?list=`, which is removed from the address bar once read, with a notice about ids it didn't find).
+    - **`selection.ts`:** `QuestionCount` and its parsing, `selectedItems`, `topicCounts` / `pointCounts`, `shuffle`, `pickCards` and `pointDrills`.
+    - **`storage.ts`:** `french-quiz:v1:start` holds the last choice (mode, source, levels, topics, points, items, count). Ids no longer in the bank are dropped on load, and if none are left, it falls back to all of them. `french-quiz:v1:lists` is an array of `{name, ids}`, so any name is safe. The default is grammar cloze with everything ticked and 10 questions.
+    - **Rule browser (`renderRules`):** the 29 rule cards grouped by level, all closed, with Open all / Close all. Each card has a "Practise (n drills)" button, which starts a cloze session on that point using the last question count and returns to the browser afterwards.
+      - It lives at `#rules`, with its own history entry, so the phone's Back button returns to the start screen. Opening `#rules` directly works, and its Back button then replaces the entry.
+    - **Ending a session:** until step 20's summary screen, finishing returns to the start screen with "Last session: 7 ✓ 3 ✗", or to the rule browser if the session started there.
+    - **Stats badges on topics and points** (the Greek app's per-category %) are left to step 25, together with the stats port.
+    - **Checks:**
+      - 290 Vitest tests pass (33 new), and `npm run build` is clean. The new tests cover:
+        - selection by topic, grammar and list in each mode;
+        - counts that agree with `selectedItems` for every point and topic in the real bank, in every mode and level mix;
+        - `pickCards`, `pointDrills`, `initialChoice`, `summaryText`;
+        - list links, with every real id link-safe;
+        - search, with every real item found by its own French and English;
+        - storage round-trips and malformed data.
+      - In Chromium via Playwright at 400 px:
+        - the mode and source switches, the levels, Select none, Tick all A1, and "Other" with 0 (Start off) and 1 (Enter starts);
+        - a search for "s’il vous plait" (19 matches, groups opened), Tick shown, saving "Politesse", Get link, and cloze skipping 13 of the 19;
+        - starting a dictée session, Quit restoring every choice, and finishing a 1-question session showing the score;
+        - `?list=` with an unknown id, the rule browser (Practise → Quit → back to the rules, its Back button, and the browser's back/forward), and opening `#rules` directly.
+      - Light and dark at 400 px and 1280 px, with no horizontal scroll and no console errors or warnings.
 20. `[not started]` Feedback, summary and retry-missed (ported), plus responsive styling checked at 400px and on desktop, in light and dark.
 21. `[not started]` Deploy workflow → GitHub Pages. **This uses a different GitHub account from the Greek app.**
     - The repo gets a local git identity (`git config user.name` / `user.email` for that account, not the global one).

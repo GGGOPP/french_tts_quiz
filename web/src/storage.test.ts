@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { createStore, guardedStorage, isRecord, KEY_PREFIX, validEntries } from './storage'
+import { createStore, guardedStorage, isRecord, KEY_PREFIX, toStartChoice, validEntries, type StartChoice } from './storage'
 
 /** An in-memory stand-in for localStorage. */
 class FakeStorage {
@@ -145,5 +145,81 @@ describe('when storage misbehaves', () => {
 
     mixed.record('good', true, 9) // saving rewrites the cleaned-up map
     expect(JSON.parse(storage.getItem(STATS_KEY)!)).toEqual({ good: { seen: 3, correct: 2, lastSeen: 9 } })
+  })
+})
+
+const CHOICE: StartChoice = {
+  mode: 'dictee',
+  source: 'grammar',
+  levels: ['A1', 'B1'],
+  topics: ['restaurant'],
+  points: ['negation', 'subjunctive'],
+  items: ['resto-01'],
+  count: 15,
+}
+
+describe('start choice', () => {
+  it('round-trips, and is undefined when never saved', () => {
+    const storage = new FakeStorage()
+    expect(createStore(() => storage).startChoice()).toBeUndefined()
+    createStore(() => storage).saveStartChoice(CHOICE)
+    expect(createStore(() => storage).startChoice()).toEqual(CHOICE)
+    createStore(() => storage).saveStartChoice({ ...CHOICE, count: 'all' })
+    expect(createStore(() => storage).startChoice()?.count).toBe('all')
+  })
+
+  it('rejects a malformed choice and drops unknown levels', () => {
+    expect(toStartChoice({ ...CHOICE, mode: 'quiz' })).toBeUndefined()
+    expect(toStartChoice({ ...CHOICE, source: 'learn' })).toBeUndefined()
+    expect(toStartChoice({ ...CHOICE, count: 0 })).toBeUndefined()
+    expect(toStartChoice({ ...CHOICE, topics: 'restaurant' })).toBeUndefined()
+    expect(toStartChoice({ ...CHOICE, items: undefined })).toBeUndefined()
+    expect(toStartChoice(null)).toBeUndefined()
+    expect(toStartChoice({ ...CHOICE, levels: ['A1', 'C2', 'B1'] })?.levels).toEqual(['A1', 'B1'])
+  })
+
+  it('reads corrupt JSON as no choice', () => {
+    const storage = new FakeStorage()
+    storage.setItem(`${KEY_PREFIX}start`, '{oops')
+    expect(createStore(() => storage).startChoice()).toBeUndefined()
+  })
+})
+
+describe('saved lists', () => {
+  it('saves, replaces by name, sorts and deletes', () => {
+    const storage = new FakeStorage()
+    const store = createStore(() => storage)
+    expect(store.savedLists()).toEqual([])
+    store.saveList('Verbs 10', ['pce-01'])
+    store.saveList('verbs 2', ['pce-02'])
+    store.saveList('Café', ['resto-01', 'resto-02'])
+    store.saveList('Verbs 10', ['pce-03'])
+    const again = createStore(() => storage)
+    expect(again.savedLists()).toEqual([
+      { name: 'Café', ids: ['resto-01', 'resto-02'] },
+      { name: 'verbs 2', ids: ['pce-02'] },
+      { name: 'Verbs 10', ids: ['pce-03'] },
+    ])
+    again.deleteList('verbs 2')
+    again.deleteList('missing')
+    expect(createStore(() => storage).savedLists().map((l) => l.name)).toEqual(['Café', 'Verbs 10'])
+  })
+
+  it('keeps names that look like object keys, and skips malformed lists', () => {
+    const storage = new FakeStorage()
+    storage.setItem(
+      `${KEY_PREFIX}lists`,
+      JSON.stringify([{ name: '__proto__', ids: ['a'] }, { name: '', ids: [] }, { name: 'x' }, 'junk', { name: 'ok', ids: ['b'] }]),
+    )
+    expect(createStore(() => storage).savedLists()).toEqual([
+      { name: '__proto__', ids: ['a'] },
+      { name: 'ok', ids: ['b'] },
+    ])
+  })
+
+  it('keeps working in memory when storage is broken', () => {
+    const store = createStore(() => broken)
+    store.saveList('A', ['x'])
+    expect(store.savedLists()).toEqual([{ name: 'A', ids: ['x'] }])
   })
 })

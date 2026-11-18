@@ -207,6 +207,485 @@ input[type='radio'] {
   border: 0;
 }
 
+/* ---------- Start screen ---------- */
+.start-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.start-head button {
+  flex: none;
+  min-height: 2.5rem;
+  padding: 0.25rem 0.8rem;
+  font-size: 0.95rem;
+}
+
+fieldset {
+  min-width: 0;
+  margin: 0 0 1rem;
+  padding: 0.5rem 0.75rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: var(--surface);
+}
+
+legend {
+  font-weight: 600;
+  padding: 0 0.35rem;
+}
+
+.notice {
+  margin: 0 0 1rem;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+}
+
+.hint,
+.source-note {
+  margin: 0.25rem 0 0.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* The four exercises: 2 × 2 on a phone, one row once there is room. */
+.mode-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+@media (min-width: 36rem) {
+  .mode-options {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.mode-option {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mode-option input,
+.segmented input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mode-option:has(input:checked) {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.mode-option:has(input:focus-visible),
+.segmented .pill:has(input:focus-visible) {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.mode-title {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.mode-blurb {
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.3;
+}
+
+/* Rows of equal pills: 10 / 20 / All / Other, the source switch, the levels. */
+.pills {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.pill {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-width: 0;
+  min-height: 2.75rem;
+  padding: 0 0.35rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-align: center;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.pill:has(input:checked) {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  font-weight: 600;
+}
+
+.pill.is-disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+/* By topic / By grammar / Custom list: a segmented switch, the radio itself hidden. */
+.segmented {
+  margin: 0.25rem 0 0.5rem;
+}
+
+.levels {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.5rem 0;
+}
+
+.levels-label {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.levels .pills {
+  flex: 1;
+}
+
+/* "Other": the pill's text is a small number box; the pill shows the focus ring instead of the box. */
+.count-other:focus-within {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.count-input {
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 1rem; /* 16px or more, so iOS doesn't zoom in on tap */
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.count-input:focus,
+.count-input:focus-visible {
+  outline: none;
+}
+
+.count-input::placeholder {
+  color: var(--muted);
+  font-weight: 400;
+  opacity: 1;
+}
+
+.select-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.select-actions button {
+  min-height: 2.5rem;
+  padding: 0.25rem 0.8rem;
+  font-size: 0.95rem;
+}
+
+/* A button that reads as a link: a level's "Tick all", "Open all". */
+.link-button {
+  min-height: 2.25rem;
+  padding: 0 0.25rem;
+  border: none;
+  background: none;
+  color: var(--accent-text);
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-transform: none;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+@media (hover: hover) {
+  .link-button:hover:not(:disabled) {
+    background: none;
+    color: var(--fg);
+  }
+}
+
+/* Topics and grammar points: a column of checkboxes, two once there is room. */
+.options {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 0.1rem 1rem;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-height: 2.75rem;
+  padding: 0.3rem 0.5rem;
+  margin: 0 -0.5rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (hover: hover) {
+  .option:hover,
+  .item-row:hover {
+    background: var(--surface-hover);
+  }
+}
+
+.option-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  line-height: 1.3;
+}
+
+.option-detail {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Nothing at the chosen levels (or in this exercise): still tickable, but dimmed. */
+.option.is-empty .option-name {
+  color: var(--muted);
+}
+
+.option-group h3,
+.item-group summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ---- Custom list picker ---- */
+.text-input,
+.list-select {
+  min-width: 0;
+  min-height: 2.75rem;
+  padding: 0.4rem 0.7rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--fg);
+  font: inherit;
+  font-size: 1rem; /* 16px or more, so iOS doesn't zoom in on tap */
+}
+
+.text-input:focus,
+.list-select:focus {
+  border-color: var(--accent);
+}
+
+.text-input::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+
+.list-row {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.list-row > :first-child {
+  flex: 1;
+}
+
+.list-row button {
+  flex: none;
+  padding: 0.4rem 0.8rem;
+}
+
+.list-status {
+  margin: 0 0 0.5rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.list-status:empty {
+  display: none;
+}
+
+.list-link,
+.item-search {
+  display: block;
+  width: 100%;
+  margin: 0 0 0.5rem;
+}
+
+.list-link {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.ticked-only {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.5rem;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+/* Its own scroll box, so the question count below stays near (687 sentences is a long list). */
+.item-groups {
+  max-height: min(28rem, 55dvh);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  margin: 0 -0.75rem;
+  padding: 0 0.75rem 0.25rem;
+  border-block: 1px solid var(--border);
+}
+
+.item-group summary {
+  min-height: 2.75rem;
+  margin: 0;
+  cursor: pointer;
+  list-style: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.item-group summary::-webkit-details-marker {
+  display: none;
+}
+
+.item-group summary::before {
+  content: '▸';
+  flex: none;
+  transition: transform 0.15s;
+}
+
+.item-group[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.item-group + .item-group {
+  border-top: 1px solid var(--border);
+}
+
+.group-title {
+  min-width: 0;
+}
+
+.group-ticked {
+  flex: none;
+  margin-left: auto;
+  color: var(--accent-text);
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.item-row {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-height: 2.75rem;
+  padding: 0.3rem 0.5rem;
+  margin: 0 -0.5rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.item-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.item-en {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.no-matches {
+  margin: 0.75rem 0 0.25rem;
+  color: var(--muted);
+}
+
+/* Start stays in reach at the bottom of the screen, however long the lists. */
+.start-footer {
+  position: sticky;
+  bottom: 0;
+  padding: 1.25rem 0 calc(0.75rem + env(safe-area-inset-bottom));
+  background: linear-gradient(to bottom, transparent, var(--bg) 1.25rem);
+}
+
+.start-footer .summary {
+  margin: 0 0 0.5rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+.start-button {
+  width: 100%;
+  min-height: 3.25rem;
+  font-size: 1.15rem;
+}
+
+/* ---------- Rule browser ---------- */
+.rules-screen .lede {
+  margin-bottom: 0.25rem;
+}
+
+.rules-toggle {
+  margin-bottom: 0.5rem;
+}
+
+.rules-level h2 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+.rules-level .rule-card {
+  margin-top: 0;
+  padding: 0 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.rules-level .rule-card + .rule-card {
+  margin-top: 0.5rem;
+}
+
+.practise {
+  margin: 0.25rem 0 0.75rem;
+}
+
 /* ---------- Quiz screen ---------- */
 .quiz {
   --play-size: clamp(5.5rem, 26vw, 8rem);
