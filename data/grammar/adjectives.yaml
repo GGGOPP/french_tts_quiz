@@ -1,0 +1,136 @@
+point: adjectives
+title: Adjective agreement and placement
+level: A1
+rule: |
+  **Agreement:** adjectives agree with their noun in gender and number.
+  - Feminine: add **-e** (grand → grande). Words already ending in -e don't change (rouge, tranquille).
+  - Plural: add **-s** (grands, grandes). Words ending in -s or -x don't change (français, heureux).
+
+  **Irregular feminines:**
+  - -eux → -euse: heureux → heureuse
+  - -if → -ive: sportif → sportive
+  - -ien → -ienne: italien → italienne
+  - -er → -ère: cher → chère
+  - blanc → blanche, long → longue, gentil → gentille, bon → bonne
+  - beau → belle, nouveau → nouvelle, vieux → vieille
+
+  **Placement:** most adjectives go **after** the noun: une voiture rouge, un film intéressant.
+  A few short, common ones go **before** it: beau, joli, jeune, vieux, nouveau, bon, mauvais, grand, petit.
+  - une **petite** maison, un **bon** restaurant.
+  - Before a vowel: beau → **bel**, nouveau → **nouvel**, vieux → **vieil**. So it is un **bel** appartement.
+items:
+  - id: adj-01
+    fr: Ma voiture est {petite|petit}.
+    en:
+      - My car is small.
+    explain: voiture is feminine → petite.
+
+  - id: adj-02
+    fr: Les chambres sont très {grandes|grand}.
+    en:
+      - The rooms are very big.
+      - The bedrooms are very large.
+    explain: chambres is feminine plural → -es.
+
+  - id: adj-03
+    fr: C'est une femme très {sportive|sportif}.
+    en:
+      - She's a very sporty woman.
+      - She is a very sporty woman.
+    explain: -if → -ive in the feminine.
+
+  - id: adj-04
+    fr: Elle est {heureuse|heureux} ici.
+    en:
+      - She's happy here.
+      - She is happy here.
+    explain: -eux → -euse in the feminine.
+
+  - id: adj-05
+    fr: J'ai une {nouvelle|nouveau} adresse.
+    en:
+      - I have a new address.
+      - I've got a new address.
+    explain: nouveau → nouvelle in the feminine. It goes before the noun.
+
+  - id: adj-06
+    fr: C'est un {bel|beau} appartement.
+    en:
+      - It's a beautiful flat.
+      - It's a lovely apartment.
+      - That's a nice flat.
+    explain: beau → bel before a masculine noun starting with a vowel.
+
+  - id: adj-07
+    fr: Nous avons une maison {blanche|blanc}.
+    en:
+      - We have a white house.
+      - We've got a white house.
+    alt_fr:
+      - On a une maison blanche.
+    explain: blanc → blanche in the feminine. Colours go after the noun.
+
+  - id: adj-08
+    fr: Mes amies sont {italiennes|italien}.
+    en:
+      - My friends are Italian.
+    explain: amies is feminine plural → -ienne + s. Nationalities have no capital letter as adjectives.
+
+  - id: adj-09
+    fr: C'est une {bonne|bon} idée.
+    en:
+      - That's a good idea.
+      - It's a good idea.
+    explain: bon → bonne (double n) in the feminine. It goes before the noun.
+
+  - id: adj-10
+    fr: Les fraises sont {chères|cher} en hiver.
+    en:
+      - Strawberries are expensive in winter.
+      - Strawberries are dear in winter.
+    explain: -er → -ère in the feminine, plus -s for the plural.
+
+  - id: adj-11
+    fr: Ils ont une {vieille|vieux} voiture.
+    en:
+      - They have an old car.
+      - They've got an old car.
+    explain: vieux → vieille in the feminine. It goes before the noun.
+
+  - id: adj-12
+    fr: J'ai acheté une robe {longue|long}.
+    en:
+      - I bought a long dress.
+    grammar: [passe-compose-avoir]
+    level: A2
+    explain: long → longue in the feminine (the u keeps the g hard).
+
+  - id: adj-13
+    fr: Tes enfants sont très {gentils|gentil}.
+    en:
+      - Your children are very nice.
+      - Your kids are very kind.
+    alt_fr:
+      - Vos enfants sont très gentils.
+    grammar: [possessives]
+    explain: Masculine plural → -s, which is silent.
+
+  - id: adj-14
+    fr: Elle a les cheveux {courts|court}.
+    en:
+      - She has short hair.
+    explain: cheveux is masculine plural in French → courts.
+
+  - id: adj-15
+    fr: C'est une {petite|petit} ville {tranquille/calme|quiet}.
+    en:
+      - It's a quiet little town.
+      - It's a small, quiet town.
+    explain: petite goes before the noun. tranquille goes after it and already ends in -e.
+
+  - id: adj-16
+    fr: Ce sont des chaussures {noires|noir}.
+    en:
+      - They're black shoes.
+      - These are black shoes.
+    explain: chaussures is feminine plural → -es. Colours go after the noun.

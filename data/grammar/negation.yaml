@@ -1,0 +1,154 @@
+point: negation
+title: Negation
+level: A1
+rule: |
+  Put **ne** before the verb and **pas** after it. ne becomes **n'** before a vowel or silent h.
+  - Je **ne** parle **pas** allemand. Il **n'**aime **pas** le froid.
+
+  Other negatives work the same way:
+  - **ne… jamais**: never
+  - **ne… plus**: not any more, no longer
+  - **ne… rien**: nothing
+  - **ne… personne**: nobody
+
+  **Where it goes:**
+  - With a verb + infinitive, around the first verb: je **ne** veux **pas** partir.
+  - In the passé composé, around avoir or être: je **n'**ai **pas** mangé.
+  - With reflexive verbs, ne goes before the pronoun: je **ne** me lève **pas**.
+  - il y a → il **n'**y a **pas**.
+
+  After a negative, un, une, du, de la and des become **de**: je n'ai pas **de** voiture.
+
+  In speech, ne is often dropped (je sais pas), but you should write it.
+items:
+  - id: neg-01
+    fr: Je {ne parle pas|not + parler} espagnol.
+    en:
+      - I don't speak Spanish.
+    explain: ne before the verb, pas after it.
+
+  - id: neg-02
+    fr: Elle {n'aime pas|not + aimer} le poisson.
+    en:
+      - She doesn't like fish.
+    explain: ne becomes n' before a vowel.
+
+  - id: neg-03
+    fr: Nous {ne sommes pas|not + être} en retard.
+    en:
+      - We're not late.
+      - We aren't late.
+      - We are not late.
+    alt_fr:
+      - On n'est pas en retard.
+    explain: ne… pas goes around the verb.
+
+  - id: neg-04
+    fr: Il {ne mange jamais|never + manger} de viande.
+    en:
+      - He never eats meat.
+    grammar: [partitive]
+    explain: ne… jamais goes around the verb like ne… pas. After a negative, de replaces de la.
+
+  - id: neg-05
+    fr: Je {n'habite plus|no longer + habiter} à Paris.
+    en:
+      - I don't live in Paris any more.
+      - I don't live in Paris anymore.
+      - I no longer live in Paris.
+    level: A2
+    explain: ne… plus means "not any more". ne becomes n' before a vowel.
+
+  - id: neg-06
+    fr: Tu {ne veux pas|not + vouloir} venir ?
+    en:
+      - Don't you want to come?
+      - You don't want to come?
+    alt_fr:
+      - Vous ne voulez pas venir ?
+    explain: With a verb + infinitive, ne… pas goes around the first verb only.
+
+  - id: neg-07
+    fr: Il {n'y a pas|not + il y a} de pain.
+    en:
+      - There's no bread.
+      - There isn't any bread.
+    grammar: [partitive]
+    explain: il y a → il n'y a pas. After a negative, du becomes de.
+
+  - id: neg-08
+    fr: Je {ne comprends rien|nothing + comprendre}.
+    en:
+      - I don't understand anything.
+      - I understand nothing.
+    level: A2
+    explain: ne… rien means "nothing", around the verb.
+
+  - id: neg-09
+    fr: Il {n'y a personne|nobody + il y a} au bureau.
+    en:
+      - There's nobody at the office.
+      - There's no one in the office.
+      - There is nobody in the office.
+    level: A2
+    explain: ne… personne means "nobody".
+
+  - id: neg-10
+    fr: Nous {n'avons pas|not + avoir} le temps.
+    en:
+      - We don't have time.
+      - We haven't got time.
+      - We don't have the time.
+    alt_fr:
+      - On n'a pas le temps.
+    explain: ne becomes n' before a vowel.
+
+  - id: neg-11
+    fr: Ce {n'est pas|not + être} cher.
+    en:
+      - It's not expensive.
+      - It isn't expensive.
+      - That's not expensive.
+    explain: ce + ne + est → ce n'est pas.
+
+  - id: neg-12
+    fr: Je {n'ai pas|not + avoir} fini.
+    en:
+      - I haven't finished.
+      - I'm not finished.
+      - I haven't finished yet.
+    grammar: [passe-compose-avoir]
+    level: A2
+    explain: In the passé composé, ne… pas goes around avoir, and the participle comes after.
+
+  - id: neg-13
+    fr: Vous {ne travaillez pas|not + travailler} le lundi ?
+    en:
+      - Don't you work on Mondays?
+      - You don't work on Mondays?
+    alt_fr:
+      - Tu ne travailles pas le lundi ?
+    explain: ne… pas goes around the verb, in questions too.
+
+  - id: neg-14
+    fr: Elle {ne boit jamais|never + boire} d'alcool.
+    en:
+      - She never drinks alcohol.
+    grammar: [partitive]
+    explain: ne… jamais goes around the verb. After a negative, de l' becomes d'.
+
+  - id: neg-15
+    fr: Mes parents {ne regardent pas|not + regarder} la télé.
+    en:
+      - My parents don't watch TV.
+      - My parents don't watch television.
+    explain: ne… pas goes around the verb.
+
+  - id: neg-16
+    fr: Je {ne me lève pas|not + se lever} tôt le dimanche.
+    en:
+      - I don't get up early on Sundays.
+      - I don't get up early on a Sunday.
+    grammar: [reflexive-verbs]
+    level: A2
+    explain: With a reflexive verb, ne goes before the pronoun (me) and pas after the verb.

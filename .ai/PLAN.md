@@ -156,7 +156,7 @@ Status key: `[not started]` · `[in progress]` · `[done]`. Each step is committ
      - `alt_fr` equal to `fr`.
      - Non-`.yaml` files.
    - **Tests:** 89 pass (62 new). Both README examples validate, and the empty repo `data/` validates.
-7. `[not started]` Claude drafts the content in two batches so each review stays manageable.
+7. `[done]` Claude drafts the content in two batches so each review stays manageable.
    - **Batch 1 (grammar-heavy):** about 15 cloze items per point:
      - present tense of être/avoir/aller/faire;
      - regular and common irregular present tense;
@@ -171,6 +171,14 @@ Status key: `[not started]` · `[in progress]` · `[done]`. Each step is committ
      - passé composé with avoir;
      - passé composé with être.
    - **Batch 1 also includes** about 100 topic sentences (greetings, café, shopping, directions, daily routine, time).
+
+   *Result:*
+   - **Totals:** 310 items (200 cloze; A1 234, A2 76), all valid.
+   - **Grammar:** 12 files with 15–19 drills each, every file with a rule card. The point ids are `present-etre-avoir-aller-faire`, `present-tense`, `articles-gender`, `partitive`, `a-de-contractions`, `negation`, `questions`, `possessives`, `adjectives`, `futur-proche`, `passe-compose-avoir` and `passe-compose-etre`.
+   - **Topics:** 110 sentences in `greetings`, `restaurant`, `shopping`, `directions`, `daily-routine` and `time`.
+   - **Batch-2 stubs:** `conditional-politeness`, `reflexive-verbs` and `imperative` are rule cards with `items: []`, so topic sentences (je voudrais, je me lève, tournez à gauche) can carry those tags now. Step 9 adds their drills.
+   - **Dictée rule:** every sentence's spelling must follow from the audio. So there is no *il parle* / *ils parlent* ambiguity, and no gendered agreement after je, tu, nous or vous. This is now written down in `data/README.md`. The PyYAML `?]` flow-list pitfall is documented there too.
+   - **Hints:** English cues (`the`, `some`, `my`, `your (tu)`), the infinitive, or `not + verb` for negation. `article` marks the general-sense le/la/les after aimer and détester.
 8. `[not started]` **Checkpoint:** the user reviews batch 1.
 9. `[not started]` **Batch 2:**
    - **Grammar points:** imparfait vs passé composé; reflexive verbs; le/la/lui/leur; y and en; futur simple; comparatives and superlatives; qui/que/où; depuis/pendant/il y a; imperative; je voudrais / conditional.

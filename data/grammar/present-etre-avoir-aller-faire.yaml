@@ -1,0 +1,183 @@
+point: present-etre-avoir-aller-faire
+title: Present tense of être, avoir, aller and faire
+level: A1
+rule: |
+  The four most common verbs are irregular, so learn them by heart.
+
+  | | être | avoir | aller | faire |
+  |---|---|---|---|---|
+  | je | suis | ai (j'ai) | vais | fais |
+  | tu | es | as | vas | fais |
+  | il / elle / on | est | a | va | fait |
+  | nous | sommes | avons | allons | faisons |
+  | vous | êtes | avez | allez | faites |
+  | ils / elles | sont | ont | vont | font |
+
+  - **ils sont** (s sound) and **ils ont** (z sound, from the liaison) are different verbs.
+  - **a** (has) has no accent; **à** (to, at) is the preposition.
+  - Age, hunger, thirst, cold and heat use **avoir**: j'ai vingt ans, j'ai faim, il a froid.
+  - Weather and many activities use **faire**: il fait beau, je fais du sport.
+items:
+  - id: pkv-01
+    fr: Je {suis|être} à la maison.
+    en:
+      - I'm at home.
+      - I am at home.
+    explain: être with je → suis.
+
+  - id: pkv-02
+    fr: Tu {es|être} en retard !
+    en:
+      - You're late!
+      - You are late!
+    alt_fr:
+      - Vous êtes en retard !
+    explain: être with tu → es. It sounds like est, but tu always takes es.
+
+  - id: pkv-03
+    fr: Nous {sommes|être} au bureau.
+    en:
+      - We're at the office.
+      - We are at the office.
+    alt_fr:
+      - On est au bureau.
+    explain: être with nous → sommes.
+
+  - id: pkv-04
+    fr: Vous {êtes|être} en vacances ?
+    en:
+      - Are you on holiday?
+      - Are you on vacation?
+    alt_fr:
+      - Tu es en vacances ?
+      - Êtes-vous en vacances ?
+      - Est-ce que vous êtes en vacances ?
+    explain: être with vous → êtes (with a circumflex).
+
+  - id: pkv-05
+    fr: Mes parents {sont|être} en Espagne.
+    en:
+      - My parents are in Spain.
+    explain: être with a plural subject (ils) → sont.
+
+  - id: pkv-06
+    fr: "{J'ai|avoir} vingt-cinq ans."
+    en:
+      - I'm twenty-five.
+      - I'm twenty-five years old.
+      - I am twenty-five years old.
+    explain: Age uses avoir in French (j'ai … ans), never être. je + ai → j'ai.
+
+  - id: pkv-07
+    fr: Tu {as|avoir} soif ?
+    en:
+      - Are you thirsty?
+    alt_fr:
+      - Vous avez soif ?
+      - Est-ce que tu as soif ?
+    explain: Thirst uses avoir (avoir soif). avoir with tu → as.
+
+  - id: pkv-08
+    fr: Elle {a|avoir} deux frères.
+    en:
+      - She has two brothers.
+      - She's got two brothers.
+    explain: avoir with elle → a, with no accent. à with an accent means "to" or "at".
+
+  - id: pkv-09
+    fr: Nous {avons|avoir} une voiture rouge.
+    en:
+      - We have a red car.
+      - We've got a red car.
+    alt_fr:
+      - On a une voiture rouge.
+    explain: avoir with nous → avons.
+
+  - id: pkv-10
+    fr: Ils {ont|avoir} froid.
+    en:
+      - They're cold.
+      - They are cold.
+    explain: Feeling cold uses avoir (avoir froid). ils ont has a z sound (liaison), unlike ils sont.
+
+  - id: pkv-11
+    fr: Je {vais|aller} au travail en bus.
+    en:
+      - I go to work by bus.
+      - I'm going to work by bus.
+      - I take the bus to work.
+    explain: aller with je → vais.
+
+  - id: pkv-12
+    fr: Où {vas|aller}-tu ?
+    en:
+      - Where are you going?
+    alt_fr:
+      - Tu vas où ?
+      - Où est-ce que tu vas ?
+      - Où allez-vous ?
+      - Vous allez où ?
+    explain: aller with tu → vas. In an inverted question the verb and pronoun are joined by a hyphen.
+
+  - id: pkv-13
+    fr: Comment {allez|aller}-vous ?
+    en:
+      - How are you?
+    register: formal
+    explain: aller with vous → allez. French asks "how are you going?" to mean "how are you?".
+
+  - id: pkv-14
+    fr: Nous {allons|aller} à la plage samedi.
+    en:
+      - We're going to the beach on Saturday.
+      - We are going to the beach on Saturday.
+      - We're going to the beach Saturday.
+    alt_fr:
+      - On va à la plage samedi.
+    explain: aller with nous → allons.
+
+  - id: pkv-15
+    fr: Mes enfants {vont|aller} à l'école à pied.
+    en:
+      - My children walk to school.
+      - My kids walk to school.
+      - My children go to school on foot.
+    explain: aller with a plural subject (ils) → vont.
+
+  - id: pkv-16
+    fr: Qu'est-ce que tu {fais|faire} ce soir ?
+    en:
+      - What are you doing tonight?
+      - What are you doing this evening?
+    alt_fr:
+      - Tu fais quoi ce soir ?
+      - Qu'est-ce que vous faites ce soir ?
+    grammar: [questions]
+    explain: faire with tu → fais (the same as je fais).
+
+  - id: pkv-17
+    fr: Il {fait|faire} beau aujourd'hui.
+    en:
+      - The weather is nice today.
+      - It's nice today.
+      - It's a nice day today.
+    explain: Weather uses faire with il → il fait beau, il fait froid, il fait chaud.
+
+  - id: pkv-18
+    fr: Vous {faites|faire} du sport ?
+    en:
+      - Do you do sport?
+      - Do you play sports?
+      - Do you do any sport?
+    alt_fr:
+      - Tu fais du sport ?
+      - Est-ce que vous faites du sport ?
+    grammar: [partitive]
+    explain: faire with vous → faites. It is irregular (never "faisez").
+
+  - id: pkv-19
+    fr: Ils {font|faire} les courses le samedi.
+    en:
+      - They do the shopping on Saturdays.
+      - They go food shopping on Saturdays.
+    explain: faire with a plural subject (ils) → font. Faire les courses means to do the (food) shopping.

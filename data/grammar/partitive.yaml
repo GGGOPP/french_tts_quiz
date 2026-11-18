@@ -1,0 +1,161 @@
+point: partitive
+title: Partitive articles and de after a negative
+level: A1
+rule: |
+  For an unspecified amount of something ("some", "any", or no word at all in English), use the **partitive**:
+
+  - **du** + masculine: du pain
+  - **de la** + feminine: de la confiture
+  - **de l'** + a vowel or silent h: de l'eau
+  - **des** + plural: des pâtes
+
+  After a **negative** (ne… pas, ne… plus, ne… jamais), un, une, du, de la and des all become **de** (d' before a vowel):
+  - Je bois du café → Je ne bois **pas de** café.
+  - J'ai une voiture → Je n'ai **pas de** voiture.
+  - Il y a de l'eau → Il n'y a **plus d'**eau.
+
+  **Exception:** after être, the article stays: ce n'est pas **un** problème.
+
+  Quantities take **de** too: beaucoup de, un peu de, un kilo de, une bouteille de.
+
+  After aimer, adorer, détester and préférer, use **le, la, les** instead: j'aime **le** café.
+items:
+  - id: part-01
+    fr: Je voudrais {du|some} pain.
+    en:
+      - I'd like some bread.
+      - I would like some bread.
+    grammar: [conditional-politeness]
+    explain: pain is masculine → du.
+
+  - id: part-02
+    fr: Tu veux {de la|some} confiture ?
+    en:
+      - Do you want some jam?
+      - Would you like some jam?
+    alt_fr:
+      - Vous voulez de la confiture ?
+      - Est-ce que tu veux de la confiture ?
+    explain: confiture is feminine → de la.
+
+  - id: part-03
+    fr: Il boit {de l'|some}eau.
+    en:
+      - He drinks water.
+      - He's drinking water.
+      - He's drinking some water.
+    explain: eau starts with a vowel → de l'.
+
+  - id: part-04
+    fr: On mange {des|some} pâtes ce soir.
+    en:
+      - We're having pasta tonight.
+      - We're eating pasta tonight.
+      - We're having pasta this evening.
+    alt_fr:
+      - Nous mangeons des pâtes ce soir.
+    explain: pâtes is plural in French → des.
+
+  - id: part-05
+    fr: Je ne bois pas {de|any} café.
+    en:
+      - I don't drink coffee.
+    grammar: [negation]
+    explain: After a negative, du becomes de.
+
+  - id: part-06
+    fr: Nous n'avons pas {de|a} voiture.
+    en:
+      - We don't have a car.
+      - We haven't got a car.
+    alt_fr:
+      - On n'a pas de voiture.
+    grammar: [negation]
+    explain: After a negative, une becomes de.
+
+  - id: part-07
+    fr: Il n'y a plus {d'|any}eau.
+    en:
+      - There's no more water.
+      - There's no water left.
+      - There isn't any more water.
+    grammar: [negation]
+    level: A2
+    explain: ne… plus is a negative too, so de l' becomes de, and de becomes d' before a vowel.
+
+  - id: part-08
+    fr: Elle mange beaucoup {de|of} légumes.
+    en:
+      - She eats a lot of vegetables.
+      - She eats lots of vegetables.
+    explain: After beaucoup, use just de (not des).
+
+  - id: part-09
+    fr: J'achète un kilo {de|of} pommes.
+    en:
+      - I'm buying a kilo of apples.
+      - I buy a kilo of apples.
+    explain: After a quantity (un kilo, une bouteille), use just de.
+
+  - id: part-10
+    fr: Vous avez {des|some} enfants ?
+    en:
+      - Do you have children?
+      - Do you have any children?
+      - Have you got kids?
+    alt_fr:
+      - Tu as des enfants ?
+      - Est-ce que vous avez des enfants ?
+      - Avez-vous des enfants ?
+    explain: Plural → des, even where English says "any" or nothing.
+
+  - id: part-11
+    fr: Je n'ai pas {d'|any}enfants.
+    en:
+      - I don't have children.
+      - I don't have any children.
+      - I have no children.
+    grammar: [negation]
+    explain: After a negative, des becomes de, and de becomes d' before a vowel.
+
+  - id: part-12
+    fr: J'aime {le|article} chocolat, mais je ne mange pas {de|any} gâteau.
+    en:
+      - I like chocolate, but I don't eat cake.
+      - I love chocolate, but I don't eat cake.
+    grammar: [articles-gender, negation]
+    level: A2
+    explain: After aimer, use le (things in general). After a negative, use de.
+
+  - id: part-13
+    fr: Il y a {du|some} lait dans le frigo.
+    en:
+      - There's milk in the fridge.
+      - There's some milk in the fridge.
+      - There is some milk in the fridge.
+    explain: lait is masculine → du.
+
+  - id: part-14
+    fr: Ce n'est pas {un|a} problème.
+    en:
+      - It's not a problem.
+      - That's not a problem.
+      - It isn't a problem.
+    grammar: [negation]
+    explain: After être the article stays, even in the negative → pas un, not pas de.
+
+  - id: part-15
+    fr: Je voudrais une bouteille {d'|of}eau minérale.
+    en:
+      - I'd like a bottle of mineral water.
+    grammar: [conditional-politeness]
+    explain: After a quantity (une bouteille), use just de, which becomes d' before a vowel.
+
+  - id: part-16
+    fr: Il fait {du|article} sport le week-end.
+    en:
+      - He does sport at the weekend.
+      - He plays sports on weekends.
+      - He does sports on the weekend.
+    grammar: [present-etre-avoir-aller-faire]
+    explain: Activities with faire take the partitive → faire du sport, faire de la natation.

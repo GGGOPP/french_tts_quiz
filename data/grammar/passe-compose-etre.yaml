@@ -1,0 +1,138 @@
+point: passe-compose-etre
+title: Passé composé with être
+level: A2
+rule: |
+  About fifteen verbs take **être** instead of avoir in the passé composé. Most are verbs of movement or change of state:
+  aller, venir, arriver, partir, entrer, sortir, monter, descendre, naître, mourir, rester, tomber, retourner, and related verbs such as revenir, rentrer and devenir.
+
+  All **reflexive verbs** take être too: elle s'est levée.
+
+  **Agreement:** with être, the participle agrees with the subject, like an adjective.
+  - il est allé, elle est allé**e**
+  - ils sont allé**s**, elles sont allé**es**
+  - A mixed group is masculine: Paul et Marie sont parti**s**.
+
+  **Irregular participles:** venir → venu, devenir → devenu, naître → né, mourir → mort, descendre → descendu.
+
+  **Negative:** elle **n'est pas** venue.
+items:
+  - id: pce-01
+    fr: Hier, elle {est allée|aller} au marché.
+    en:
+      - Yesterday she went to the market.
+      - She went to the market yesterday.
+    explain: aller takes être. The subject is feminine → allée.
+
+  - id: pce-02
+    fr: Mon frère {est parti|partir} en vacances.
+    en:
+      - My brother went on holiday.
+      - My brother has gone on holiday.
+      - My brother went on vacation.
+    explain: partir takes être. Masculine singular → parti, with no ending.
+
+  - id: pce-03
+    fr: Les enfants {sont rentrés|rentrer} à cinq heures.
+    en:
+      - The children came home at five.
+      - The kids got home at five o'clock.
+    explain: rentrer takes être. Les enfants is masculine plural → rentrés.
+
+  - id: pce-04
+    fr: Ma grand-mère {est née|naître} en mille neuf cent cinquante.
+    en:
+      - My grandmother was born in 1950.
+      - My grandmother was born in nineteen fifty.
+      - My grandma was born in 1950.
+    explain: naître takes être and its participle is né. The subject is feminine → née.
+
+  - id: pce-05
+    fr: Marie et Sophie {sont venues|venir} à la fête.
+    en:
+      - Marie and Sophie came to the party.
+    explain: venir takes être and its participle is venu. Two women → venues.
+
+  - id: pce-06
+    fr: Il {est tombé|tomber} dans la rue.
+    en:
+      - He fell in the street.
+      - He fell over in the street.
+    explain: tomber takes être. Masculine singular → tombé.
+
+  - id: pce-07
+    fr: Elle {est restée|rester} à la maison.
+    en:
+      - She stayed at home.
+      - She stayed home.
+    explain: rester takes être. The subject is feminine → restée.
+
+  - id: pce-08
+    fr: Ils {sont sortis|sortir} hier soir.
+    en:
+      - They went out last night.
+      - They went out yesterday evening.
+    explain: sortir takes être. Masculine plural → sortis.
+
+  - id: pce-09
+    fr: Paul, tu {es monté|monter} en haut de la tour ?
+    en:
+      - Paul, did you go up to the top of the tower?
+      - Paul, have you been up to the top of the tower?
+    explain: monter takes être. Paul is a man → monté.
+
+  - id: pce-10
+    fr: Le train {est arrivé|arriver} en retard.
+    en:
+      - The train arrived late.
+    explain: arriver takes être. le train is masculine → arrivé.
+
+  - id: pce-11
+    fr: Mes parents {sont partis|partir} à six heures.
+    en:
+      - My parents left at six.
+      - My parents left at six o'clock.
+    explain: partir takes être. Mixed or masculine plural → partis.
+
+  - id: pce-12
+    fr: Anne {n'est pas venue|not + venir}.
+    en:
+      - Anne didn't come.
+      - Anne hasn't come.
+    grammar: [negation]
+    explain: ne… pas goes around être. Anne is a woman → venue.
+
+  - id: pce-13
+    fr: Elles {sont descendues|descendre} à la plage.
+    en:
+      - They went down to the beach.
+    explain: descendre takes être and its participle is descendu. Feminine plural → descendues.
+
+  - id: pce-14
+    fr: Il {est devenu|devenir} médecin.
+    en:
+      - He became a doctor.
+    explain: devenir takes être and its participle is devenu. No article before a job.
+
+  - id: pce-15
+    fr: Sophie {s'est levée|se lever} à six heures.
+    en:
+      - Sophie got up at six.
+      - Sophie got up at six o'clock.
+    grammar: [reflexive-verbs]
+    explain: Reflexive verbs take être. Sophie is a woman → levée.
+
+  - id: pce-16
+    fr: Il {est entré|entrer} dans la boutique.
+    en:
+      - He went into the shop.
+      - He went into the store.
+      - He entered the shop.
+    explain: entrer takes être. Masculine singular → entré.
+
+  - id: pce-17
+    fr: Elle {a pris|prendre} un taxi et elle {est rentrée|rentrer} chez elle.
+    en:
+      - She took a taxi and went home.
+      - She got a taxi and went home.
+    grammar: [passe-compose-avoir]
+    explain: prendre takes avoir (no agreement). rentrer takes être and agrees with elle → rentrée.

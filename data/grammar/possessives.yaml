@@ -1,0 +1,139 @@
+point: possessives
+title: Possessive adjectives
+level: A1
+rule: |
+  The possessive agrees with the **thing owned**, not with the owner.
+
+  | | masculine | feminine | plural |
+  |---|---|---|---|
+  | my | mon | ma | mes |
+  | your (tu) | ton | ta | tes |
+  | his, her, its | son | sa | ses |
+  | our | notre | notre | nos |
+  | your (vous) | votre | votre | vos |
+  | their | leur | leur | leurs |
+
+  - **sa** mère means his mother *or* her mother. **son** père means his father *or* her father.
+  - Before a feminine word that starts with a vowel, use **mon, ton, son**: mon amie, son école.
+items:
+  - id: poss-01
+    fr: C'est {mon|my} frère.
+    en:
+      - This is my brother.
+      - That's my brother.
+      - He's my brother.
+    explain: frère is masculine → mon.
+
+  - id: poss-02
+    fr: "{Ma|my} sœur habite à Bordeaux."
+    en:
+      - My sister lives in Bordeaux.
+    explain: sœur is feminine → ma.
+
+  - id: poss-03
+    fr: "{Mes|my} parents sont à la retraite."
+    en:
+      - My parents are retired.
+    explain: Plural → mes.
+
+  - id: poss-04
+    fr: Où est {ta|your (tu)} valise ?
+    en:
+      - Where's your suitcase?
+      - Where is your suitcase?
+    alt_fr:
+      - Où est votre valise ?
+    explain: valise is feminine → ta.
+
+  - id: poss-05
+    fr: Tu as {tes|your (tu)} clés ?
+    en:
+      - Have you got your keys?
+      - Do you have your keys?
+    alt_fr:
+      - Vous avez vos clés ?
+    explain: Plural → tes.
+
+  - id: poss-06
+    fr: Pierre aime beaucoup {sa|his} voiture.
+    en:
+      - Pierre loves his car.
+      - Pierre really likes his car.
+    explain: voiture is feminine → sa, even though Pierre is a man.
+
+  - id: poss-07
+    fr: Julie appelle {son|her} père tous les jours.
+    en:
+      - Julie calls her father every day.
+      - Julie phones her dad every day.
+    explain: père is masculine → son, even though Julie is a woman.
+
+  - id: poss-08
+    fr: C'est {mon|my} amie Claire.
+    en:
+      - This is my friend Claire.
+      - That's my friend Claire.
+    explain: amie is feminine, but it starts with a vowel → mon, not ma.
+
+  - id: poss-09
+    fr: "{Notre|our} maison est petite."
+    en:
+      - Our house is small.
+    grammar: [adjectives]
+    explain: Singular → notre, for both genders.
+
+  - id: poss-10
+    fr: "{Nos|our} voisins sont très sympas."
+    en:
+      - Our neighbours are very nice.
+      - Our neighbors are really nice.
+    explain: Plural → nos.
+
+  - id: poss-11
+    fr: Monsieur, voici {votre|your (vous)} chambre.
+    en:
+      - Sir, here's your room.
+      - Here is your room, sir.
+    register: formal
+    explain: Singular → votre, for both genders.
+
+  - id: poss-12
+    fr: Vous avez {vos|your (vous)} billets ?
+    en:
+      - Do you have your tickets?
+      - Have you got your tickets?
+    alt_fr:
+      - Tu as tes billets ?
+      - Est-ce que vous avez vos billets ?
+    explain: Plural → vos.
+
+  - id: poss-13
+    fr: Les enfants cherchent {leur|their} chien.
+    en:
+      - The children are looking for their dog.
+      - The kids are looking for their dog.
+    explain: One dog → leur, without an s.
+
+  - id: poss-14
+    fr: Ils invitent {leurs|their} amis.
+    en:
+      - They're inviting their friends.
+      - They invite their friends.
+    explain: Several friends → leurs, with an s (you hear it as a z before amis).
+
+  - id: poss-15
+    fr: Marc a oublié {son|his} écharpe.
+    en:
+      - Marc forgot his scarf.
+      - Marc has forgotten his scarf.
+    grammar: [passe-compose-avoir]
+    level: A2
+    explain: écharpe is feminine, but it starts with a vowel → son.
+
+  - id: poss-16
+    fr: Ce sont {ses|her} lunettes.
+    en:
+      - They're her glasses.
+      - These are her glasses.
+      - Those are her glasses.
+    explain: Plural → ses, for both his and her.

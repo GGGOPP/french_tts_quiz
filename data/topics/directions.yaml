@@ -1,0 +1,155 @@
+topic: Directions
+items:
+  - id: dir-01
+    fr: Excusez-moi, où est la gare ?
+    en:
+      - Excuse me, where is the station?
+      - Excuse me, where's the train station?
+    level: A1
+    register: formal
+    grammar: [questions]
+
+  - id: dir-02
+    fr: Pour aller au musée, s'il vous plaît ?
+    en:
+      - How do I get to the museum, please?
+      - Which way is the museum, please?
+    level: A1
+    register: formal
+    grammar: [a-de-contractions]
+
+  - id: dir-03
+    fr: C'est loin d'ici ?
+    en:
+      - Is it far from here?
+      - Is it far?
+    alt_fr:
+      - Est-ce que c'est loin d'ici ?
+    level: A1
+    grammar: [questions]
+
+  - id: dir-04
+    fr: Non, c'est tout près.
+    en:
+      - No, it's very close.
+      - No, it's really near.
+      - No, it's close by.
+    level: A1
+
+  - id: dir-05
+    fr: Allez tout droit.
+    en:
+      - Go straight ahead.
+      - Go straight on.
+    level: A1
+    register: formal
+    grammar: [imperative]
+
+  - id: dir-06
+    fr: Tournez à gauche au feu.
+    en:
+      - Turn left at the lights.
+      - Turn left at the traffic lights.
+    level: A1
+    register: formal
+    grammar: [imperative, a-de-contractions]
+
+  - id: dir-07
+    fr: Prenez la deuxième rue à droite.
+    en:
+      - Take the second street on the right.
+      - Take the second road on the right.
+      - Take the second right.
+    level: A1
+    register: formal
+    grammar: [imperative]
+
+  - id: dir-08
+    fr: La pharmacie est en face de la banque.
+    en:
+      - The pharmacy is opposite the bank.
+      - The chemist's is across from the bank.
+    level: A1
+    grammar: [a-de-contractions]
+
+  - id: dir-09
+    fr: La poste est à côté du supermarché.
+    en:
+      - The post office is next to the supermarket.
+      - The post office is beside the supermarket.
+    level: A1
+    grammar: [a-de-contractions]
+
+  - id: dir-10
+    fr: Il y a un distributeur près d'ici ?
+    en:
+      - Is there a cash machine near here?
+      - Is there an ATM nearby?
+      - Is there a cashpoint near here?
+    alt_fr:
+      - Est-ce qu'il y a un distributeur près d'ici ?
+    level: A1
+    grammar: [questions]
+
+  - id: dir-11
+    fr: C'est à dix minutes à pied.
+    en:
+      - It's a ten-minute walk.
+      - It's ten minutes on foot.
+      - It's ten minutes' walk.
+    level: A1
+
+  - id: dir-12
+    fr: Traversez la place et continuez jusqu'au pont.
+    en:
+      - Cross the square and carry on to the bridge.
+      - Cross the square and continue as far as the bridge.
+      - Cross the square and keep going to the bridge.
+    level: A2
+    register: formal
+    grammar: [imperative, a-de-contractions]
+
+  - id: dir-13
+    fr: Je ne trouve pas mon hôtel.
+    en:
+      - I can't find my hotel.
+      - I cannot find my hotel.
+    level: A1
+    grammar: [negation, possessives]
+
+  - id: dir-14
+    fr: Vous pouvez me montrer sur le plan ?
+    en:
+      - Can you show me on the map?
+      - Could you show me on the map?
+    alt_fr:
+      - Pouvez-vous me montrer sur le plan ?
+      - Est-ce que vous pouvez me montrer sur le plan ?
+    level: A2
+    register: formal
+    grammar: [questions, present-tense]
+
+  - id: dir-15
+    fr: Quel bus va au centre-ville ?
+    en:
+      - Which bus goes to the town centre?
+      - Which bus goes to the city centre?
+      - Which bus goes downtown?
+    level: A1
+    grammar: [questions, a-de-contractions]
+
+  - id: dir-16
+    fr: Descendez au prochain arrêt.
+    en:
+      - Get off at the next stop.
+    level: A2
+    register: formal
+    grammar: [imperative, a-de-contractions]
+
+  - id: dir-17
+    fr: La sortie est par là.
+    en:
+      - The exit is that way.
+      - The way out is over there.
+      - The exit is this way.
+    level: A1

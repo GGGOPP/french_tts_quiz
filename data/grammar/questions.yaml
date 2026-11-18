@@ -1,0 +1,189 @@
+point: questions
+title: Asking questions
+level: A1
+rule: |
+  **Three ways to ask a yes/no question:**
+  1. **Intonation** (everyday speech): Tu viens ?
+  2. **Est-ce que** + a statement: **Est-ce que** tu viens ? (est-ce qu' before a vowel)
+  3. **Inversion** (more formal): **Viens-tu ?** The verb and pronoun swap places and are joined by a hyphen. Add **-t-** between two vowels: **a-t-il**, parle-t-elle.
+
+  **Question words:**
+  - **où**: where
+  - **quand**: when
+  - **comment**: how
+  - **pourquoi**: why (answer with parce que)
+  - **combien**: how much, how many (**combien de** + noun)
+  - **qui**: who
+  - **qu'est-ce que**: what (at the start); **quoi**: what (at the end)
+  - **quel, quelle, quels, quelles**: which or what + noun. It agrees with the noun.
+
+  **Examples:**
+  - Où est-ce que tu habites ? / Tu habites où ? / Où habites-tu ?
+  - **Qu'est-ce que** tu fais ? but Tu fais **quoi** ?
+  - **Quelle** heure est-il ? **Quel** est ton numéro ?
+items:
+  - id: q-01
+    fr: "{Où|where} est la gare ?"
+    en:
+      - Where is the station?
+      - Where's the station?
+      - Where's the train station?
+    explain: où means "where". Don't confuse it with ou (or), which has no accent.
+
+  - id: q-02
+    fr: "{Est-ce que|question} tu as faim ?"
+    en:
+      - Are you hungry?
+    alt_fr:
+      - Tu as faim ?
+      - As-tu faim ?
+      - Est-ce que vous avez faim ?
+    grammar: [present-etre-avoir-aller-faire]
+    explain: Est-ce que at the start turns a statement into a yes/no question.
+
+  - id: q-03
+    fr: "{Quand|when} est-ce que vous partez ?"
+    en:
+      - When are you leaving?
+      - When do you leave?
+    alt_fr:
+      - Vous partez quand ?
+      - Quand partez-vous ?
+      - Quand est-ce que tu pars ?
+    explain: quand means "when". Question word + est-ce que + statement.
+
+  - id: q-04
+    fr: "{Comment|how} tu t'appelles ?"
+    en:
+      - What's your name?
+      - What is your name?
+    alt_fr:
+      - Comment vous appelez-vous ?
+      - Tu t'appelles comment ?
+    grammar: [reflexive-verbs]
+    explain: French asks "how do you call yourself?" → comment, not quoi.
+
+  - id: q-05
+    fr: "{Pourquoi|why} tu ne manges pas ?"
+    en:
+      - Why aren't you eating?
+      - Why don't you eat?
+    alt_fr:
+      - Pourquoi est-ce que tu ne manges pas ?
+    grammar: [negation]
+    explain: pourquoi means "why". The answer starts with parce que.
+
+  - id: q-06
+    fr: Ça coûte {combien|how much} ?
+    en:
+      - How much does it cost?
+      - How much is it?
+      - How much does that cost?
+    alt_fr:
+      - Combien ça coûte ?
+      - C'est combien ?
+    explain: combien means "how much" or "how many". In speech it often comes at the end.
+
+  - id: q-07
+    fr: "{Qui|who} est ce monsieur ?"
+    en:
+      - Who is that man?
+      - Who's that gentleman?
+      - Who is this man?
+    explain: qui means "who".
+
+  - id: q-08
+    fr: "{Qu'est-ce que|what} vous voulez boire ?"
+    en:
+      - What would you like to drink?
+      - What do you want to drink?
+    alt_fr:
+      - Qu'est-ce que tu veux boire ?
+      - Vous voulez boire quoi ?
+    explain: qu'est-ce que means "what" at the start of a question.
+
+  - id: q-09
+    fr: "{Quelle|what} heure est-il ?"
+    en:
+      - What time is it?
+    explain: heure is feminine → quelle. The question uses inversion (est-il).
+
+  - id: q-10
+    fr: "{Quel|what} est ton numéro de téléphone ?"
+    en:
+      - What's your phone number?
+      - What is your telephone number?
+    alt_fr:
+      - Quel est votre numéro de téléphone ?
+    grammar: [possessives]
+    explain: Before être + a noun, "what" is quel, not qu'est-ce que. numéro is masculine → quel.
+
+  - id: q-11
+    fr: "{Quel|what} âge as-tu ?"
+    en:
+      - How old are you?
+    alt_fr:
+      - Tu as quel âge ?
+      - Quel âge avez-vous ?
+    grammar: [present-etre-avoir-aller-faire]
+    explain: âge is masculine → quel. Age uses avoir → "what age do you have?".
+
+  - id: q-12
+    fr: "{Parlez-vous|parler, inversion} anglais ?"
+    en:
+      - Do you speak English?
+    register: formal
+    alt_fr:
+      - Vous parlez anglais ?
+      - Est-ce que vous parlez anglais ?
+    explain: Inversion means the verb comes first and is joined to the pronoun with a hyphen.
+
+  - id: q-13
+    fr: "{A-t-il|avoir, inversion} des frères et sœurs ?"
+    en:
+      - Does he have any brothers or sisters?
+      - Does he have brothers and sisters?
+      - Has he got any siblings?
+    alt_fr:
+      - Il a des frères et sœurs ?
+      - Est-ce qu'il a des frères et sœurs ?
+    level: A2
+    explain: In inversion, -t- goes between two vowels → a-t-il.
+
+  - id: q-14
+    fr: "{Combien de|how many} cafés tu bois par jour ?"
+    en:
+      - How many coffees do you drink a day?
+      - How many coffees do you drink per day?
+    alt_fr:
+      - Tu bois combien de cafés par jour ?
+      - Combien de cafés est-ce que tu bois par jour ?
+    explain: combien de + a noun, with no article.
+
+  - id: q-15
+    fr: Tu fais {quoi|what} ce week-end ?
+    en:
+      - What are you doing this weekend?
+      - What are you up to this weekend?
+    alt_fr:
+      - Qu'est-ce que tu fais ce week-end ?
+      - Vous faites quoi ce week-end ?
+    explain: At the end of a question, "what" is quoi.
+
+  - id: q-16
+    fr: "{Est-ce qu'|question}il pleut ?"
+    en:
+      - Is it raining?
+    alt_fr:
+      - Il pleut ?
+    explain: est-ce que becomes est-ce qu' before a vowel (il, elle, on).
+
+  - id: q-17
+    fr: "{Quelles|which} chaussures tu préfères ?"
+    en:
+      - Which shoes do you prefer?
+      - Which shoes do you like best?
+    alt_fr:
+      - Quelles chaussures est-ce que tu préfères ?
+      - Quelles chaussures préférez-vous ?
+    explain: chaussures is feminine plural → quelles.

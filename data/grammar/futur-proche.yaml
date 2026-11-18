@@ -1,0 +1,143 @@
+point: futur-proche
+title: Near future with aller + infinitive
+level: A1
+rule: |
+  To talk about plans and the near future, use **aller** in the present + an **infinitive**.
+  It is like "going to" in English.
+  - Je **vais partir**. Nous **allons manger**.
+
+  aller: je vais, tu vas, il/elle/on va, nous allons, vous allez, ils/elles vont.
+
+  **Negative:** ne… pas goes around aller: je **ne vais pas** travailler.
+
+  **Useful time words:** ce soir, demain, ce week-end, la semaine prochaine, l'année prochaine.
+items:
+  - id: fp-01
+    fr: Je {vais partir|partir} demain.
+    en:
+      - I'm going to leave tomorrow.
+      - I'm leaving tomorrow.
+    explain: aller (je vais) + the infinitive partir.
+
+  - id: fp-02
+    fr: Tu {vas aimer|aimer} ce film.
+    en:
+      - You're going to love this film.
+      - You're going to like this movie.
+      - You'll like this film.
+    alt_fr:
+      - Vous allez aimer ce film.
+    explain: aller (tu vas) + the infinitive aimer.
+
+  - id: fp-03
+    fr: Il {va pleuvoir|pleuvoir} cet après-midi.
+    en:
+      - It's going to rain this afternoon.
+    explain: aller (il va) + the infinitive pleuvoir.
+
+  - id: fp-04
+    fr: Nous {allons visiter|visiter} le musée samedi.
+    en:
+      - We're going to visit the museum on Saturday.
+      - We're visiting the museum on Saturday.
+    alt_fr:
+      - On va visiter le musée samedi.
+    explain: aller (nous allons) + the infinitive visiter.
+
+  - id: fp-05
+    fr: Vous {allez prendre|prendre} un dessert ?
+    en:
+      - Are you going to have a dessert?
+      - Will you have dessert?
+      - Are you having dessert?
+    alt_fr:
+      - Tu vas prendre un dessert ?
+    explain: aller (vous allez) + the infinitive prendre. Prendre also means "to have" food or drink.
+
+  - id: fp-06
+    fr: Mes amis {vont venir|venir} ce soir.
+    en:
+      - My friends are coming tonight.
+      - My friends are going to come this evening.
+    explain: aller (ils vont) + the infinitive venir.
+
+  - id: fp-07
+    fr: Je {ne vais pas|not + aller} travailler demain.
+    en:
+      - I'm not going to work tomorrow.
+      - I'm not working tomorrow.
+    grammar: [negation]
+    explain: ne… pas goes around aller, and the infinitive comes after.
+
+  - id: fp-08
+    fr: On {va manger|manger} au restaurant.
+    en:
+      - We're going to eat at a restaurant.
+      - We're going to eat out.
+    alt_fr:
+      - Nous allons manger au restaurant.
+    grammar: [a-de-contractions]
+    explain: on takes the il form → on va + infinitive.
+
+  - id: fp-09
+    fr: Elle {va avoir|avoir} trente ans.
+    en:
+      - She's going to be thirty.
+      - She'll be thirty.
+    grammar: [present-etre-avoir-aller-faire]
+    explain: aller + avoir. Age uses avoir, in the future too.
+
+  - id: fp-10
+    fr: Qu'est-ce que tu {vas faire|faire} ce week-end ?
+    en:
+      - What are you going to do this weekend?
+      - What are you doing this weekend?
+    alt_fr:
+      - Tu vas faire quoi ce week-end ?
+      - Qu'est-ce que vous allez faire ce week-end ?
+    grammar: [questions]
+    explain: aller (tu vas) + the infinitive faire.
+
+  - id: fp-11
+    fr: Ils {vont acheter|acheter} une maison.
+    en:
+      - They're going to buy a house.
+      - They are going to buy a house.
+    explain: aller (ils vont) + the infinitive acheter.
+
+  - id: fp-12
+    fr: Nous {allons être|être} en retard !
+    en:
+      - We're going to be late!
+      - We'll be late!
+    alt_fr:
+      - On va être en retard !
+    explain: aller (nous allons) + the infinitive être.
+
+  - id: fp-13
+    fr: Le train {va arriver|arriver} dans cinq minutes.
+    en:
+      - The train is going to arrive in five minutes.
+      - The train will arrive in five minutes.
+      - The train arrives in five minutes.
+    explain: aller (il va) + the infinitive arriver.
+
+  - id: fp-14
+    fr: Vous {n'allez pas|not + aller} le regretter.
+    en:
+      - You won't regret it.
+      - You're not going to regret it.
+    alt_fr:
+      - Tu ne vas pas le regretter.
+    grammar: [negation]
+    level: A2
+    explain: ne… pas goes around aller. ne becomes n' before allez.
+
+  - id: fp-15
+    fr: Je {vais appeler|appeler} ma mère ce soir.
+    en:
+      - I'm going to call my mum tonight.
+      - I'm going to call my mother this evening.
+      - I'll call my mom tonight.
+    grammar: [possessives]
+    explain: aller (je vais) + the infinitive appeler.

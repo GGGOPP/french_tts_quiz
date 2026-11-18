@@ -1,0 +1,145 @@
+point: articles-gender
+title: Articles and gender
+level: A1
+rule: |
+  Every noun is masculine or feminine. Learn the article along with the noun.
+
+  | | masculine | feminine | plural |
+  |---|---|---|---|
+  | the | le (l') | la (l') | les |
+  | a, some | un | une | des |
+
+  - **le** and **la** become **l'** before a vowel or a silent h: l'ami, l'école, l'hôtel.
+  - **des** is the plural of un and une: un livre → des livres. English often leaves it out ("I have friends"), but French needs it.
+  - Use **le, la, les** for things in general after aimer, adorer, détester and préférer: j'aime **le** fromage.
+  - Endings that are usually feminine: -tion, -té, -ée, -ette, -ure. Usually masculine: -ment, -age, -eau. Common exceptions: **la** plage, **l'**eau (f), **le** problème.
+items:
+  - id: art-01
+    fr: "{La|the} gare est loin d'ici."
+    en:
+      - The station is far from here.
+      - The train station is far from here.
+    explain: gare is feminine → la.
+
+  - id: art-02
+    fr: J'ai {un|a} frère et {une|a} sœur.
+    en:
+      - I have a brother and a sister.
+      - I've got a brother and a sister.
+    explain: frère is masculine → un; sœur is feminine → une.
+
+  - id: art-03
+    fr: "{L'|the}hôtel est près de la mer."
+    en:
+      - The hotel is near the sea.
+      - The hotel is close to the sea.
+    explain: The h of hôtel is silent, so le becomes l'.
+
+  - id: art-04
+    fr: J'aime {le|article} fromage.
+    en:
+      - I like cheese.
+      - I love cheese.
+    explain: After aimer, French uses le, la or les for things in general, even though English has no article.
+
+  - id: art-05
+    fr: Il y a {des|some} fleurs sur la table.
+    en:
+      - There are flowers on the table.
+      - There are some flowers on the table.
+    explain: Plural of une fleur → des fleurs.
+
+  - id: art-06
+    fr: C'est {une|a} belle journée.
+    en:
+      - It's a beautiful day.
+      - It's a lovely day.
+    grammar: [adjectives]
+    explain: journée is feminine → une (and belle, not beau).
+
+  - id: art-07
+    fr: "{Le|the} problème, c'est le prix."
+    en:
+      - The problem is the price.
+      - The problem is the cost.
+    explain: problème is masculine, even though it ends in -e.
+
+  - id: art-08
+    fr: Je cherche {la|the} pharmacie.
+    en:
+      - I'm looking for the pharmacy.
+      - I'm looking for the chemist's.
+      - I am looking for the pharmacy.
+    explain: pharmacie is feminine → la.
+
+  - id: art-09
+    fr: Nous avons {des|some} amis à Marseille.
+    en:
+      - We have friends in Marseille.
+      - We have some friends in Marseille.
+      - We've got friends in Marseille.
+    alt_fr:
+      - On a des amis à Marseille.
+    explain: French needs des for "some" even when English leaves it out.
+
+  - id: art-10
+    fr: "{L'|the}eau est froide."
+    en:
+      - The water is cold.
+    explain: eau is feminine (froide), but la becomes l' before a vowel.
+
+  - id: art-11
+    fr: Tu as {un|a} stylo ?
+    en:
+      - Do you have a pen?
+      - Have you got a pen?
+    alt_fr:
+      - Vous avez un stylo ?
+      - Est-ce que tu as un stylo ?
+    grammar: [questions]
+    explain: stylo is masculine → un.
+
+  - id: art-12
+    fr: "{Les|the} enfants jouent dans le jardin."
+    en:
+      - The children are playing in the garden.
+      - The kids are playing in the garden.
+      - The children are playing in the yard.
+    explain: Plural → les, with a z sound (liaison) before a vowel.
+
+  - id: art-13
+    fr: C'est {une|a} question difficile.
+    en:
+      - It's a difficult question.
+      - That's a difficult question.
+      - It's a hard question.
+    explain: Words ending in -tion are feminine → une.
+
+  - id: art-14
+    fr: Je prends {le|the} train de huit heures.
+    en:
+      - I'm taking the eight o'clock train.
+      - I take the eight o'clock train.
+    grammar: [present-tense]
+    explain: train is masculine → le.
+
+  - id: art-15
+    fr: Il y a {un|a} problème avec {la|the} réservation.
+    en:
+      - There's a problem with the reservation.
+      - There is a problem with the booking.
+    explain: problème is masculine → un; réservation ends in -tion → feminine → la.
+
+  - id: art-16
+    fr: Elle déteste {les|article} araignées.
+    en:
+      - She hates spiders.
+    explain: After détester, use les for things in general. English uses no article.
+
+  - id: art-17
+    fr: J'habite dans {un|a} petit appartement.
+    en:
+      - I live in a small flat.
+      - I live in a small apartment.
+    grammar: [adjectives]
+    explain: appartement ends in -ment → masculine → un (and petit, not petite).

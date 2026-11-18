@@ -1,0 +1,168 @@
+topic: Time & days
+items:
+  - id: time-01
+    fr: Vous avez l'heure, s'il vous plaît ?
+    en:
+      - Do you have the time, please?
+      - Have you got the time, please?
+    level: A1
+    register: formal
+    grammar: [questions]
+
+  - id: time-02
+    fr: Il est trois heures.
+    en:
+      - It's three o'clock.
+      - It's three.
+    level: A1
+
+  - id: time-03
+    fr: Il est huit heures et quart.
+    en:
+      - It's quarter past eight.
+      - It's a quarter past eight.
+      - It's eight fifteen.
+    level: A1
+
+  - id: time-04
+    fr: Il est deux heures et demie.
+    en:
+      - It's half past two.
+      - It's two thirty.
+    level: A1
+    notes: heure is feminine, so it is et demie, with an e.
+
+  - id: time-05
+    fr: Il est sept heures moins le quart.
+    en:
+      - It's quarter to seven.
+      - It's a quarter to seven.
+      - It's six forty-five.
+    level: A1
+
+  - id: time-06
+    fr: Il est midi.
+    en:
+      - It's noon.
+      - It's midday.
+      - It's twelve o'clock.
+    level: A1
+
+  - id: time-07
+    fr: Il est minuit et demi.
+    en:
+      - It's half past midnight.
+      - It's twelve thirty at night.
+    level: A2
+    notes: minuit is masculine, so it is et demi, without an e.
+
+  - id: time-08
+    fr: Le film commence à vingt heures trente.
+    en:
+      - The film starts at eight thirty in the evening.
+      - The movie starts at 8.30 pm.
+      - The film starts at half past eight.
+    level: A1
+    grammar: [present-tense]
+    notes: The 24-hour clock is normal for timetables, shows and appointments.
+
+  - id: time-09
+    fr: À quelle heure ouvre la banque ?
+    en:
+      - What time does the bank open?
+      - When does the bank open?
+    alt_fr:
+      - La banque ouvre à quelle heure ?
+      - À quelle heure est-ce que la banque ouvre ?
+    level: A1
+    grammar: [questions]
+
+  - id: time-10
+    fr: Le train a dix minutes de retard.
+    en:
+      - The train is ten minutes late.
+      - The train is running ten minutes late.
+    level: A2
+    grammar: [present-etre-avoir-aller-faire]
+    notes: French says the train "has" ten minutes of delay → avoir.
+
+  - id: time-11
+    fr: On est quel jour aujourd'hui ?
+    en:
+      - What day is it today?
+    alt_fr:
+      - Quel jour sommes-nous ?
+      - Quel jour est-on aujourd'hui ?
+      - C'est quel jour aujourd'hui ?
+    level: A1
+    grammar: [questions]
+
+  - id: time-12
+    fr: Aujourd'hui, c'est mercredi.
+    en:
+      - Today is Wednesday.
+      - It's Wednesday today.
+    alt_fr:
+      - On est mercredi aujourd'hui.
+    level: A1
+    notes: Days and months have no capital letter in French.
+
+  - id: time-13
+    fr: Mon anniversaire, c'est le douze mai.
+    en:
+      - My birthday is the twelfth of May.
+      - My birthday is on May twelfth.
+      - My birthday is on the twelfth of May.
+    level: A1
+    grammar: [possessives]
+    notes: Dates use le + a plain number (le douze mai), except for the first day of the month, le premier.
+
+  - id: time-14
+    fr: Je travaille du lundi au vendredi.
+    en:
+      - I work from Monday to Friday.
+      - I work Monday to Friday.
+    level: A1
+    grammar: [a-de-contractions, present-tense]
+
+  - id: time-15
+    fr: On se voit demain matin ?
+    en:
+      - Shall we meet tomorrow morning?
+      - See you tomorrow morning?
+      - Are we meeting tomorrow morning?
+    level: A2
+    grammar: [reflexive-verbs, questions]
+
+  - id: time-16
+    fr: Je suis libre jeudi après-midi.
+    en:
+      - I'm free on Thursday afternoon.
+      - I'm free Thursday afternoon.
+    level: A1
+    grammar: [present-etre-avoir-aller-faire]
+
+  - id: time-17
+    fr: Le magasin est fermé le dimanche.
+    en:
+      - The shop is closed on Sundays.
+      - The store is closed on Sundays.
+    level: A1
+    grammar: [adjectives]
+
+  - id: time-18
+    fr: J'arrive dans cinq minutes !
+    en:
+      - I'll be there in five minutes!
+      - I'm coming in five minutes!
+      - I'll be there in five minutes.
+    level: A1
+    notes: J'arrive means "I'm on my way" or "I'll be right there".
+
+  - id: time-19
+    fr: La semaine prochaine, je vais à Nice.
+    en:
+      - Next week I'm going to Nice.
+      - Next week, I'm going to Nice.
+    level: A1
+    grammar: [present-etre-avoir-aller-faire, a-de-contractions]

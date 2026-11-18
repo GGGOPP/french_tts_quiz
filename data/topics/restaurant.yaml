@@ -1,0 +1,186 @@
+topic: Café & restaurant
+items:
+  - id: resto-01
+    fr: Bonjour, une table pour deux, s'il vous plaît.
+    en:
+      - Hello, a table for two, please.
+      - Hi, a table for two, please.
+    level: A1
+    register: formal
+
+  - id: resto-02
+    fr: Vous avez réservé ?
+    en:
+      - Do you have a reservation?
+      - Have you booked?
+      - Did you make a reservation?
+    alt_fr:
+      - Est-ce que vous avez réservé ?
+      - Avez-vous réservé ?
+    level: A2
+    register: formal
+    grammar: [passe-compose-avoir, questions]
+
+  - id: resto-03
+    fr: Je voudrais un café, s'il vous plaît.
+    en:
+      - I would like a coffee, please.
+      - I'd like a coffee, please.
+    level: A1
+    register: formal
+    grammar: [conditional-politeness, articles-gender]
+    notes: Un café is a small black coffee (an espresso). Ask for un café crème for one with milk.
+
+  - id: resto-04
+    fr: La carte, s'il vous plaît.
+    en:
+      - The menu, please.
+      - Can I have the menu, please?
+    level: A1
+    register: formal
+    notes: La carte is the menu. Le menu usually means a set meal at a fixed price.
+
+  - id: resto-05
+    fr: Qu'est-ce que vous me conseillez ?
+    en:
+      - What do you recommend?
+      - What would you recommend?
+    level: A2
+    register: formal
+    grammar: [questions]
+
+  - id: resto-06
+    fr: Je vais prendre le plat du jour.
+    en:
+      - I'll have the dish of the day.
+      - I'm going to have today's special.
+      - I'll have the special of the day.
+    level: A1
+    grammar: [futur-proche, a-de-contractions]
+
+  - id: resto-07
+    fr: Pour moi, une salade niçoise.
+    en:
+      - For me, a niçoise salad.
+      - A niçoise salad for me.
+    level: A1
+
+  - id: resto-08
+    fr: Je ne mange pas de viande.
+    en:
+      - I don't eat meat.
+    level: A1
+    grammar: [negation, partitive]
+
+  - id: resto-09
+    fr: Il y a des noix dans ce gâteau ?
+    en:
+      - Are there nuts in this cake?
+      - Does this cake have nuts in it?
+      - Are there any nuts in this cake?
+    alt_fr:
+      - Est-ce qu'il y a des noix dans ce gâteau ?
+    level: A2
+    grammar: [questions, articles-gender]
+
+  - id: resto-10
+    fr: Une carafe d'eau, s'il vous plaît.
+    en:
+      - A jug of water, please.
+      - A carafe of water, please.
+      - Tap water, please.
+    level: A1
+    register: formal
+    grammar: [partitive]
+    notes: Tap water is free in French restaurants. Ask for une carafe d'eau.
+
+  - id: resto-11
+    fr: Vous voulez un dessert ?
+    en:
+      - Would you like a dessert?
+      - Do you want a dessert?
+      - Do you want dessert?
+    alt_fr:
+      - Tu veux un dessert ?
+      - Est-ce que vous voulez un dessert ?
+      - Voulez-vous un dessert ?
+    level: A1
+    grammar: [present-tense, questions]
+
+  - id: resto-12
+    fr: Non merci, mais je veux bien un café.
+    en:
+      - No thanks, but I'd love a coffee.
+      - No thank you, but I'll have a coffee.
+      - No thanks, but I'd like a coffee.
+    level: A2
+    grammar: [conditional-politeness]
+    notes: Je veux bien means "yes please" or "I'd like that". It is softer than je veux.
+
+  - id: resto-13
+    fr: C'était délicieux !
+    en:
+      - It was delicious!
+      - That was delicious!
+    level: A2
+
+  - id: resto-14
+    fr: L'addition, s'il vous plaît.
+    en:
+      - The bill, please.
+      - The check, please.
+      - Can I have the bill, please?
+    level: A1
+    register: formal
+
+  - id: resto-15
+    fr: On peut payer par carte ?
+    en:
+      - Can we pay by card?
+      - Can I pay by card?
+    alt_fr:
+      - Est-ce qu'on peut payer par carte ?
+      - Nous pouvons payer par carte ?
+      - Je peux payer par carte ?
+      - Est-ce que je peux payer par carte ?
+    level: A1
+    grammar: [present-tense, questions]
+
+  - id: resto-16
+    fr: Le service est compris ?
+    en:
+      - Is service included?
+      - Is the service charge included?
+    alt_fr:
+      - Est-ce que le service est compris ?
+    level: A2
+    grammar: [questions]
+
+  - id: resto-17
+    fr: Je n'ai plus faim, merci.
+    en:
+      - I'm not hungry any more, thanks.
+      - I'm no longer hungry, thank you.
+      - I'm full, thanks.
+    level: A2
+    grammar: [negation, present-etre-avoir-aller-faire]
+
+  - id: resto-18
+    fr: Un croissant et un jus d'orange, s'il vous plaît.
+    en:
+      - A croissant and an orange juice, please.
+      - A croissant and orange juice, please.
+    level: A1
+    register: formal
+    grammar: [articles-gender]
+
+  - id: resto-19
+    fr: Nous avons une réservation au nom de Martin.
+    en:
+      - We have a reservation under the name Martin.
+      - We have a booking in the name of Martin.
+      - We have a reservation for Martin.
+    alt_fr:
+      - On a une réservation au nom de Martin.
+    level: A2
+    grammar: [a-de-contractions]

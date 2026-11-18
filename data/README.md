@@ -90,6 +90,12 @@ Any other key is an error, which catches typos such as `alt-fr`.
 - Start every `fr`, `alt_fr` and `en` entry with a capital letter, as a sentence. End with punctuation where the sentence would have it.
 - Write numbers in words (`quatre-vingt-dix`), so dictée has a single right spelling. The numbers mode practises digits.
 - Keep sentences short and natural. Use A1–A2 vocabulary, and one new difficulty per sentence.
+- **Every sentence is also a dictée**, so its spelling must follow from the audio plus grammar. Avoid sentences that sound the same as another spelling:
+  - *il parle* / *ils parlent*: use a subject you can hear is plural (*mes amis parlent*), or a verb whose plural sounds different (*ils ont*, *ils prennent*, *ils invitent*).
+  - *je suis allé* / *je suis allée*, *je suis fatigué(e)*, *nous sommes prêts/prêtes*: only je, tu, nous and vous hide the gender. Use il, elle or a name instead (*Sophie s'est levée*).
+  - *leur vélo* / *leurs vélos*: the plural must be heard somewhere (*leurs amis* has a z sound).
+
+  Agreement that grammar decides (*elle est allée*, *les fleurs blanches*) is fine. That is what dictée practises.
 - Give `en` the natural English translations a learner might write (contractions, word-order variants). The LLM grader handles other paraphrases.
 
 ## YAML pitfalls
@@ -97,6 +103,8 @@ Any other key is an error, which catches typos such as `alt-fr`.
 The validator catches each of these, but it is quicker to avoid them:
 
 - **Commas split entries inside `[...]`.** `en: [Yes, please.]` is two entries, `Yes` and `please.`. Quote the entry (`["Yes, please."]`) or use a block list (`- Yes, please.`).
+- **A `?` just before `]` breaks a flow list.** `en: [Are you hungry?]` is a parse error. Write lists in block style (`- Are you hungry?` on its own line), as the data files do.
+- **A value can't start with `{` or `"`.** `fr: {Où|where} est la gare ?` would be read as a mapping. Quote the whole value: `fr: "{Où|where} est la gare ?"`.
 - **`yes`, `no`, `on` and `off` become booleans.** `en: [No]` gives `false`. Write `["No."]`.
 - **`: ` and ` #` inside a plain value** start a mapping or a comment. Quote values that contain them.
 - **Duplicate keys** in one item are an error. Plain YAML would silently keep the last one.

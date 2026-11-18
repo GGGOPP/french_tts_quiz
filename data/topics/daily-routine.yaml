@@ -1,0 +1,158 @@
+topic: Daily routine
+items:
+  - id: day-01
+    fr: Je me réveille à sept heures.
+    en:
+      - I wake up at seven.
+      - I wake up at seven o'clock.
+    level: A1
+    grammar: [reflexive-verbs]
+
+  - id: day-02
+    fr: Je me lève tout de suite.
+    en:
+      - I get up straight away.
+      - I get up right away.
+    level: A1
+    grammar: [reflexive-verbs]
+
+  - id: day-03
+    fr: Je prends une douche et je m'habille.
+    en:
+      - I take a shower and get dressed.
+      - I have a shower and get dressed.
+      - I take a shower and I get dressed.
+    level: A1
+    grammar: [reflexive-verbs, present-tense]
+
+  - id: day-04
+    fr: Le matin, je bois du thé.
+    en:
+      - In the morning I drink tea.
+      - In the mornings I drink tea.
+      - I drink tea in the morning.
+    level: A1
+    grammar: [partitive, present-tense]
+
+  - id: day-05
+    fr: Je pars de la maison à huit heures.
+    en:
+      - I leave the house at eight.
+      - I leave home at eight o'clock.
+    level: A1
+    grammar: [a-de-contractions, present-tense]
+
+  - id: day-06
+    fr: Je vais au travail en métro.
+    en:
+      - I go to work by metro.
+      - I take the metro to work.
+      - I go to work on the subway.
+    level: A1
+    grammar: [present-etre-avoir-aller-faire, a-de-contractions]
+
+  - id: day-07
+    fr: Je déjeune avec mes collègues à midi et demi.
+    en:
+      - I have lunch with my colleagues at half past twelve.
+      - I eat lunch with my coworkers at twelve thirty.
+    level: A2
+    grammar: [possessives]
+    notes: midi is masculine, so it is midi et demi, without an e.
+
+  - id: day-08
+    fr: L'après-midi, je travaille jusqu'à six heures.
+    en:
+      - In the afternoon, I work until six.
+      - In the afternoon I work till six o'clock.
+    level: A1
+    grammar: [present-tense]
+
+  - id: day-09
+    fr: Après le travail, je fais les courses.
+    en:
+      - After work, I do the shopping.
+      - After work I go food shopping.
+    level: A1
+    grammar: [present-etre-avoir-aller-faire]
+
+  - id: day-10
+    fr: Le soir, nous dînons vers vingt heures.
+    en:
+      - In the evening we have dinner around eight.
+      - In the evening, we eat at about eight o'clock.
+      - We have dinner at around 8 pm.
+    alt_fr:
+      - Le soir, on dîne vers vingt heures.
+    level: A1
+    grammar: [present-tense]
+
+  - id: day-11
+    fr: Je fais la vaisselle et je regarde la télé.
+    en:
+      - I do the washing-up and watch TV.
+      - I do the dishes and watch television.
+      - I do the dishes and I watch TV.
+    level: A1
+    grammar: [present-etre-avoir-aller-faire]
+
+  - id: day-12
+    fr: Je me couche vers onze heures.
+    en:
+      - I go to bed around eleven.
+      - I go to bed at about eleven o'clock.
+    level: A1
+    grammar: [reflexive-verbs]
+
+  - id: day-13
+    fr: Le week-end, je ne travaille pas.
+    en:
+      - At the weekend, I don't work.
+      - I don't work at weekends.
+      - I don't work on weekends.
+    level: A1
+    grammar: [negation]
+
+  - id: day-14
+    fr: Le samedi, je fais du sport.
+    en:
+      - On Saturdays I do sport.
+      - On Saturdays I play sports.
+      - I do sport on Saturdays.
+    level: A1
+    grammar: [partitive, present-etre-avoir-aller-faire]
+    notes: le samedi means every Saturday; samedi on its own means this Saturday.
+
+  - id: day-15
+    fr: Mon voisin promène son chien tous les soirs.
+    en:
+      - My neighbour walks his dog every evening.
+      - My neighbor walks his dog every night.
+    level: A2
+    grammar: [possessives]
+
+  - id: day-16
+    fr: Le dimanche, on se repose.
+    en:
+      - On Sundays we rest.
+      - We relax on Sundays.
+      - On Sundays, we take it easy.
+    alt_fr:
+      - Le dimanche, nous nous reposons.
+    level: A2
+    grammar: [reflexive-verbs]
+
+  - id: day-17
+    fr: Ce matin, j'ai pris le bus.
+    en:
+      - This morning I took the bus.
+      - I took the bus this morning.
+    level: A2
+    grammar: [passe-compose-avoir]
+
+  - id: day-18
+    fr: Le lundi, c'est toujours difficile.
+    en:
+      - Mondays are always hard.
+      - Mondays are always difficult.
+    level: A1

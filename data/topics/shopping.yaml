@@ -1,0 +1,167 @@
+topic: Shopping
+items:
+  - id: shop-01
+    fr: Je cherche un pull noir.
+    en:
+      - I'm looking for a black jumper.
+      - I'm looking for a black sweater.
+    level: A1
+    grammar: [adjectives]
+
+  - id: shop-02
+    fr: C'est combien ?
+    en:
+      - How much is it?
+      - How much is this?
+      - How much does it cost?
+    alt_fr:
+      - Ça coûte combien ?
+      - Combien ça coûte ?
+    level: A1
+    grammar: [questions]
+
+  - id: shop-03
+    fr: Vous avez cette robe en trente-huit ?
+    en:
+      - Do you have this dress in a thirty-eight?
+      - Do you have this dress in size thirty-eight?
+      - Have you got this dress in a 38?
+    alt_fr:
+      - Est-ce que vous avez cette robe en trente-huit ?
+    level: A2
+    register: formal
+    grammar: [questions]
+    notes: French clothes use European sizes.
+
+  - id: shop-04
+    fr: Je peux l'essayer ?
+    en:
+      - Can I try it on?
+      - May I try it on?
+    alt_fr:
+      - Est-ce que je peux l'essayer ?
+    level: A2
+    grammar: [present-tense, questions]
+
+  - id: shop-05
+    fr: Les cabines d'essayage sont au fond.
+    en:
+      - The fitting rooms are at the back.
+      - The changing rooms are at the back.
+    level: A2
+    grammar: [a-de-contractions]
+
+  - id: shop-06
+    fr: C'est un peu trop grand.
+    en:
+      - It's a bit too big.
+      - It's a little too big.
+    level: A1
+
+  - id: shop-07
+    fr: Vous l'avez en bleu ?
+    en:
+      - Do you have it in blue?
+    alt_fr:
+      - Est-ce que vous l'avez en bleu ?
+    level: A2
+    register: formal
+    grammar: [questions]
+
+  - id: shop-08
+    fr: Je voudrais un kilo de tomates.
+    en:
+      - I'd like a kilo of tomatoes.
+      - I would like a kilo of tomatoes.
+    level: A1
+    grammar: [conditional-politeness, partitive]
+
+  - id: shop-09
+    fr: Et avec ceci ?
+    en:
+      - Anything else?
+      - Will there be anything else?
+    level: A2
+    notes: What a shop assistant asks when serving you. Answer with C'est tout, merci.
+
+  - id: shop-10
+    fr: C'est tout, merci.
+    en:
+      - That's all, thanks.
+      - That's everything, thank you.
+    level: A1
+
+  - id: shop-11
+    fr: Ça fait douze euros cinquante.
+    en:
+      - That's twelve euros fifty.
+      - That comes to twelve euros fifty.
+      - That's twelve fifty.
+    level: A1
+    notes: Ça fait… is how you hear the total at the till.
+
+  - id: shop-12
+    fr: Vous payez en espèces ou par carte ?
+    en:
+      - Are you paying in cash or by card?
+      - Are you paying cash or card?
+      - Cash or card?
+    level: A2
+    register: formal
+    grammar: [questions]
+
+  - id: shop-13
+    fr: Je n'ai pas de monnaie.
+    en:
+      - I don't have any change.
+      - I have no change.
+      - I haven't got any change.
+    level: A1
+    grammar: [negation, partitive]
+
+  - id: shop-14
+    fr: Est-ce que je peux avoir un sac, s'il vous plaît ?
+    en:
+      - Can I have a bag, please?
+      - Could I have a bag, please?
+    alt_fr:
+      - Je peux avoir un sac, s'il vous plaît ?
+    level: A1
+    register: formal
+    grammar: [questions, present-tense]
+
+  - id: shop-15
+    fr: La boulangerie ferme à quelle heure ?
+    en:
+      - What time does the bakery close?
+      - When does the bakery close?
+    alt_fr:
+      - À quelle heure ferme la boulangerie ?
+      - À quelle heure est-ce que la boulangerie ferme ?
+    level: A2
+    grammar: [questions]
+
+  - id: shop-16
+    fr: Je regarde seulement, merci.
+    en:
+      - I'm just looking, thanks.
+      - I'm only looking, thank you.
+    level: A1
+
+  - id: shop-17
+    fr: Ces chaussures sont trop chères.
+    en:
+      - These shoes are too expensive.
+      - Those shoes are too expensive.
+    level: A1
+    grammar: [adjectives]
+
+  - id: shop-18
+    fr: Il me faut du pain et des œufs.
+    en:
+      - I need bread and eggs.
+      - I need some bread and some eggs.
+    alt_fr:
+      - J'ai besoin de pain et d'œufs.
+    level: A2
+    grammar: [partitive]

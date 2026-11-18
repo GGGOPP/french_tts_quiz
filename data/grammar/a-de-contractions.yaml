@@ -1,0 +1,148 @@
+point: a-de-contractions
+title: À and de, their contractions, and places
+level: A1
+rule: |
+  **à** (to, at, in) and **de** (of, from) merge with **le** and **les**:
+
+  | | + le | + la | + l' | + les |
+  |---|---|---|---|---|
+  | à | **au** | à la | à l' | **aux** |
+  | de | **du** | de la | de l' | **des** |
+
+  - Je vais **au** cinéma, **à la** banque, **à l'**hôpital.
+  - Je rentre **du** bureau, **de la** gare. C'est la voiture **du** voisin.
+
+  **Places:**
+  - Cities: **à** Paris (to or in), **de** Paris (from).
+  - Feminine countries (most end in -e): **en** France, **d'**Espagne.
+  - Masculine countries: **au** Canada, **du** Japon.
+  - Plural countries: **aux** États-Unis, **des** États-Unis.
+
+  **chez** + a person means at or to their place: chez moi, chez le dentiste.
+items:
+  - id: ad-01
+    fr: Je vais {au|to the} cinéma ce soir.
+    en:
+      - I'm going to the cinema tonight.
+      - I'm going to the movies tonight.
+    grammar: [present-etre-avoir-aller-faire]
+    explain: à + le → au.
+
+  - id: ad-02
+    fr: Elle travaille {à la|at the} banque.
+    en:
+      - She works at the bank.
+    explain: à + la does not contract → à la.
+
+  - id: ad-03
+    fr: Il est {à l'|in the}hôpital.
+    en:
+      - He's in hospital.
+      - He is in the hospital.
+    explain: à + le before a vowel or silent h → à l'.
+
+  - id: ad-04
+    fr: Nous parlons {aux|to the} voisins.
+    en:
+      - We're talking to the neighbours.
+      - We talk to the neighbors.
+    alt_fr:
+      - On parle aux voisins.
+    explain: à + les → aux.
+
+  - id: ad-05
+    fr: Je rentre {du|from} travail à six heures.
+    en:
+      - I come home from work at six.
+      - I get back from work at six.
+      - I get home from work at six o'clock.
+    explain: de + le travail → du travail.
+
+  - id: ad-06
+    fr: C'est la voiture {du|of the} voisin.
+    en:
+      - It's the neighbour's car.
+      - That's the neighbor's car.
+    explain: de + le → du. French says "the car of the neighbour".
+
+  - id: ad-07
+    fr: Il habite {à|in} Lyon.
+    en:
+      - He lives in Lyon.
+    explain: Cities take à, for both "in" and "to".
+
+  - id: ad-08
+    fr: Nous passons nos vacances {en|in} Italie.
+    en:
+      - We spend our holidays in Italy.
+      - We're spending our holiday in Italy.
+      - We're spending our vacation in Italy.
+    grammar: [possessives]
+    explain: Italie is feminine → en, for both "in" and "to".
+
+  - id: ad-09
+    fr: Mon cousin habite {au|in} Canada.
+    en:
+      - My cousin lives in Canada.
+    explain: le Canada is masculine → au.
+
+  - id: ad-10
+    fr: Ils partent {aux|to the} États-Unis en juin.
+    en:
+      - They're going to the United States in June.
+      - They're leaving for the United States in June.
+      - They are going to the USA in June.
+    explain: les États-Unis is plural → aux.
+
+  - id: ad-11
+    fr: Je viens {d'|from}Espagne.
+    en:
+      - I'm from Spain.
+      - I come from Spain.
+    explain: Feminine country → de (no article), and de becomes d' before a vowel.
+
+  - id: ad-12
+    fr: Elle arrive {du|from} Japon demain.
+    en:
+      - She's arriving from Japan tomorrow.
+      - She arrives from Japan tomorrow.
+    explain: le Japon is masculine → de + le → du.
+
+  - id: ad-13
+    fr: J'ai rendez-vous {chez|at} le dentiste.
+    en:
+      - I have an appointment at the dentist's.
+      - I've got a dentist's appointment.
+      - I have a dentist appointment.
+    level: A2
+    explain: chez means "at the place of" a person, so it is used for the dentist, the doctor and people's homes.
+
+  - id: ad-14
+    fr: Le musée est à côté {de la|of the} poste.
+    en:
+      - The museum is next to the post office.
+      - The museum is beside the post office.
+    explain: à côté de + la poste does not contract → de la.
+
+  - id: ad-15
+    fr: Je téléphone {au|to the} médecin.
+    en:
+      - I'm calling the doctor.
+      - I'm phoning the doctor.
+      - I call the doctor.
+    explain: téléphoner takes à, and à + le → au.
+
+  - id: ad-16
+    fr: Ce soir, on dîne {au|at the} restaurant.
+    en:
+      - Tonight we're eating out.
+      - We're having dinner at a restaurant tonight.
+      - This evening we're eating at a restaurant.
+    explain: à + le → au. Au restaurant means "eating out".
+
+  - id: ad-17
+    fr: Elle rentre {de la|from the} piscine.
+    en:
+      - She's coming back from the pool.
+      - She's coming home from the swimming pool.
+    explain: de + la does not contract → de la.

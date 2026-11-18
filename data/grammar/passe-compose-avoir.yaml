@@ -1,0 +1,160 @@
+point: passe-compose-avoir
+title: Passé composé with avoir
+level: A2
+rule: |
+  The passé composé says what happened ("I did", "I have done").
+  Form it with **avoir** in the present + the **past participle**: j'ai mangé, nous avons fini.
+
+  **Regular participles:**
+  - -er → **-é**: parler → parlé
+  - -ir → **-i**: finir → fini, dormir → dormi
+  - -re → **-u**: attendre → attendu
+
+  **Common irregular participles:**
+  - avoir → eu, être → été, faire → fait
+  - prendre → pris, mettre → mis
+  - voir → vu, lire → lu, boire → bu
+  - écrire → écrit, dire → dit, ouvrir → ouvert
+
+  **Negative:** ne… pas goes around avoir: je **n'ai pas** mangé.
+  Short adverbs go between avoir and the participle: j'ai **déjà** mangé, il a **bien** dormi.
+
+  Most verbs take avoir. Verbs of movement and reflexive verbs take être (see Passé composé with être).
+items:
+  - id: pca-01
+    fr: Hier, {j'ai mangé|manger} une pizza.
+    en:
+      - Yesterday I ate a pizza.
+      - I had a pizza yesterday.
+      - Yesterday I had pizza.
+    explain: avoir (j'ai) + participle. -er → -é.
+
+  - id: pca-02
+    fr: Tu {as fini|finir} tes devoirs ?
+    en:
+      - Have you finished your homework?
+      - Did you finish your homework?
+    grammar: [possessives]
+    explain: avoir (tu as) + participle. -ir → -i.
+
+  - id: pca-03
+    fr: Nous {avons attendu|attendre} le bus pendant vingt minutes.
+    en:
+      - We waited for the bus for twenty minutes.
+    alt_fr:
+      - On a attendu le bus pendant vingt minutes.
+    explain: avoir (nous avons) + participle. -re → -u.
+
+  - id: pca-04
+    fr: Elle {a pris|prendre} le train de sept heures.
+    en:
+      - She took the seven o'clock train.
+      - She caught the seven o'clock train.
+    explain: prendre has an irregular participle → pris.
+
+  - id: pca-05
+    fr: "{J'ai fait|faire} les courses ce matin."
+    en:
+      - I did the shopping this morning.
+      - I went shopping this morning.
+    explain: faire has an irregular participle → fait.
+
+  - id: pca-06
+    fr: Vous {avez vu|voir} la tour Eiffel ?
+    en:
+      - Have you seen the Eiffel Tower?
+      - Did you see the Eiffel Tower?
+    alt_fr:
+      - Tu as vu la tour Eiffel ?
+      - Est-ce que vous avez vu la tour Eiffel ?
+    explain: voir has an irregular participle → vu.
+
+  - id: pca-07
+    fr: Ils {ont acheté|acheter} une nouvelle voiture.
+    en:
+      - They bought a new car.
+      - They've bought a new car.
+    grammar: [adjectives]
+    explain: avoir (ils ont, with a z sound) + participle. -er → -é.
+
+  - id: pca-08
+    fr: "{J'ai bu|boire} trop de café."
+    en:
+      - I drank too much coffee.
+      - I've had too much coffee.
+    explain: boire has an irregular participle → bu.
+
+  - id: pca-09
+    fr: Il {a eu|avoir} un accident.
+    en:
+      - He had an accident.
+    explain: avoir is its own auxiliary. Its participle is eu (said like u).
+
+  - id: pca-10
+    fr: Tu {as lu|lire} ce livre ?
+    en:
+      - Have you read this book?
+      - Did you read this book?
+    alt_fr:
+      - Vous avez lu ce livre ?
+      - Est-ce que tu as lu ce livre ?
+    explain: lire has an irregular participle → lu.
+
+  - id: pca-11
+    fr: "{J'ai écrit|écrire} une lettre à ma grand-mère."
+    en:
+      - I wrote a letter to my grandmother.
+      - I've written a letter to my grandma.
+    explain: écrire has an irregular participle → écrit.
+
+  - id: pca-12
+    fr: Elle {a mis|mettre} son manteau.
+    en:
+      - She put on her coat.
+      - She put her coat on.
+    grammar: [possessives]
+    explain: mettre has an irregular participle → mis.
+
+  - id: pca-13
+    fr: Je {n'ai pas|not + avoir} compris.
+    en:
+      - I didn't understand.
+      - I haven't understood.
+      - I didn't get it.
+    grammar: [negation]
+    explain: ne… pas goes around avoir, and the participle follows.
+
+  - id: pca-14
+    fr: Vous {avez déjà mangé|manger, already} ?
+    en:
+      - Have you already eaten?
+      - Have you eaten already?
+      - Did you eat already?
+    alt_fr:
+      - Tu as déjà mangé ?
+    explain: déjà goes between avoir and the participle.
+
+  - id: pca-15
+    fr: On {a dormi|dormir} dix heures !
+    en:
+      - We slept for ten hours!
+      - We slept ten hours!
+    alt_fr:
+      - Nous avons dormi dix heures !
+    explain: on takes the il form (on a). dormir → dormi.
+
+  - id: pca-16
+    fr: Il {a ouvert|ouvrir} la fenêtre.
+    en:
+      - He opened the window.
+    explain: ouvrir has an irregular participle → ouvert.
+
+  - id: pca-17
+    fr: Qu'est-ce que tu {as dit|dire} ?
+    en:
+      - What did you say?
+    alt_fr:
+      - Qu'est-ce que vous avez dit ?
+      - Tu as dit quoi ?
+    grammar: [questions]
+    explain: dire has an irregular participle → dit.

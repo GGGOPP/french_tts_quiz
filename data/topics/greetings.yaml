@@ -1,0 +1,187 @@
+topic: Greetings & introductions
+items:
+  - id: greet-01
+    fr: Bonjour, comment allez-vous ?
+    en:
+      - Hello, how are you?
+      - Good morning, how are you?
+    level: A1
+    register: formal
+    grammar: [present-etre-avoir-aller-faire, questions]
+
+  - id: greet-02
+    fr: Salut, ça va ?
+    en:
+      - Hi, how's it going?
+      - Hi, how are you?
+      - Hey, how are you?
+    alt_fr:
+      - Salut, comment ça va ?
+    level: A1
+    register: informal
+    notes: Salut is informal, for friends and people your own age.
+
+  - id: greet-03
+    fr: Ça va bien, merci. Et toi ?
+    en:
+      - I'm fine, thanks. And you?
+      - I'm good, thank you. And you?
+      - Fine, thanks. And you?
+    level: A1
+    register: informal
+    notes: With someone you call vous, say Et vous ?
+
+  - id: greet-04
+    fr: Je m'appelle Thomas.
+    en:
+      - My name is Thomas.
+      - I'm Thomas.
+    alt_fr:
+      - Moi, c'est Thomas.
+    level: A1
+    grammar: [reflexive-verbs]
+
+  - id: greet-05
+    fr: Je vous présente ma collègue, Claire.
+    en:
+      - Let me introduce my colleague, Claire.
+      - This is my colleague, Claire.
+    level: A2
+    register: formal
+    grammar: [possessives]
+
+  - id: greet-06
+    fr: Vous êtes d'où ?
+    en:
+      - Where are you from?
+    alt_fr:
+      - D'où êtes-vous ?
+      - Vous venez d'où ?
+      - D'où venez-vous ?
+      - Tu es d'où ?
+      - Tu viens d'où ?
+    level: A1
+    grammar: [questions, present-etre-avoir-aller-faire]
+
+  - id: greet-07
+    fr: Je viens du Canada, mais j'habite à Lyon.
+    en:
+      - I'm from Canada, but I live in Lyon.
+      - I come from Canada, but I live in Lyon.
+    level: A1
+    grammar: [a-de-contractions, present-tense]
+
+  - id: greet-08
+    fr: Tu parles anglais ?
+    en:
+      - Do you speak English?
+    alt_fr:
+      - Est-ce que tu parles anglais ?
+      - Vous parlez anglais ?
+      - Parlez-vous anglais ?
+    level: A1
+    grammar: [questions, present-tense]
+
+  - id: greet-09
+    fr: Pouvez-vous parler plus lentement, s'il vous plaît ?
+    en:
+      - Can you speak more slowly, please?
+      - Could you speak more slowly, please?
+    alt_fr:
+      - Vous pouvez parler plus lentement, s'il vous plaît ?
+      - Est-ce que vous pouvez parler plus lentement, s'il vous plaît ?
+    level: A1
+    register: formal
+    grammar: [questions, present-tense]
+
+  - id: greet-10
+    fr: Pardon, je n'ai pas compris.
+    en:
+      - Sorry, I didn't understand.
+      - Sorry, I didn't catch that.
+      - Excuse me, I didn't understand.
+    level: A1
+    grammar: [negation, passe-compose-avoir]
+
+  - id: greet-11
+    fr: Comment ça s'écrit ?
+    en:
+      - How do you spell that?
+      - How is that spelled?
+      - How do you write that?
+    level: A2
+    grammar: [questions]
+
+  - id: greet-12
+    fr: Merci beaucoup, c'est très gentil.
+    en:
+      - Thank you very much, that's very kind.
+      - Thanks a lot, that's very kind of you.
+    level: A1
+
+  - id: greet-13
+    fr: Il n'y a pas de quoi.
+    en:
+      - You're welcome.
+      - Don't mention it.
+      - No problem.
+    alt_fr:
+      - De rien.
+    level: A2
+    grammar: [negation]
+
+  - id: greet-14
+    fr: Bonne journée, à demain !
+    en:
+      - Have a good day, see you tomorrow!
+      - Have a nice day, see you tomorrow!
+    level: A1
+
+  - id: greet-15
+    fr: À bientôt, et bon week-end !
+    en:
+      - See you soon, and have a good weekend!
+      - See you soon, and have a nice weekend!
+    level: A1
+
+  - id: greet-16
+    fr: Je suis ici pour le travail.
+    en:
+      - I'm here for work.
+      - I am here for work.
+      - I'm here on business.
+    level: A1
+    grammar: [present-etre-avoir-aller-faire]
+
+  - id: greet-17
+    fr: Tu as des frères et sœurs ?
+    en:
+      - Do you have any brothers or sisters?
+      - Do you have brothers and sisters?
+      - Have you got any siblings?
+    alt_fr:
+      - Est-ce que tu as des frères et sœurs ?
+      - As-tu des frères et sœurs ?
+      - Vous avez des frères et sœurs ?
+    level: A1
+    grammar: [articles-gender, questions]
+
+  - id: greet-18
+    fr: Bonsoir, madame. Vous allez bien ?
+    en:
+      - Good evening, madam. Are you well?
+      - Good evening. Are you well?
+      - Good evening. How are you?
+    alt_fr:
+      - Bonsoir, madame. Comment allez-vous ?
+    level: A1
+    register: formal
+    grammar: [present-etre-avoir-aller-faire]
+
+  - id: greet-19
+    fr: J'apprends le français depuis un an.
+    en:
+      - I've been learning French for a year.
+      - I have been learning French for one year.
+    level: A2
+    notes: depuis + the present means something started in the past and is still going on. English uses "have been".

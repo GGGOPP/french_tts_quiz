@@ -1,0 +1,174 @@
+point: present-tense
+title: Present tense of regular and common irregular verbs
+level: A1
+rule: |
+  **-er verbs** (parler): drop -er and add **-e, -es, -e, -ons, -ez, -ent**.
+  je parle, tu parles, il parle, nous parlons, vous parlez, ils parlent.
+  The -e, -es and -ent endings are silent, so parle, parles and parlent sound the same.
+
+  **-ir verbs** like finir: **-is, -is, -it, -issons, -issez, -issent**.
+  je finis, nous finissons, ils finissent.
+
+  **-re verbs** like attendre: **-s, -s, (nothing), -ons, -ez, -ent**.
+  j'attends, il attend, nous attendons, ils attendent.
+
+  **Common irregular verbs:**
+  - prendre: je prends, nous prenons, ils prennent
+  - venir: je viens, nous venons, ils viennent
+  - pouvoir: je peux, nous pouvons, ils peuvent
+  - vouloir: je veux, nous voulons, ils veulent
+  - devoir: je dois, nous devons, ils doivent
+  - savoir: je sais, nous savons, ils savent
+  - boire: je bois, nous buvons, ils boivent
+
+  **Spelling:** manger → nous **mangeons**, commencer → nous **commençons**. The e and the ç keep the soft sound before o.
+
+  **on** (we, people) always takes the il form: on parle, on attend.
+items:
+  - id: pres-01
+    fr: Je {parle|parler} un peu français.
+    en:
+      - I speak a little French.
+      - I speak a bit of French.
+    explain: -er verb with je → -e, which is silent.
+
+  - id: pres-02
+    fr: Tu {habites|habiter} où ?
+    en:
+      - Where do you live?
+    alt_fr:
+      - Où habites-tu ?
+      - Où est-ce que tu habites ?
+      - Vous habitez où ?
+      - Où habitez-vous ?
+    grammar: [questions]
+    explain: -er verb with tu → -es, which is silent.
+
+  - id: pres-03
+    fr: Nous {mangeons|manger} à midi.
+    en:
+      - We eat at noon.
+      - We have lunch at noon.
+      - We eat at midday.
+    alt_fr:
+      - On mange à midi.
+    explain: nous → -ons, but manger keeps its e (mangeons) so the g stays soft.
+
+  - id: pres-04
+    fr: Vous {aimez|aimer} le chocolat ?
+    en:
+      - Do you like chocolate?
+    alt_fr:
+      - Tu aimes le chocolat ?
+      - Est-ce que vous aimez le chocolat ?
+      - Aimez-vous le chocolat ?
+    explain: -er verb with vous → -ez.
+
+  - id: pres-05
+    fr: Mes amis {travaillent|travailler} à Lyon.
+    en:
+      - My friends work in Lyon.
+    explain: -er verb with a plural subject (ils) → -ent, which is silent.
+
+  - id: pres-06
+    fr: Le cours {finit|finir} à cinq heures.
+    en:
+      - The class finishes at five.
+      - The lesson ends at five o'clock.
+      - The class ends at five.
+    explain: finir with il → finit.
+
+  - id: pres-07
+    fr: Nous {choisissons|choisir} un restaurant.
+    en:
+      - We're choosing a restaurant.
+      - We choose a restaurant.
+    alt_fr:
+      - On choisit un restaurant.
+    explain: -ir verbs like finir add -iss- in the plural → choisissons.
+
+  - id: pres-08
+    fr: Je {prends|prendre} le métro tous les matins.
+    en:
+      - I take the metro every morning.
+      - I take the subway every morning.
+      - I take the underground every morning.
+    explain: prendre with je → prends (with an s).
+
+  - id: pres-09
+    fr: Ils {prennent|prendre} un taxi.
+    en:
+      - They're taking a taxi.
+      - They take a taxi.
+    explain: prendre with ils → prennent, with a double n and a sounded n (il prend has a nasal sound).
+
+  - id: pres-10
+    fr: Tu {viens|venir} avec nous ?
+    en:
+      - Are you coming with us?
+    alt_fr:
+      - Vous venez avec nous ?
+      - Est-ce que tu viens avec nous ?
+    explain: venir with tu → viens.
+
+  - id: pres-11
+    fr: Je {peux|pouvoir} ouvrir la fenêtre ?
+    en:
+      - Can I open the window?
+      - May I open the window?
+    alt_fr:
+      - Est-ce que je peux ouvrir la fenêtre ?
+      - Puis-je ouvrir la fenêtre ?
+    explain: pouvoir with je → peux (with an x), followed by an infinitive.
+
+  - id: pres-12
+    fr: Elles {veulent|vouloir} partir tôt.
+    en:
+      - They want to leave early.
+    explain: vouloir with elles → veulent. You hear the l, unlike elle veut.
+
+  - id: pres-13
+    fr: Vous {devez|devoir} payer à la caisse.
+    en:
+      - You have to pay at the till.
+      - You must pay at the checkout.
+      - You need to pay at the till.
+    explain: devoir with vous → devez, followed by an infinitive.
+
+  - id: pres-14
+    fr: Je ne {sais|savoir} pas.
+    en:
+      - I don't know.
+    grammar: [negation]
+    explain: savoir with je → sais.
+
+  - id: pres-15
+    fr: Nous {commençons|commencer} à huit heures.
+    en:
+      - We start at eight.
+      - We start at eight o'clock.
+      - We begin at eight.
+    alt_fr:
+      - On commence à huit heures.
+    explain: c becomes ç before o so it stays soft → commençons.
+
+  - id: pres-16
+    fr: Qu'est-ce que vous {buvez|boire} ?
+    en:
+      - What are you drinking?
+      - What would you like to drink?
+      - What do you drink?
+    alt_fr:
+      - Qu'est-ce que tu bois ?
+      - Vous buvez quoi ?
+    grammar: [questions]
+    explain: boire with vous → buvez (the stem changes to buv-).
+
+  - id: pres-17
+    fr: On {attend|attendre} le bus.
+    en:
+      - We're waiting for the bus.
+      - We are waiting for the bus.
+    alt_fr:
+      - Nous attendons le bus.
+    explain: on takes the il form. -re verbs add nothing with il → attend. Note that attendre needs no word for "for".
