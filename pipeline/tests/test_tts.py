@@ -6,7 +6,7 @@ import aiohttp
 import pytest
 
 from french_tts import tts
-from french_tts.config import DEFAULT_VOICE, NORMAL_RATE, SLOW_RATE
+from french_tts.config import DEFAULT_VOICE, ITEM_VOICES, NORMAL_RATE, SLOW_RATE
 from french_tts.tts import TICKS_PER_SECOND, VOICES, EdgeTTSBackend, check_rate, resolve_voice
 
 
@@ -38,6 +38,8 @@ def fake_edge(monkeypatch):
 
 def test_defaults_are_valid():
     assert DEFAULT_VOICE in VOICES
+    assert len(ITEM_VOICES) == len(set(ITEM_VOICES)) >= 1
+    assert set(ITEM_VOICES) <= set(VOICES)
     for rate in (NORMAL_RATE, SLOW_RATE):
         assert check_rate(rate) == rate
 
