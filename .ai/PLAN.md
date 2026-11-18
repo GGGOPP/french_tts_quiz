@@ -134,7 +134,28 @@ Status key: `[not started]` · `[in progress]` · `[done]`. Each step is committ
    - **`config.py`:** gains `ITEM_VOICES = ("denise", "henri")`, and `DEFAULT_VOICE` is now its first entry. Step 10 alternates through `ITEM_VOICES`.
 
 ### Phase 3: Content (checkpoint)
-6. `[not started]` Data format + `data/README.md` + a pytest validator.
+6. `[done]` Data format + `data/README.md` + a pytest validator.
+   *Result:*
+   - **`data/README.md`:** the format reference: files, every item field, cloze markup, conventions (straight `'`, a capital first letter, numbers in words, ids never change) and YAML pitfalls. It supersedes the sketch in "Data format" above, whose `alt_fr: [Je voudrais un café, s'il te plaît.]` would split at the comma.
+   - **`french_tts/data.py`:** `load_data()` returns `Dataset(topics, points, items)` for `generate.py` to reuse, or raises `DataError` listing every problem with file and item id. `parse_cloze()` resolves `{a/b|hint}` to the spoken sentence plus `Blank(answers, hint)`.
+   - **Fields:** `Item.text` is `fr` with its blanks filled in, and `Item.speech` is `tts_text` if set, else `text`. Grammar items inherit the file's level and get the point as their first grammar tag. The CLI `python -m french_tts.data` prints a summary.
+   - **Format decisions:**
+     - The hint is optional.
+     - Grammar items need a blank and `explain`.
+     - Topic items need `level`.
+     - A tag must name a `grammar/<point>.yaml`, and a grammar file can have `items: []` as a rule card only.
+     - The topic id is the file name, and the grammar `point` must equal the file name.
+     - `voice` and `tts_text` overrides are in the schema already, for step 12.
+   - **Validator checks:**
+     - Unknown or missing keys.
+     - Duplicate ids across files, even on otherwise broken items.
+     - Duplicate YAML keys.
+     - YAML booleans (`[No]`).
+     - Entries starting with a lowercase letter, which catches `[Yes, please.]` comma splits.
+     - Curly apostrophes and double spaces.
+     - `alt_fr` equal to `fr`.
+     - Non-`.yaml` files.
+   - **Tests:** 89 pass (62 new). Both README examples validate, and the empty repo `data/` validates.
 7. `[not started]` Claude drafts the content in two batches so each review stays manageable.
    - **Batch 1 (grammar-heavy):** about 15 cloze items per point:
      - present tense of être/avoir/aller/faire;

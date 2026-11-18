@@ -24,6 +24,7 @@ Run a module with `uv run python -m french_tts.<module>`. Modules are added to t
 | `tts` | The TTS backend interface and its edge-tts implementation. It returns MP3 bytes and per-word timings in seconds. `rate` is a signed percentage (`-25%` is 25% slower). The voices are `denise`, `eloise` and `vivienne` (female) and `henri` and `remy` (male). Try it: `uv run python -m french_tts.tts "Je voudrais un café." --voice henri --rate=-25% --out sample.mp3`. The `=` is needed: without it, argparse reads `-25%` as a flag. |
 | `clip` | Post-processing with ffmpeg. It can cut at a timestamp, keeping a 40 ms lead-in and a click-free fade. It trims trailing silence, keeping 150 ms. It normalises loudness to -18 LUFS in two passes. Try it: `uv run python -m french_tts.clip in.mp3 out.mp3`. |
 | `bakeoff` | Renders 22 sentences that are hard for French TTS (liaison, elision, silent `-ent`, `plus`/`tous`, 70–99, digits) in each voice at each rate, through `process_clip`. It writes `bakeoff_out/index.html`, a table of players with clip lengths and a per-column total. The defaults are denise, henri, vivienne and remy at `+0%` and `-25%`. Override them with `--voices=denise,henri --rates=+0%,-20%,-30%`. |
+| `data` | Loads and validates `../data/` (format: [`data/README.md`](../data/README.md)). It returns typed topics, grammar points and items, with cloze blanks parsed. Otherwise it lists every problem with its file and item id. Check the data with `uv run python -m french_tts.data`; the test suite also runs this check. |
 
 ## Tests
 
