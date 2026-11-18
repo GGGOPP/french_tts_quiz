@@ -85,17 +85,20 @@ function apply(input: TextInput, { start, end, text }: Replacement): void {
   input.dispatchEvent(new Event('input', { bubbles: true }))
 }
 
+/** Whether the bar may type into an input (not while it is read-only, e.g. during feedback). */
+const editable = (input: TextInput) => !input.readOnly && !input.disabled
+
 /**
- * Set up an input for typing French and make its accent bar, which the caller
- * places under it. The input gets lang="fr" and loses autocorrect, autocomplete,
- * auto-capitals and spellcheck (a phone keyboard must not fix the answer).
+ * Set up inputs for typing French and make one accent bar for them, which the
+ * caller places near them. The bar types into whichever of the inputs had the
+ * focus last (the first, until one is focused). The inputs get lang="fr" and
+ * lose autocorrect, autocomplete, auto-capitals and spellcheck (a phone
+ * keyboard must not fix the answer).
  */
-export function attachAccentBar(input: TextInput): HTMLElement {
-  input.lang = 'fr'
-  input.spellcheck = false
-  input.autocomplete = 'off'
-  input.setAttribute('autocapitalize', 'off')
-  input.setAttribute('autocorrect', 'off')
+export function attachAccentBar(inputs: TextInput | readonly TextInput[]): HTMLElement {
+  const fields: readonly TextInput[] = Array.isArray(inputs) ? inputs : [inputs as TextInput]
+  if (fields.length === 0) throw new Error('attachAccentBar needs at least one input')
+  let target = fields[0]
 
   const bar = document.createElement('div')
   bar.className = 'accent-bar'
@@ -121,45 +124,17 @@ export function attachAccentBar(input: TextInput): HTMLElement {
   bar.addEventListener('pointerdown', keepFocus)
   bar.addEventListener('mousedown', keepFocus)
 
-  bar.addEventListener('click', (event) => {
-    const button = (event.target as Element).closest<HTMLButtonElement>('button')
-    if (!button?.dataset.letter) return
-    if (document.activeElement !== input) input.focus() // e.g. a tap before ever focusing the input
-    const end = input.value.length
-    apply(input, insertion(button.dataset.letter, event.shiftKey, input.selectionStart ?? end, input.selectionEnd ?? end))
-    cycle = null
-  })
-
-  // Typed as HTMLElement so its listeners get typed events (the input union loses them).
-  const field: HTMLElement = input
   let cycle: Cycle | null = null
   let usedAlt = false
   const showCapitals = (on: boolean) => bar.classList.toggle('upper', on)
 
-  field.addEventListener('keydown', (event) => {
-    showCapitals(event.shiftKey)
-    // AltGr arrives as Ctrl+Alt on Windows: leave it to the keyboard layout.
-    const altOnly = event.altKey && !event.ctrlKey && !event.metaKey && !event.getModifierState('AltGraph')
-    if (!altOnly) {
-      if (event.key !== 'Alt') cycle = null
-      return
-    }
-    const end = input.value.length
-    const result = shortcut(event.code, event.shiftKey, cycle, input.selectionStart ?? end, input.selectionEnd ?? end)
-    if (!result) return
-    event.preventDefault()
-    apply(input, result.replace)
-    cycle = result.cycle
-    usedAlt = true
-  })
-
-  field.addEventListener('keyup', (event) => {
-    showCapitals(event.shiftKey)
-    if (event.key !== 'Alt') return
+  bar.addEventListener('click', (event) => {
+    const button = (event.target as Element).closest<HTMLButtonElement>('button')
+    if (!button?.dataset.letter || !editable(target)) return
+    if (document.activeElement !== target) target.focus() // e.g. a tap before ever focusing the input
+    const end = target.value.length
+    apply(target, insertion(button.dataset.letter, event.shiftKey, target.selectionStart ?? end, target.selectionEnd ?? end))
     cycle = null
-    // Releasing Alt after a shortcut must not also open the browser's menu bar.
-    if (usedAlt) event.preventDefault()
-    usedAlt = false
   })
 
   const reset = () => {
@@ -167,8 +142,50 @@ export function attachAccentBar(input: TextInput): HTMLElement {
     usedAlt = false
     showCapitals(false)
   }
-  field.addEventListener('blur', reset)
-  field.addEventListener('pointerdown', reset) // moving the cursor by click ends a cycle
+
+  for (const input of fields) {
+    input.lang = 'fr'
+    input.spellcheck = false
+    input.autocomplete = 'off'
+    input.setAttribute('autocapitalize', 'off')
+    input.setAttribute('autocorrect', 'off')
+
+    // Typed as HTMLElement so its listeners get typed events (the input union loses them).
+    const field: HTMLElement = input
+    field.addEventListener('focus', () => {
+      target = input
+    })
+
+    field.addEventListener('keydown', (event) => {
+      showCapitals(event.shiftKey)
+      // AltGr arrives as Ctrl+Alt on Windows: leave it to the keyboard layout.
+      const altOnly = event.altKey && !event.ctrlKey && !event.metaKey && !event.getModifierState('AltGraph')
+      if (!altOnly) {
+        if (event.key !== 'Alt') cycle = null
+        return
+      }
+      if (!editable(input)) return
+      const end = input.value.length
+      const result = shortcut(event.code, event.shiftKey, cycle, input.selectionStart ?? end, input.selectionEnd ?? end)
+      if (!result) return
+      event.preventDefault()
+      apply(input, result.replace)
+      cycle = result.cycle
+      usedAlt = true
+    })
+
+    field.addEventListener('keyup', (event) => {
+      showCapitals(event.shiftKey)
+      if (event.key !== 'Alt') return
+      cycle = null
+      // Releasing Alt after a shortcut must not also open the browser's menu bar.
+      if (usedAlt) event.preventDefault()
+      usedAlt = false
+    })
+
+    field.addEventListener('blur', reset)
+    field.addEventListener('pointerdown', reset) // moving the cursor by click ends a cycle
+  }
 
   return bar
 }

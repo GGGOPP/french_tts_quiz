@@ -245,7 +245,24 @@ Status key: `[not started]` · `[in progress]` · `[done]`. Each step is committ
       - a click while unfocused (focuses, then inserts);
       - Tab skipping the bar.
       Touch couldn't be emulated in this Playwright setup, so the no-flicker check on a real phone is part of the step 21 checkpoint.
-15. `[not started]` Data loading (`items.json` parser + tests) and a card model (item × mode), with the generic quiz screen from `quiz.ts` handing prompt, input and feedback to a mode module. Replay is available, plus 🐢 slow replay.
+15. `[done]` Data loading (`items.json` parser + tests) and a card model (item × mode), with the generic quiz screen from `quiz.ts` handing prompt, input and feedback to a mode module. Replay is available, plus 🐢 slow replay.
+    *Result:*
+    - **`items.ts`:** `parseItems` checks `items.json`: version 1, topics, grammar points with their Markdown rule, and per item the required fields, level, topic or point, register, and the cloze blanks (at least one, each with answers). Ids must be unique, the error names the item, and absent `altFr` / `grammar` become `[]`. `loadItems` fetches it from under the base URL. The real file has 687 items (471 drills, 216 topic sentences) and 29 grammar points. Rules contain Markdown tables, which the rule card needs to render (step 16).
+    - **`cards.ts`:** the modes are `cloze | dictee | meaning | produce`. A card is `{id: "<item>:<mode>", item, mode}`, and `parseCardId` splits at the last `:`. Every item gets dictée, meaning and production, and drills also get cloze: 471 + 687 × 3 cards.
+    - **`session.ts`:** the outcomes are `correct | typo | accent | wrong | dont-know`. Only `correct` and `typo` count as right, since a typo is only allowed in English and an accent mistake is wrong. `CardResult.typed` holds one entry per answer box, and `isBlankAnswer` means don't know.
+    - **`quiz.ts`:** `renderQuiz(root, cards, modes, store, handlers)`. A `ModeModule` supplies:
+      - `instruction`;
+      - `audioWhen`: `ask` for dictée and meaning, or `feedback` for cloze and production, where the clip would give the answer away, so ▶ and 🐢 stay hidden and nothing is fetched until feedback, which then plays the clip;
+      - `answer` (language, label and placeholder);
+      - `ask(card, prompt)`, which fills the prompt and can return its own inline answer boxes, since 21 drills have 2–3 blanks;
+      - `grade(card, typed | null)`, which returns `{outcome, show(body)}` directly or as a Promise.
+    - **The screen:** keeps the session going, with the header, score and progress, Check / Next / Finish, Don't know, the feedback panel (heading from the outcome, body from the mode; green, amber for accent mistakes, red) and `store.record(card.id, right)` on Next.
+      - **Async grading:** shows "Checking…" and ignores Enter. A late result for an earlier card, or one after leaving, is dropped, and a failure says so and allows another Check.
+      - **The answer box and its accent bar** stay for the whole session so the phone keyboard stays up. Inline blanks get their own bar right under the sentence. Enter in a blank that isn't the last moves to the next one.
+      - **Replay:** ▶ / Ctrl+Space / ↑, and slow 🐢 / Ctrl+Shift+Space / ↓. One `<audio>` element switches between the two clips, and the button that started the clip lights up. Pressing ▶ or 🐢 doesn't take the focus off the answer box.
+    - **`accentbar.ts`:** `attachAccentBar` now takes several inputs and types into the one focused last. It ignores read-only inputs, so feedback can't be edited.
+    - **`main.ts`:** loads the bank and shows its counts until the start screen exists.
+    - **Checks:** 121 Vitest tests pass (36 new: parser, real-file integrity, card ids, outcomes, replay keys, keys help, tone), and `npm run build` is clean. In Chromium via Playwright, with throwaway mode modules: a dictée card (autoplay, ↓ slow then ↑ normal, Correct), a 2-blank cloze (no audio while asking, Enter to the next blank, the bar typing into blank 2, the clip played with the feedback), an async-graded card ("Checking…", a second Enter ignored), a 3-blank don't-know by Enter, an accent-only answer → amber "Check the accents", Quit, and the right `record` calls and `onFinish` results. No console errors and no horizontal scroll at 400 px, in light and dark. At 400×440 the feedback panel runs below the fold, so the page scrolls; that's for step 20.
 16. `[not started]` Cloze mode (text + hint → type the form → explain + rule card + audio).
 17. `[not started]` Dictée mode (audio → type the French → word diff + English).
 18. `[not started]` Listen→meaning and English→French modes, with local matching and the self-mark fallback (the LLM is wired in at step 24).
