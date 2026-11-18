@@ -225,7 +225,13 @@ Status key: `[not started]` · `[in progress]` · `[done]`. Each step is committ
     *Result:* the user listened to the 71 flagged items and found them all fine: every flag was Whisper mishearing or a spelling-only difference, so no `tts_text` / `voice` overrides were needed and the audio from step 10 stands.
 
 ### Phase 5: Core app
-13. `[not started]` `french.ts` + tests: normalisation, strict compare with accent detection, word-level dictée diff.
+13. `[done]` `french.ts` + tests: normalisation, strict compare with accent detection, word-level dictée diff.
+    *Result:*
+    - **`normalise`:** NFC, lowercase, apostrophe look-alikes → `'`, non-breaking hyphens → `-`, and the space after an apostrophe dropped (`l' ami` = `l'ami`). Accents and hyphens are kept. **All punctuation other than `'` and `-` is ignored, not just final punctuation**, so a missing comma or a `«»` never makes an answer wrong.
+    - **`compare(input, answers)`:** `correct` on an exact match after `normalise`, with no typo tolerance (`allez` ≠ `allons`, `allé` ≠ `allée`, `Dépêche toi` ≠ `Dépêche-toi`). `accent` when it matches only once accents are stripped (`allee`/`allée`, `a la`/`à la`, `coeur`/`cœur`), and `wrong` otherwise. An exact match beats an earlier accent-only one, and the matched answer is returned for the feedback.
+    - **`tokenize`:** elided words are their own token (`l' j' d' m' t' s' n' c' qu' jusqu' lorsqu' puisqu' quoiqu'`), while `aujourd'hui`, `quelqu'un` and hyphenated words (`est-ce`, `A-t-il`) stay whole. Each token keeps its typed text for display plus its compare form.
+    - **`diffWords(input, sentence)`:** an edit distance over tokens, where a right word costs 0, an accent-only one 0.5 and a wrong one between 1 and 2 by letter similarity, so a misspelt word pairs with its look-alike rather than a neighbour. Every sentence word is marked right, accent, wrong or missing, and extra typed words appear where they were typed. It's `correct` only if every word is right.
+    - **Tests:** 59 pass (46 new), including every real sentence being a correct dictée of itself and every sentence, `altFr` and cloze answer matching itself, also with curly apostrophes. `npm run build` is clean.
 14. `[not started]` Accent bar (é è ê ë à â ç î ï ô ù û œ, and É on Shift). It inserts at the cursor, keeps the input focused (no keyboard flicker on phone), and supports Alt-shortcuts on desktop.
 15. `[not started]` Data loading (`items.json` parser + tests) and a card model (item × mode), with the generic quiz screen from `quiz.ts` handing prompt, input and feedback to a mode module. Replay is available, plus 🐢 slow replay.
 16. `[not started]` Cloze mode (text + hint → type the form → explain + rule card + audio).
