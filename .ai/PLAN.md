@@ -232,7 +232,19 @@ Status key: `[not started]` · `[in progress]` · `[done]`. Each step is committ
     - **`tokenize`:** elided words are their own token (`l' j' d' m' t' s' n' c' qu' jusqu' lorsqu' puisqu' quoiqu'`), while `aujourd'hui`, `quelqu'un` and hyphenated words (`est-ce`, `A-t-il`) stay whole. Each token keeps its typed text for display plus its compare form.
     - **`diffWords(input, sentence)`:** an edit distance over tokens, where a right word costs 0, an accent-only one 0.5 and a wrong one between 1 and 2 by letter similarity, so a misspelt word pairs with its look-alike rather than a neighbour. Every sentence word is marked right, accent, wrong or missing, and extra typed words appear where they were typed. It's `correct` only if every word is right.
     - **Tests:** 59 pass (46 new), including every real sentence being a correct dictée of itself and every sentence, `altFr` and cloze answer matching itself, also with curly apostrophes. `npm run build` is clean.
-14. `[not started]` Accent bar (é è ê ë à â ç î ï ô ù û œ, and É on Shift). It inserts at the cursor, keeps the input focused (no keyboard flicker on phone), and supports Alt-shortcuts on desktop.
+14. `[done]` Accent bar (é è ê ë à â ç î ï ô ù û œ, and É on Shift). It inserts at the cursor, keeps the input focused (no keyboard flicker on phone), and supports Alt-shortcuts on desktop.
+    *Result:*
+    - **`attachAccentBar(input)`** returns the bar for the caller to place under the input. It also sets the input up for French: `lang="fr"`, with autocorrect, autocomplete, auto-capitals and spellcheck off, so a phone keyboard can't fix accents for you.
+    - **Buttons:** each inserts at the cursor or over the selection (`setRangeText`) and fires `input`. `pointerdown`/`mousedown` are cancelled so the focus stays in the input, and the `click` does the typing. If the input wasn't focused, a tap focuses it. The buttons are `tabindex=-1`, so Tab skips them. Shift-click types the capital. Holding Shift in the input switches the labels to capitals, and the tooltips show the shortcut.
+    - **Alt-shortcuts (cycling):** Alt+E types é, and E again while Alt is still held turns it into è → ê → ë → é. The same goes for Alt+A (à â), Alt+C (ç), Alt+I (î ï), Alt+O (ô œ) and Alt+U (ù û), with Shift for capitals. Releasing Alt ends the cycle, so créé = Alt+E, release, Alt+E. The cycle also ends when the cursor moves, on any other key, on a click and on blur. AltGr (Ctrl+Alt) is left to the keyboard layout. The Alt keyup is cancelled after a shortcut so the browser's menu bar doesn't open. Firefox's own Alt+E menu key isn't checked.
+    - **Layout:** 7 + 6 keys on a phone (48×40 px at 400 px wide), one row of 13 from 36rem, and 34 px tall keys on short screens. No horizontal scroll at 400×800, 400×440 or 1280×800, in light or dark.
+    - **Checks:** the pure logic (`insertion`, `shortcut` cycling, `withCase`, `shortcutHint`) has 26 new Vitest tests (85 in all), and `npm run build` is clean. In Chromium via Playwright, real clicks and key presses covered:
+      - inserting at the end, in the middle and over a selection, with the input still focused;
+      - Shift-click → É, Alt cycling tré → trè → trê, créé, Alt+Shift+O ×2 → Œ;
+      - ordinary typing unaffected and Ctrl+Alt+E not hijacked;
+      - a click while unfocused (focuses, then inserts);
+      - Tab skipping the bar.
+      Touch couldn't be emulated in this Playwright setup, so the no-flicker check on a real phone is part of the step 21 checkpoint.
 15. `[not started]` Data loading (`items.json` parser + tests) and a card model (item × mode), with the generic quiz screen from `quiz.ts` handing prompt, input and feedback to a mode module. Replay is available, plus 🐢 slow replay.
 16. `[not started]` Cloze mode (text + hint → type the form → explain + rule card + audio).
 17. `[not started]` Dictée mode (audio → type the French → word diff + English).

@@ -150,6 +150,42 @@ input[type='radio'] {
   flex: none;
 }
 
+/*
+ * Accent bar under a French input: two rows (7 + 6) on a phone so each key is
+ * thumb-sized, one row of 13 once there is room. Shorter keys on short screens
+ * (a phone with its keyboard open).
+ */
+.accent-bar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.3rem;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 36rem) {
+  .accent-bar {
+    grid-template-columns: repeat(13, 1fr);
+  }
+}
+
+.accent-bar button {
+  min-height: 2.5rem;
+  min-width: 0;
+  padding: 0;
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.accent-bar.upper button {
+  text-transform: uppercase;
+}
+
+@media (max-height: 30rem) {
+  .accent-bar button {
+    min-height: 2.15rem;
+  }
+}
+
 .error {
   color: var(--wrong);
 }
