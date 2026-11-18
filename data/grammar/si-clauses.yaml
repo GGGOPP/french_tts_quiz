@@ -1,0 +1,155 @@
+point: si-clauses
+title: si + imparfait → conditional
+level: B1
+rule: |
+  To imagine something that **isn't true** or probably won't happen (if I had…, I would…):
+  - **si + imparfait**, then the **conditional** in the other half.
+  - Si j'**avais** le temps, je **viendrais**. (If I had time, I would come.)
+  - Either half can come first: Je viendrais si j'avais le temps.
+
+  **The conditional:** the future stem + the imparfait endings (-ais, -ais, -ait, -ions, -iez, -aient).
+  - parler → je parler**ais**; faire → je fer**ais**; être → je ser**ais**; avoir → j'aur**ais**; pouvoir → je pourr**ais**; aller → j'ir**ais**
+
+  **A real possibility** uses **si + present**, then the future, the present or an imperative:
+  - S'il **fait** beau demain, on **ira** à la plage. Si tu **as** besoin d'aide, **appelle**-moi.
+
+  Never put the conditional or the future right after **si**: si j'avais (not si j'aurais).
+  si becomes **s'** before il and ils only: s'il, but si elle.
+items:
+  - id: si-01
+    fr: Si j'{avais|avoir} une voiture, je t'emmènerais à la mer ce week-end.
+    en:
+      - If I had a car, I'd take you to the seaside this weekend.
+      - If I had a car, I would take you to the beach this weekend.
+    register: informal
+    explain: Not true (I have no car) → si + imparfait, then the conditional.
+
+  - id: si-02
+    fr: Si je {gagnais|gagner} plus d'argent, je {voyagerais|voyager} en Asie pendant un an.
+    en:
+      - If I earned more money, I would travel around Asia for a year.
+      - If I made more money, I'd travel in Asia for a year.
+    grammar: [comparatives, depuis-pendant-il-y-a]
+    explain: si + imparfait (gagnais), then the conditional (voyagerais).
+
+  - id: si-03
+    fr: Si tu {venais|venir} avec nous samedi, on pourrait faire une randonnée ensemble.
+    en:
+      - If you came with us on Saturday, we could go hiking together.
+      - If you came along on Saturday, we could go for a hike together.
+    register: informal
+    explain: An imagined situation → si + imparfait. venir → tu venais.
+
+  - id: si-04
+    fr: Qu'est-ce que tu {ferais|faire} si tu gagnais au loto ?
+    en:
+      - What would you do if you won the lottery?
+    alt_fr:
+      - Que ferais-tu si tu gagnais au loto ?
+    register: informal
+    grammar: [questions]
+    explain: si + imparfait (gagnais) → the other half is in the conditional. faire → ferais.
+
+  - id: si-05
+    fr: Si nous {habitions|habiter} à la campagne, nos enfants auraient un grand jardin pour jouer.
+    en:
+      - If we lived in the countryside, our children would have a big garden to play in.
+      - If we lived in the country, our kids would have a large garden to play in.
+    alt_fr:
+      - Si on habitait à la campagne, nos enfants auraient un grand jardin pour jouer.
+    grammar: [possessives]
+    explain: si + imparfait. nous habitons → nous habitions.
+
+  - id: si-06
+    fr: Si j'étais toi, je {prendrais|prendre} le train plutôt que la voiture.
+    en:
+      - If I were you, I would take the train rather than the car.
+      - If I were you, I'd take the train instead of the car.
+    register: informal
+    explain: si j'étais toi (if I were you) → advice in the conditional. prendre → je prendrais.
+
+  - id: si-07
+    fr: S'il {fait|faire} beau demain, on ira à la plage avec les enfants.
+    en:
+      - If the weather's nice tomorrow, we'll go to the beach with the children.
+      - If it's sunny tomorrow, we'll go to the beach with the kids.
+    alt_fr:
+      - S'il fait beau demain, nous irons à la plage avec les enfants.
+    grammar: [futur-simple]
+    explain: A real possibility → si + present, then the future. Compare s'il faisait beau, on irait (just imagining).
+
+  - id: si-08
+    fr: Mes parents {seraient|être} très contents si tu venais les voir à Noël.
+    en:
+      - My parents would be very happy if you came to see them at Christmas.
+      - My parents would be really pleased if you visited them at Christmas.
+    register: informal
+    grammar: [object-pronouns]
+    explain: The si half is in the imparfait (venais) → the other half is in the conditional. être → ils seraient.
+
+  - id: si-09
+    fr: Si vous {pouviez|pouvoir} changer une chose dans votre vie, qu'est-ce que vous changeriez ?
+    en:
+      - If you could change one thing in your life, what would you change?
+    alt_fr:
+      - Si vous pouviez changer une chose dans votre vie, que changeriez-vous ?
+    register: formal
+    grammar: [questions]
+    explain: si + imparfait. pouvoir → vous pouviez.
+
+  - id: si-10
+    fr: Si je {savais|savoir} cuisiner, j'inviterais mes amis à dîner plus souvent.
+    en:
+      - If I knew how to cook, I would invite my friends to dinner more often.
+      - If I could cook, I'd have my friends over for dinner more often.
+    grammar: [comparatives]
+    explain: si + imparfait. savoir → je savais. Then the conditional (inviterais).
+
+  - id: si-11
+    fr: Si le train {arrivait|arriver} plus souvent à l'heure, je ne prendrais pas la voiture pour aller au travail.
+    en:
+      - If the train arrived on time more often, I wouldn't take the car to work.
+      - If the train was on time more often, I wouldn't drive to work.
+    grammar: [negation, comparatives]
+    explain: si + imparfait (arrivait), then the conditional in the negative (ne prendrais pas).
+
+  - id: si-12
+    fr: Si tu {as|avoir} besoin d'aide pour ton déménagement, appelle-moi.
+    en:
+      - If you need help with your move, call me.
+      - If you need a hand moving house, give me a call.
+    register: informal
+    grammar: [imperative]
+    explain: A real possibility → si + present, then an imperative.
+
+  - id: si-13
+    fr: Si tu finissais ton travail plus tôt, on {pourrait|pouvoir} aller au cinéma ce soir.
+    en:
+      - If you finished your work earlier, we could go to the cinema tonight.
+      - If you finished work earlier, we could go to the movies this evening.
+    register: informal
+    grammar: [comparatives]
+    explain: si + imparfait (finissais) → the conditional. pouvoir → on pourrait.
+
+  - id: si-14
+    fr: Si mes voisins {faisaient|faire} moins de bruit le soir, je dormirais beaucoup mieux.
+    en:
+      - If my neighbours made less noise in the evening, I would sleep much better.
+      - If my neighbors were quieter at night, I'd sleep a lot better.
+    grammar: [comparatives]
+    explain: si + imparfait. faire → mes voisins faisaient.
+
+  - id: si-15
+    fr: Si j'{étais|être} plus jeune, je partirais vivre à l'étranger.
+    en:
+      - If I were younger, I would go and live abroad.
+      - If I was younger, I'd move abroad.
+    grammar: [comparatives]
+    explain: si + imparfait. être → j'étais. Then the conditional (partirais).
+
+  - id: si-16
+    fr: Si vous {voulez|vouloir} venir, la fête commence à vingt heures chez Paul.
+    en:
+      - If you want to come, the party starts at eight p.m. at Paul's.
+      - If you'd like to come, the party begins at 8 pm at Paul's place.
+    explain: A real offer → si + present, then the present. vouloir → vous voulez.

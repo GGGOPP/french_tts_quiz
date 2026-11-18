@@ -29,7 +29,7 @@ from french_tts.tts import VOICES
 
 DEFAULT_DATA = Path(__file__).resolve().parents[3] / "data"
 
-LEVELS = ("A1", "A2")
+LEVELS = ("A1", "A2", "B1")
 REGISTERS = ("formal", "informal")  # formal: vous is expected; informal: tu
 SLUG_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")  # ids, topic and point names
 
@@ -223,6 +223,8 @@ class _Checker:
             self.error(f"{key} uses a curly apostrophe; write ' instead: {value!r}")
         if "  " in value:
             self.error(f"{key} has a double space: {value!r}")
+        if "' " in value:
+            self.error(f"{key} has a space after an apostrophe: {value!r}")
 
     def capital(self, key: str, value: str | None, *, listed: bool = False) -> None:
         """Entries start like a sentence. In a list this also catches ``[Yes, please]``,
@@ -280,6 +282,11 @@ def _read_item(
             check.error(f"fr: {exc}: {fr!r}")
         else:
             check.capital("fr", text)
+            if blanks and "' " in text:
+                check.error(
+                    "fr has a space after an apostrophe once the blanks are filled"
+                    f" (write {{l'|it}}ai, not {{l'|it}} ai): {text!r}"
+                )
             if point and not blanks:
                 check.error("a grammar drill needs at least one {blank} in fr")
 

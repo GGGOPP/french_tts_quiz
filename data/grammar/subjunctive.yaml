@@ -1,0 +1,147 @@
+point: subjunctive
+title: The subjunctive after il faut que, vouloir que…
+level: B1
+rule: |
+  After some expressions + **que**, the next verb goes in the **subjunctive**:
+  - **Necessity:** il faut que, il vaut mieux que (it's better that)
+  - **Wishes:** vouloir que, aimer que, préférer que
+  - **Feelings:** ça me fait plaisir que, j'ai peur que
+  - **Conjunctions:** pour que (so that), avant que (before)
+
+  It is only used when the subject **changes**: je veux partir (I want to leave), but je veux **que tu partes** (I want you to leave).
+
+  **How to build it:** take the **ils** form of the present, drop -ent, add **-e, -es, -e, -ions, -iez, -ent**.
+  - ils finissent → que je finisse, que tu finisses, qu'il finisse, que nous finissions, que vous finissiez, qu'ils finissent
+  - ils prennent → que je prenne; ils viennent → que je vienne (but que nous prenions, venions)
+
+  **Irregular:** être (sois, soit, soyons, soyez, soient), avoir (aie, ait, ayons, ayez, aient), aller (aille, allions), faire (fasse), pouvoir (puisse), savoir (sache), vouloir (veuille).
+
+  For -er verbs, je/tu/il/ils sound like the present (qu'il parle); nous and vous add an **i** (que nous parlions).
+items:
+  - id: subj-01
+    fr: Il faut que tu {fasses|faire} tes devoirs avant de regarder la télé.
+    en:
+      - You have to do your homework before watching TV.
+      - You need to do your homework before you watch TV.
+    register: informal
+    explain: il faut que + subjunctive. faire is irregular → que tu fasses.
+
+  - id: subj-02
+    fr: Mes parents veulent que je {vienne|venir} dîner dimanche, mais je travaille.
+    en:
+      - My parents want me to come to dinner on Sunday, but I'm working.
+      - My parents want me to come for dinner on Sunday, but I work.
+    explain: vouloir que + subjunctive. ils viennent → que je vienne.
+    notes: English says "want me to come". French needs a whole clause, que je vienne.
+
+  - id: subj-03
+    fr: Il faut que nous {partions|partir} avant sept heures si nous voulons éviter les bouchons.
+    en:
+      - We have to leave before seven if we want to avoid the traffic jams.
+      - We need to leave before seven o'clock if we want to avoid the traffic.
+    alt_fr:
+      - Il faut qu'on parte avant sept heures si on veut éviter les bouchons.
+    explain: il faut que + subjunctive. The nous form adds an i → partions (present partons).
+
+  - id: subj-04
+    fr: Je voudrais que vous {soyez|être} à l'heure demain, la réunion commence à neuf heures pile.
+    en:
+      - I'd like you to be on time tomorrow, the meeting starts at nine sharp.
+      - I would like you to be on time tomorrow, the meeting begins at exactly nine.
+    register: formal
+    grammar: [conditional-politeness]
+    explain: vouloir que + subjunctive. être is irregular → que vous soyez.
+
+  - id: subj-05
+    fr: Il faut que ma grand-mère {prenne|prendre} ses médicaments trois fois par jour.
+    en:
+      - My grandmother has to take her medicine three times a day.
+      - My grandma needs to take her medication three times a day.
+    explain: il faut que + subjunctive. ils prennent → qu'elle prenne.
+
+  - id: subj-06
+    fr: Ma mère ne veut pas que mon petit frère {sorte|sortir} seul le soir.
+    en:
+      - My mother doesn't want my little brother to go out alone in the evening.
+      - My mum doesn't want my younger brother going out on his own at night.
+    grammar: [negation, possessives]
+    explain: vouloir que + subjunctive, also in the negative. ils sortent → qu'il sorte (you hear the t).
+
+  - id: subj-07
+    fr: Ça me fait vraiment plaisir que tu {puisses|pouvoir} venir à mon anniversaire.
+    en:
+      - I'm really glad you can come to my birthday party.
+      - It really makes me happy that you can come to my birthday.
+    register: informal
+    explain: A feeling + que → subjunctive. pouvoir is irregular → que tu puisses.
+
+  - id: subj-08
+    fr: Il faut que vous {sachiez|savoir} que le musée est fermé le lundi.
+    en:
+      - You should know that the museum is closed on Mondays.
+      - You need to know that the museum is shut on Mondays.
+    register: formal
+    explain: il faut que + subjunctive. savoir is irregular → que vous sachiez. The second que (que le musée est fermé) states a fact, so it takes the normal present.
+
+  - id: subj-09
+    fr: Rentrons à la maison avant qu'il {fasse|faire} nuit, il commence à faire froid.
+    en:
+      - Let's go home before it gets dark, it's starting to get cold.
+      - Let's head home before night falls, it's getting cold.
+    grammar: [imperative]
+    explain: avant que + subjunctive. il fait nuit → avant qu'il fasse nuit.
+
+  - id: subj-10
+    fr: Je te le répète encore une fois pour que tu {comprennes|comprendre} bien.
+    en:
+      - I'll say it to you one more time so that you understand properly.
+      - I'm repeating it once more so you really understand.
+    register: informal
+    grammar: [double-pronouns]
+    explain: pour que (so that) + subjunctive. ils comprennent → que tu comprennes.
+
+  - id: subj-11
+    fr: Mes collègues veulent qu'on {aille|aller} au restaurant ensemble vendredi midi.
+    en:
+      - My colleagues want us to go to a restaurant together on Friday lunchtime.
+      - My coworkers want us to go out for lunch together on Friday.
+    explain: vouloir que + subjunctive. aller is irregular → qu'on aille.
+
+  - id: subj-12
+    fr: Avant de partir en vacances, il faut que je {finisse|finir} ce rapport, sinon mon patron ne sera pas content.
+    en:
+      - Before going on holiday, I have to finish this report, otherwise my boss won't be happy.
+      - I need to finish this report before I go on vacation, or my boss won't be pleased.
+    grammar: [futur-simple]
+    explain: il faut que + subjunctive. ils finissent → que je finisse (present je finis).
+
+  - id: subj-13
+    fr: Je veux que tu me {dises|dire} la vérité, même si elle n'est pas agréable.
+    en:
+      - I want you to tell me the truth, even if it isn't pleasant.
+      - I want you to tell me the truth, even if it's not nice.
+    register: informal
+    grammar: [object-pronouns]
+    explain: vouloir que + subjunctive. ils disent → que tu dises (present tu dis).
+
+  - id: subj-14
+    fr: Il faut que les enfants {soient|être} au lit à huit heures et demie.
+    en:
+      - The children have to be in bed at half past eight.
+      - The kids need to be in bed by eight thirty.
+    explain: il faut que + subjunctive. être is irregular → qu'ils soient.
+
+  - id: subj-15
+    fr: Mon médecin veut que je {marche|marcher} au moins trente minutes par jour.
+    en:
+      - My doctor wants me to walk at least thirty minutes a day.
+      - My doctor wants me to walk for at least half an hour every day.
+    explain: vouloir que + subjunctive. For -er verbs, que je marche looks and sounds like the present.
+
+  - id: subj-16
+    fr: Il vaut mieux que vous {attendiez|attendre} ici, le docteur arrive dans cinq minutes.
+    en:
+      - It's better if you wait here, the doctor will be here in five minutes.
+      - You'd better wait here, the doctor is coming in five minutes.
+    register: formal
+    explain: il vaut mieux que + subjunctive. que vous attendiez (with i), not vous attendez.

@@ -87,7 +87,7 @@ items:
 
 ## LLM grader (`llm.ts`)
 - `POST https://openrouter.ai/api/v1/chat/completions` from the browser, with the key read from Settings and `temperature: 0`. It asks for JSON output (with `response_format` json_schema where the model supports it, otherwise it extracts the JSON from the text), plus usage and cost reporting.
-- **Input:** the task (produce or meaning), the English prompt or the French source, the reference answers, the learner's answer, the register, and the level (A1/A2).
+- **Input:** the task (produce or meaning), the English prompt or the French source, the reference answers, the learner's answer, the register, and the level (A1/A2/B1).
 - **Output schema:** `{ verdict: "correct"|"wrong", corrected: string, errors: [{type: gender|agreement|conjugation|tense|accent|spelling|word-choice|word-order|missing|extra|meaning|register, wrong, right, explanation}], note? }`.
 - **The prompt's rules:** accept any grammatical answer that keeps the meaning even if it differs from the reference; any accent error makes the answer wrong; tu/vous and on/nous are accepted unless `register` says otherwise; `corrected` makes the fewest edits to the learner's sentence; explanations are short, in English, at A2 level.
 - **Settings screen:** the key in a password field, with Clear and "Test key". It explains that the key is stored on this device only and that the key should have an **OpenRouter credit limit** set. The site is published from a different GitHub account than the Greek app, so it has its own `<account>.github.io` origin and doesn't share localStorage with it.
@@ -192,11 +192,17 @@ Status key: `[not started]` · `[in progress]` · `[done]`. Each step is committ
    - **Grammar:** the three stubs now have drills (`reflexive-verbs`, `imperative`, `conditional-politeness`, the last retitled "Polite requests and advice" with on pourrait / tu devrais / il faudrait). New points: `imparfait`, `imparfait-vs-passe-compose`, `object-pronouns`, `y-en`, `futur-simple`, `comparatives`, `relative-pronouns`, `depuis-pendant-il-y-a`. That's 175 drills, 15–16 per point.
    - **Topics:** 106 sentences in `travel`, `health`, `work`, `weather`, `hobbies`, `family` and `appointments`.
    - **Dictée:** the imparfait's -ais/-ait/-aient sound alike, so plural subjects are audible (mes grands-parents avaient, ils_avaient). Past participles after je/nous are avoided as before, using names or plural nouns instead.
-9b. `[not started]` **Batch 3 (B1):** a small batch of high-value B1 points, agreed with the user after batch 1.
+9b. `[in progress]` **Batch 3 (B1):** a small batch of high-value B1 points, agreed with the user after batch 1.
    - **Points:** the subjunctive after il faut que / vouloir que; si + imparfait with the conditional; the plus-que-parfait; dont and ce qui / ce que; double pronouns (je le lui ai donné); the gérondif.
    - **Format change:** add `B1` to `LEVELS` in `data.py`, `data/README.md` and the level filter (step 19).
    - **Dictée:** subjunctive -er forms sound like the present (qu'il parle), and the conditional je -rais sounds close to the future je -rai. These are fine when the grammar decides, as with si + imparfait.
    - **Review:** the user reviews it on the proofreading page.
+
+   *Drafted (awaiting the user's review):*
+   - **Totals:** 687 items (471 cloze; A1 294, A2 297, B1 96), all valid. B1 drills average 12.6 words.
+   - **Grammar:** `subjunctive`, `si-clauses` (with a few si + present contrasts), `plus-que-parfait`, `dont-ce-qui-ce-que` (with ce dont), `double-pronouns` (with positive and negative imperatives), `gerondif`. 16 drills each.
+   - **Dictée:** the subjunctive drills mostly use forms you can hear (fasse, vienne, partions, attendiez). Plural possessives you can't hear (leur voyage / leurs voyages) were reworded.
+   - **Validator:** B1 is a level. A new check rejects a space after an apostrophe, including once blanks are filled. It caught opr-06 and opr-14 (`{l'|it} ai` read "l' ai"), now `{l'|it}ai`.
 
 ### Phase 4: Audio + QA (checkpoint)
 10. `[not started]` `generate.py`: YAML → `audio/<id>.mp3` + `<id>.slow.mp3` + `items.json`, with a cache keyed on (text, voice, rate, version).
@@ -210,7 +216,7 @@ Status key: `[not started]` · `[in progress]` · `[done]`. Each step is committ
 16. `[not started]` Cloze mode (text + hint → type the form → explain + rule card + audio).
 17. `[not started]` Dictée mode (audio → type the French → word diff + English).
 18. `[not started]` Listen→meaning and English→French modes, with local matching and the self-mark fallback (the LLM is wired in at step 24).
-19. `[not started]` Start screen: pick the mode, then filter by topic, grammar point or level (A1/A2), choose the question count, plus custom lists (ported from `lists.ts`). Rule-card browser screen.
+19. `[not started]` Start screen: pick the mode, then filter by topic, grammar point or level (A1/A2/B1), choose the question count, plus custom lists (ported from `lists.ts`). Rule-card browser screen.
 20. `[not started]` Feedback, summary and retry-missed (ported), plus responsive styling checked at 400px and on desktop, in light and dark.
 21. `[not started]` Deploy workflow → GitHub Pages. **This uses a different GitHub account from the Greek app.**
     - The repo gets a local git identity (`git config user.name` / `user.email` for that account, not the global one).

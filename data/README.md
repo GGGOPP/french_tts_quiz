@@ -66,7 +66,7 @@ items:
 | `fr` | yes | The French sentence, which may include cloze blanks (see below). This is what is spoken and what dictée expects. |
 | `en` | yes | A list of accepted English translations. The first is shown as *the* translation, and all are used when marking listen→meaning. |
 | `alt_fr` | no | Other correct French answers for English→French, such as tu/vous or on/nous variants and other word orders. Plain French, no blanks. |
-| `level` | topic items | `A1` or `A2`. Grammar items inherit their file's level. |
+| `level` | topic items | `A1`, `A2` or `B1`. Grammar items inherit their file's level. |
 | `grammar` | no | Grammar points the item practises. Each one must have a file in `grammar/`. |
 | `register` | no | `formal` (vous expected) or `informal` (tu expected). Leave it out when either is fine. It tells the grader whether tu/vous matters. |
 | `explain` | grammar items | Why the blank takes that form. One or two short lines, in English. |
@@ -83,13 +83,14 @@ Any other key is an error, which catches typos such as `alt-fr`.
 - **`answer`** is the exact form the learner must type. List alternatives with `/`, for example `{sont arrivés/sont venus|arriver}`. The first alternative is the one spoken and shown in the full sentence.
 - **`hint`** is optional and is shown in the blank, usually the infinitive (`aller`) or a cue (`negative`, `my`). Leave it out only when the context makes the answer unambiguous: `{hier}`.
 - A sentence may have more than one blank.
+- A blank that ends in an apostrophe joins the next word with no space: `Je {l'|it}ai vu`, `{qu'|relative}il faut`.
 
 ## Conventions
 
 - Write a straight apostrophe `'` (not `’`) and single spaces. Put a normal space before `? ! : ;`, as in French (`Tu as faim ?`). The app handles display and normalisation.
 - Start every `fr`, `alt_fr` and `en` entry with a capital letter, as a sentence. End with punctuation where the sentence would have it.
 - Write numbers in words (`quatre-vingt-dix`), so dictée has a single right spelling. The numbers mode practises digits.
-- Keep sentences short and natural. Use A1–A2 vocabulary, and one new difficulty per sentence.
+- Keep sentences short and natural. Use A1–A2 vocabulary (B1 for B1 points), and one new difficulty per sentence.
 - **Every sentence is also a dictée**, so its spelling must follow from the audio plus grammar. Avoid sentences that sound the same as another spelling:
   - *il parle* / *ils parlent*: use a subject you can hear is plural (*mes amis parlent*), or a verb whose plural sounds different (*ils ont*, *ils prennent*, *ils invitent*).
   - *je suis allé* / *je suis allée*, *je suis fatigué(e)*, *nous sommes prêts/prêtes*: only je, tu, nous and vous hide the gender. Use il, elle or a name instead (*Sophie s'est levée*).

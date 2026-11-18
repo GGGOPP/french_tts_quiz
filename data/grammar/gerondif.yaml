@@ -1,0 +1,147 @@
+point: gerondif
+title: The gérondif (en + -ant)
+level: B1
+rule: |
+  **en + a verb ending in -ant** describes a second action done by the **same person**.
+  - **While** (two things at once): Je chante **en prenant** ma douche.
+  - **By** (how): On apprend beaucoup **en voyageant**.
+  - **When / on** (one thing leads to another): **En sortant** du métro, j'ai vu Paul.
+
+  **How to build it:** take the **nous** form of the present, drop -ons, add **-ant**.
+  - nous prenons → en prenant; nous faisons → en faisant; nous lisons → en lisant
+  - Keep the spelling changes: nous mangeons → en mangeant, nous commençons → en commençant
+
+  **Irregular:** être → en étant, avoir → en ayant, savoir → en sachant.
+
+  The gérondif never changes for the subject: en partant is the same for je, elle, nous...
+items:
+  - id: ger-01
+    fr: Je chante toujours {en prenant|prendre} ma douche le matin.
+    en:
+      - I always sing in the shower in the morning.
+      - I always sing while I'm having my shower in the morning.
+    explain: Two things at once → en + -ant. nous prenons → prenant.
+
+  - id: ger-02
+    fr: Mon père écoute les informations à la radio {en conduisant|conduire} pour aller au travail.
+    en:
+      - My father listens to the news on the radio while he drives to work.
+      - My dad listens to the radio news while driving to work.
+    explain: While → en + -ant. nous conduisons → conduisant.
+
+  - id: ger-03
+    fr: On apprend beaucoup de choses {en voyageant|voyager}, surtout quand on parle avec les gens du pays.
+    en:
+      - You learn a lot by travelling, especially when you talk to the local people.
+      - You learn lots of things by traveling, especially when you talk to the locals.
+    explain: By → en + -ant. nous voyageons → voyageant, keeping the e.
+
+  - id: ger-04
+    fr: "{En sortant|sortir} du métro, j'ai vu un vieil ami que je n'avais pas vu depuis dix ans."
+    en:
+      - Coming out of the metro, I saw an old friend I hadn't seen for ten years.
+      - As I came out of the underground, I saw an old friend I hadn't seen in ten years.
+    grammar: [plus-que-parfait, depuis-pendant-il-y-a]
+    explain: When / on → en + -ant. nous sortons → sortant.
+
+  - id: ger-05
+    fr: Elle s'est cassé la jambe {en faisant|faire} du ski dans les Alpes.
+    en:
+      - She broke her leg skiing in the Alps.
+      - She broke her leg while she was skiing in the Alps.
+    grammar: [reflexive-verbs]
+    explain: While → en + -ant. nous faisons → faisant.
+    notes: s'est cassé has no e here, because the object (la jambe) comes after the verb.
+
+  - id: ger-06
+    fr: Vous trouverez la pharmacie {en tournant|tourner} à droite après la poste.
+    en:
+      - You'll find the chemist's by turning right after the post office.
+      - You'll find the pharmacy if you turn right after the post office.
+    register: formal
+    grammar: [futur-simple]
+    explain: By / if → en + -ant. nous tournons → tournant.
+
+  - id: ger-07
+    fr: "{En travaillant|travailler} un peu chaque jour, tu vas réussir ton examen sans problème."
+    en:
+      - By working a little every day, you'll pass your exam easily.
+      - If you work a bit every day, you'll pass your exam with no problem.
+    register: informal
+    grammar: [futur-proche]
+    explain: By / if → en + -ant. nous travaillons → travaillant.
+
+  - id: ger-08
+    fr: Ne parle pas {en mangeant|manger}, ce n'est pas poli !
+    en:
+      - Don't talk while you're eating, it's not polite!
+      - Don't talk with your mouth full, it's rude!
+    register: informal
+    grammar: [imperative, negation]
+    explain: While → en + -ant. nous mangeons → mangeant, keeping the e.
+
+  - id: ger-09
+    fr: Mon grand-père s'est endormi {en regardant|regarder} le match à la télé.
+    en:
+      - My grandfather fell asleep watching the match on TV.
+      - My grandpa fell asleep while he was watching the game on TV.
+    grammar: [reflexive-verbs, passe-compose-etre]
+    explain: While → en + -ant. nous regardons → regardant.
+
+  - id: ger-10
+    fr: J'ai rencontré ma meilleure amie {en attendant|attendre} le bus, il y a quinze ans.
+    en:
+      - I met my best friend while waiting for the bus, fifteen years ago.
+      - I met my best friend fifteen years ago while I was waiting for the bus.
+    grammar: [depuis-pendant-il-y-a]
+    explain: While → en + -ant. nous attendons → attendant.
+
+  - id: ger-11
+    fr: "{En commençant|commencer} tôt le matin, nous finirons avant midi."
+    en:
+      - If we start early in the morning, we'll finish before noon.
+      - By starting early in the morning, we'll be done before midday.
+    alt_fr:
+      - En commençant tôt le matin, on finira avant midi.
+    grammar: [futur-simple]
+    explain: By / if → en + -ant. nous commençons → commençant, keeping the ç.
+
+  - id: ger-12
+    fr: On économise beaucoup d'argent {en cuisinant|cuisiner} à la maison.
+    en:
+      - You save a lot of money by cooking at home.
+      - We save lots of money by cooking at home.
+    explain: By → en + -ant. nous cuisinons → cuisinant.
+
+  - id: ger-13
+    fr: J'ai beaucoup amélioré mon français {en lisant|lire} des romans policiers.
+    en:
+      - I've improved my French a lot by reading detective novels.
+      - I improved my French a lot by reading crime novels.
+    grammar: [passe-compose-avoir]
+    explain: By → en + -ant. nous lisons → lisant.
+
+  - id: ger-14
+    fr: Mon frère s'est fait mal au dos {en portant|porter} les cartons du déménagement.
+    en:
+      - My brother hurt his back carrying the boxes when we moved.
+      - My brother hurt his back while carrying the moving boxes.
+    grammar: [reflexive-verbs]
+    explain: While → en + -ant. nous portons → portant.
+
+  - id: ger-15
+    fr: Fais attention {en traversant|traverser} la rue, il y a beaucoup de voitures ici.
+    en:
+      - Be careful crossing the street, there are lots of cars here.
+      - Be careful when you cross the road, there's a lot of traffic here.
+    register: informal
+    grammar: [imperative]
+    explain: When / while → en + -ant. nous traversons → traversant.
+
+  - id: ger-16
+    fr: Le soir, je me détends {en écoutant|écouter} de la musique classique.
+    en:
+      - In the evening, I relax by listening to classical music.
+      - In the evenings I unwind listening to classical music.
+    grammar: [reflexive-verbs]
+    explain: By → en + -ant. nous écoutons → écoutant.

@@ -1,0 +1,139 @@
+point: dont-ce-qui-ce-que
+title: dont, ce qui, ce que
+level: B1
+rule: |
+  **dont** replaces **de + something**. Use it with verbs and phrases that take **de**: parler de, avoir besoin de, rêver de, se souvenir de, avoir peur de.
+  - Je t'ai parlé **de ce livre**. → C'est le livre **dont** je t'ai parlé.
+  - dont also means **whose**: un collègue **dont** la femme est médecin (a colleague whose wife is a doctor).
+
+  **ce qui / ce que / ce dont** mean **what** (the thing that) when there is no noun before them:
+  - **ce qui** is the **subject** of the next verb: **Ce qui** m'énerve, c'est le bruit.
+  - **ce que** is the **object**, so a subject comes next: Dis-moi **ce que** tu veux. que becomes **qu'** before a vowel.
+  - **ce dont** goes with a verb + de: **Ce dont** j'ai besoin, c'est de vacances.
+  - **tout ce qui / tout ce que** = everything that: Il a mangé **tout ce qu'**il y avait.
+
+  **Quick test**, as with qui and que: a verb next → ce qui; a subject next → ce que; a verb + de → dont or ce dont.
+items:
+  - id: dcq-01
+    fr: C'est le livre {dont|relative} je t'ai parlé hier soir.
+    en:
+      - That's the book I told you about last night.
+      - It's the book that I talked to you about yesterday evening.
+    register: informal
+    explain: parler de quelque chose → dont.
+
+  - id: dcq-02
+    fr: Voici la liste du matériel {dont|relative} vous aurez besoin pour le cours de photo.
+    en:
+      - Here is the list of equipment you will need for the photography class.
+      - Here's the list of the gear you'll need for the photo course.
+    register: formal
+    grammar: [futur-simple]
+    explain: avoir besoin de quelque chose → dont.
+
+  - id: dcq-03
+    fr: J'ai un collègue {dont|relative} la femme est médecin à l'hôpital.
+    en:
+      - I have a colleague whose wife is a doctor at the hospital.
+      - I've got a coworker whose wife is a doctor at the hospital.
+    explain: whose → dont. The word order stays normal after it (dont la femme est...).
+
+  - id: dcq-04
+    fr: "{Ce qui|what} m'énerve, c'est que le bus est toujours en retard."
+    en:
+      - What annoys me is that the bus is always late.
+      - What gets on my nerves is that the bus is always late.
+    grammar: [object-pronouns]
+    explain: m'énerve is the next verb, so "what" is its subject → ce qui.
+
+  - id: dcq-05
+    fr: Dis-moi {ce que|what} tu veux pour ton anniversaire, je n'ai aucune idée.
+    en:
+      - Tell me what you want for your birthday, I have no idea.
+      - Tell me what you'd like for your birthday, I've got no idea.
+    register: informal
+    grammar: [imperative]
+    explain: tu comes next (a subject), so "what" is the object → ce que.
+
+  - id: dcq-06
+    fr: Je ne comprends pas {ce qui|what} se passe, tout le monde est parti.
+    en:
+      - I don't understand what's going on, everyone has left.
+      - I don't get what's happening, everybody's gone.
+    grammar: [negation]
+    explain: se passe is the next verb → ce qui.
+
+  - id: dcq-07
+    fr: Le film {dont|relative} tout le monde parle sort mercredi au cinéma.
+    en:
+      - The film everyone is talking about comes out on Wednesday.
+      - The movie that everybody's talking about is out in theaters on Wednesday.
+    explain: parler de → dont. English puts "about" at the end; French puts dont first.
+
+  - id: dcq-08
+    fr: Tu peux faire {ce que|what} tu veux ce week-end, mais rentre avant minuit.
+    en:
+      - You can do what you want this weekend, but be home before midnight.
+      - You can do whatever you like this weekend, but come home before midnight.
+    register: informal
+    grammar: [imperative]
+    explain: tu comes next (a subject) → ce que.
+
+  - id: dcq-09
+    fr: "{Ce dont|what} j'ai besoin, c'est d'une semaine de vacances au soleil."
+    en:
+      - What I need is a week's holiday in the sun.
+      - What I need is a week of vacation somewhere sunny.
+    explain: avoir besoin de → ce dont. The de comes back in c'est d'une semaine.
+
+  - id: dcq-10
+    fr: Lyon est une ville {dont|relative} je garde de très bons souvenirs.
+    en:
+      - Lyon is a city I have very good memories of.
+      - Lyon is a city that I have very fond memories of.
+    explain: garder un souvenir de quelque chose → dont.
+
+  - id: dcq-11
+    fr: Il m'a raconté {ce qui|what} lui était arrivé pendant son voyage en Inde.
+    en:
+      - He told me what had happened to him during his trip to India.
+      - He told me what happened to him on his trip to India.
+    grammar: [plus-que-parfait, object-pronouns]
+    explain: lui était arrivé has no other subject, so "what" is the subject → ce qui.
+
+  - id: dcq-12
+    fr: Mon voisin, {dont|relative} le fils joue au foot avec le mien, est très sympa.
+    en:
+      - My neighbour, whose son plays football with mine, is very nice.
+      - My neighbor, whose son plays soccer with mine, is really nice.
+    explain: whose → dont.
+
+  - id: dcq-13
+    fr: Je me demande {ce qu'|what}elle pense vraiment de mon idée.
+    en:
+      - I wonder what she really thinks of my idea.
+      - I wonder what she really thinks about my idea.
+    grammar: [reflexive-verbs]
+    explain: elle comes next (a subject) → ce que, which becomes ce qu' before a vowel.
+
+  - id: dcq-14
+    fr: "{Ce qui|what} est important, c'est de bien dormir la nuit avant l'examen."
+    en:
+      - What's important is to sleep well the night before the exam.
+      - What matters is getting a good night's sleep before the exam.
+    explain: est is the next verb → ce qui.
+
+  - id: dcq-15
+    fr: Les enfants ont mangé tout {ce qu'|what}il y avait dans le frigo.
+    en:
+      - The children ate everything there was in the fridge.
+      - The kids ate everything that was in the fridge.
+    grammar: [imparfait]
+    explain: tout ce que = everything that. il comes next (a subject) → ce qu'.
+
+  - id: dcq-16
+    fr: La maison {dont|relative} mes parents rêvent a un grand jardin et une piscine.
+    en:
+      - The house my parents dream of has a big garden and a swimming pool.
+      - The house that my parents are dreaming about has a large garden and a pool.
+    explain: rêver de quelque chose → dont.

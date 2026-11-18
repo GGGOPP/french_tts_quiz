@@ -58,7 +58,7 @@ items:
     explain: écrire à takes an indirect object. Plural → leur, never leurs.
 
   - id: opr-06
-    fr: Le dernier film de ce réalisateur ? Je {l'|it} ai vu deux fois.
+    fr: Le dernier film de ce réalisateur ? Je {l'|it}ai vu deux fois.
     en:
       - That director's latest film? I've seen it twice.
       - The director's latest movie? I saw it twice.
@@ -122,7 +122,7 @@ items:
     explain: répondre à → lui. In the negative, ne goes before the pronoun and pas after avoir.
 
   - id: opr-14
-    fr: J'adore cette chanson, je {l'|it} écoute tous les jours.
+    fr: J'adore cette chanson, je {l'|it}écoute tous les jours.
     en:
       - I love this song, I listen to it every day.
     explain: écouter takes a direct object in French (no à), so la chanson → la → l'. English says "listen to".

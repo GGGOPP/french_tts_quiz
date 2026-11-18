@@ -200,10 +200,12 @@ def item_edit(**changes):
         (item_edit(fr="Je voudrais un café,  merci."), "double space"),
         (item_edit(fr="Je voudrais un café, s’il vous plaît."), "curly apostrophe"),
         (item_edit(fr="Je {voudrais un café."), "fr: unbalanced"),
+        (item_edit(fr="Il {l'|it} a bu."), "space after an apostrophe once the blanks are filled"),
+        (item_edit(alt_fr=["Il l' a bu."]), "alt_fr has a space after an apostrophe"),
         (item_edit(alt_fr=["Je voudrais un café, s'il vous plaît."]), "alt_fr repeats fr"),
         (item_edit(alt_fr=["Je {voudrais} un café."]), "alt_fr is plain French"),
         (item_edit(tts_text="Je {voudrais} un café."), "tts_text is plain French"),
-        (item_edit(level="B1"), "level must be one of A1, A2"),
+        (item_edit(level="B2"), "level must be one of A1, A2, B1"),
         (item_edit(register="polite"), "register must be one of formal, informal"),
         (item_edit(voice="nestoras"), "voice must be one of"),
         (item_edit(grammar=["subjonctif"]), "unknown grammar point 'subjonctif'"),
@@ -249,7 +251,7 @@ def test_problem_names_the_item(make_data):
 
 def test_all_problems_are_reported_together(make_data):
     problems = problems_of(
-        make_data, topic_edit=item_edit(level="B1"), grammar_edit=item_edit(explain=...)
+        make_data, topic_edit=item_edit(level="B2"), grammar_edit=item_edit(explain=...)
     )
     assert len(problems) == 2
 

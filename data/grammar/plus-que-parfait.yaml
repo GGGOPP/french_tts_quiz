@@ -1,0 +1,146 @@
+point: plus-que-parfait
+title: Plus-que-parfait (had done)
+level: B1
+rule: |
+  The plus-que-parfait is the English **had + past participle**. It shows that something happened **before** another past event.
+  - Quand Marc est arrivé, le train **était parti**. (When Marc arrived, the train had left.)
+
+  **How to build it:** avoir or être in the **imparfait** + the past participle.
+  - j'**avais** mangé, tu **avais** fini, il **avait** vu, nous **avions** fait, vous **aviez** pris, ils **avaient** compris
+  - il **était** parti, elle **était** partie, ils **étaient** arrivés, il **s'était** couché
+
+  The choice between avoir and être, and the agreement rules, are the same as in the passé composé.
+
+  **Common with:** parce que, quand, déjà, jamais, and after il m'a dit que / je ne savais pas que.
+  - Je ne savais pas que tu **avais habité** à Marseille.
+
+  In the negative, ne...pas goes around avoir or être: je **n'avais pas** révisé.
+items:
+  - id: pqp-01
+    fr: Quand Marc est arrivé à la gare, le train {était parti|partir} depuis dix minutes.
+    en:
+      - When Marc got to the station, the train had left ten minutes earlier.
+      - When Marc arrived at the station, the train had already been gone for ten minutes.
+    grammar: [passe-compose-etre]
+    explain: The train left before Marc arrived → plus-que-parfait. partir takes être → était parti.
+
+  - id: pqp-02
+    fr: J'ai raté l'examen parce que je {n'avais pas révisé|not + réviser}.
+    en:
+      - I failed the exam because I hadn't revised.
+      - I failed the exam because I hadn't studied.
+    grammar: [negation]
+    explain: Not revising came before the exam → plus-que-parfait. ne...pas goes around avais.
+
+  - id: pqp-03
+    fr: Sophie m'a dit qu'elle {avait vu|voir} ce film deux fois au cinéma.
+    en:
+      - Sophie told me she had seen this film twice at the cinema.
+      - Sophie told me that she'd seen that movie twice in the theater.
+    explain: After a past "she told me that", an earlier action goes in the plus-que-parfait.
+
+  - id: pqp-04
+    fr: Je n'ai pas pu entrer chez moi parce que j'{avais oublié|oublier} mes clés au bureau.
+    en:
+      - I couldn't get into my flat because I had left my keys at the office.
+      - I couldn't get into my house because I'd forgotten my keys at work.
+    grammar: [negation]
+    explain: Forgetting the keys happened first → j'avais oublié.
+
+  - id: pqp-05
+    fr: Quand ma mère est rentrée, les enfants {avaient mangé|manger} et ils jouaient dans le jardin.
+    en:
+      - When my mother came home, the children had eaten and were playing in the garden.
+      - When my mum got home, the kids had already eaten and were playing in the yard.
+    grammar: [imparfait-vs-passe-compose]
+    explain: They ate before she came home → plus-que-parfait. Then jouaient sets the scene (imparfait).
+
+  - id: pqp-06
+    fr: Le professeur nous a demandé pourquoi nous {n'avions pas fait|not + faire} l'exercice.
+    en:
+      - The teacher asked us why we hadn't done the exercise.
+    alt_fr:
+      - Le professeur nous a demandé pourquoi on n'avait pas fait l'exercice.
+    grammar: [object-pronouns, negation]
+    explain: Not doing the exercise came before the question → plus-que-parfait. nous avions.
+
+  - id: pqp-07
+    fr: Thomas était très fatigué ce matin parce qu'il {s'était couché|se coucher} à trois heures.
+    en:
+      - Thomas was very tired this morning because he had gone to bed at three.
+      - Thomas was really tired this morning because he'd gone to bed at three o'clock.
+    grammar: [reflexive-verbs]
+    explain: Reflexive verbs take être → il s'était couché.
+
+  - id: pqp-08
+    fr: Mes grands-parents {s'étaient rencontrés|se rencontrer} à un bal, deux ans avant de se marier.
+    en:
+      - My grandparents had met at a dance, two years before they got married.
+      - My grandparents had met at a ball two years before getting married.
+    grammar: [reflexive-verbs]
+    explain: Reflexive → être. Plural subject → rencontrés.
+
+  - id: pqp-09
+    fr: Quelqu'un m'a rapporté le portefeuille que j'{avais perdu|perdre} dans le bus.
+    en:
+      - Someone brought back the wallet I had lost on the bus.
+      - Someone returned the wallet that I'd lost on the bus.
+    grammar: [relative-pronouns]
+    explain: Losing the wallet came first → j'avais perdu.
+
+  - id: pqp-10
+    fr: Quand les invités sont arrivés, Paul {avait préparé|préparer} tout le repas.
+    en:
+      - When the guests arrived, Paul had made the whole meal.
+      - By the time the guests arrived, Paul had cooked the entire meal.
+    grammar: [passe-compose-etre]
+    explain: The meal was ready before the guests came → plus-que-parfait.
+
+  - id: pqp-11
+    fr: Léa était triste parce que son copain {n'était pas venu|not + venir} à sa fête.
+    en:
+      - Léa was sad because her boyfriend hadn't come to her party.
+      - Léa was upset because her boyfriend hadn't come to her party.
+    grammar: [negation, possessives]
+    explain: venir takes être → il était venu. ne...pas goes around était.
+
+  - id: pqp-12
+    fr: Je ne savais pas que tu {avais habité|habiter} à Marseille pendant cinq ans.
+    en:
+      - I didn't know you had lived in Marseille for five years.
+      - I didn't know that you'd lived in Marseille for five years.
+    register: informal
+    grammar: [negation, depuis-pendant-il-y-a]
+    explain: Living in Marseille came before "I didn't know" → plus-que-parfait.
+
+  - id: pqp-13
+    fr: Avant ce voyage, mon père {n'avait jamais pris|never + prendre} l'avion.
+    en:
+      - Before this trip, my father had never taken a plane.
+      - Before that trip, my dad had never flown.
+    grammar: [negation]
+    explain: ne...jamais goes around avait, like ne...pas. prendre → pris.
+
+  - id: pqp-14
+    fr: Il a enfin retrouvé le livre qu'il {avait cherché|chercher} partout pendant une semaine.
+    en:
+      - He finally found the book he had looked for everywhere for a week.
+      - He finally found the book he'd been searching for everywhere for a week.
+    grammar: [relative-pronouns, depuis-pendant-il-y-a]
+    explain: The search came before finding it → plus-que-parfait.
+
+  - id: pqp-15
+    fr: Les voisins nous ont expliqué que le chat {était tombé|tomber} du balcon pendant la nuit.
+    en:
+      - The neighbours explained to us that the cat had fallen off the balcony during the night.
+      - The neighbors told us the cat had fallen from the balcony in the night.
+    grammar: [object-pronouns]
+    explain: tomber takes être → était tombé.
+
+  - id: pqp-16
+    fr: J'ai dû rappeler Julie parce qu'elle {n'avait pas compris|not + comprendre} mon message.
+    en:
+      - I had to call Julie back because she hadn't understood my message.
+      - I had to ring Julie back because she hadn't understood my message.
+    grammar: [negation]
+    explain: Not understanding came first → plus-que-parfait. comprendre → compris.

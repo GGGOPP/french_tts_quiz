@@ -1,0 +1,156 @@
+point: double-pronouns
+title: Two pronouns together (je le lui donne)
+level: B1
+rule: |
+  When a verb has two object pronouns, they go before the verb in this order:
+
+  | 1 | 2 | 3 | 4 | 5 |
+  |---|---|---|---|---|
+  | me, te, nous, vous | le, la, les | lui, leur | y | en |
+
+  - Il **me le** prête. Je **le lui** donne. Je **leur en** parle. Il **y en** a.
+  - me and te become **m'** and **t'** before en: Je **t'en** donne.
+
+  **Where they go:**
+  - Passé composé: before avoir or être. Je **le lui** ai donné.
+  - Verb + infinitive (pouvoir, vouloir, aller...): before the infinitive. Je peux **te la** prêter.
+  - Negative: ne goes before both. Je **ne le lui** dis pas.
+
+  **Agreement:** in the passé composé, the participle agrees with le, la or les before it. La recette ? Je **la** lui ai écri**te**.
+
+  **Positive imperative:** the pronouns go **after** the verb with hyphens, le/la/les first, and me becomes **moi**: Donne-**le-moi**. Envoyez-**les-nous**.
+  **Negative imperative:** the normal order before the verb: **Ne le lui** dis pas.
+items:
+  - id: dbl-01
+    fr: Tu me prêtes ton vélo ? Oui, je {te le|it, to you} prête jusqu'à dimanche.
+    en:
+      - Will you lend me your bike? Yes, I'll lend it to you until Sunday.
+      - Can you lend me your bike? Sure, I'm lending it to you till Sunday.
+    register: informal
+    explain: te (to you) comes before le (it).
+
+  - id: dbl-02
+    fr: Ma sœur voulait mon vieux livre de cuisine, alors je {le lui|it, to her} ai donné hier.
+    en:
+      - My sister wanted my old cookbook, so I gave it to her yesterday.
+      - My sister wanted my old cookery book, so I gave it to her yesterday.
+    grammar: [passe-compose-avoir, imparfait]
+    explain: le (it) comes before lui (to her). Both go before ai.
+
+  - id: dbl-03
+    fr: Est-ce que tu as envoyé les photos à tes parents ? Oui, je {les leur|them, to them} ai envoyées ce matin.
+    en:
+      - Did you send the photos to your parents? Yes, I sent them to them this morning.
+      - Have you sent the pictures to your parents? Yes, I sent them this morning.
+    register: informal
+    grammar: [passe-compose-avoir]
+    explain: les comes before leur. The participle agrees with les (the photos) → envoyées.
+
+  - id: dbl-04
+    fr: Si tu n'as pas l'adresse de l'hôtel, je peux {te la|it, to you} donner.
+    en:
+      - If you don't have the hotel's address, I can give it to you.
+      - If you haven't got the address of the hotel, I can give it to you.
+    register: informal
+    grammar: [si-clauses, negation]
+    explain: With pouvoir + infinitive, the pronouns go before the infinitive. te before la.
+
+  - id: dbl-05
+    fr: Il reste du gâteau ? Oui, je {t'en|to you, some} coupe un morceau.
+    en:
+      - Is there any cake left? Yes, I'll cut you a piece.
+      - Is there some cake left? Yes, I'll cut you a slice.
+    register: informal
+    grammar: [y-en]
+    explain: te before en, and te becomes t' before a vowel → t'en.
+
+  - id: dbl-06
+    fr: J'ai besoin de ce document, {envoyez-le-moi|envoyer (vous) + it, to me} avant midi, s'il vous plaît.
+    en:
+      - I need this document, please send it to me before noon.
+      - I need that document, send it to me before midday, please.
+    register: formal
+    grammar: [imperative]
+    explain: Positive imperative → pronouns after the verb with hyphens. le first, then moi.
+
+  - id: dbl-07
+    fr: C'est une surprise pour leur anniversaire, alors ne {le leur|it, to them} dis pas !
+    en:
+      - It's a surprise for their birthday, so don't tell them!
+      - It's a birthday surprise for them, so don't tell them about it!
+    register: informal
+    grammar: [imperative, negation]
+    explain: Negative imperative → the normal order before the verb. le before leur.
+
+  - id: dbl-08
+    fr: Ton frère a besoin de la voiture samedi ? Pas de problème, je {la lui|it, to him} prête.
+    en:
+      - Does your brother need the car on Saturday? No problem, I'll lend it to him.
+      - Your brother needs the car on Saturday? No problem, I'm lending it to him.
+    register: informal
+    explain: la (the car) before lui (to him).
+
+  - id: dbl-09
+    fr: Est-ce qu'il reste du pain ? Oui, il {y en|there, some} a encore un peu.
+    en:
+      - Is there any bread left? Yes, there's still a little.
+      - Is there still some bread? Yes, there's a bit left.
+    grammar: [y-en]
+    explain: il y a + en → il y en a. y always comes before en.
+
+  - id: dbl-10
+    fr: Mes amis m'ont demandé des conseils pour visiter Rome, alors je {leur en|to them, some} ai donné.
+    en:
+      - My friends asked me for advice on visiting Rome, so I gave them some.
+      - My friends asked me for tips for visiting Rome, so I gave them some.
+    grammar: [y-en, passe-compose-avoir]
+    explain: leur before en. en stands for des conseils.
+
+  - id: dbl-11
+    fr: Je n'ai pas compris la règle, tu peux {me la|it, to me} réexpliquer, s'il te plaît ?
+    en:
+      - I didn't understand the rule, can you explain it to me again, please?
+      - I haven't understood the rule, could you explain it to me again, please?
+    register: informal
+    grammar: [negation]
+    explain: me before la, both before the infinitive.
+
+  - id: dbl-12
+    fr: Qui vous a donné ces billets de concert ? C'est Paul qui {nous les|them, to us} a donnés.
+    en:
+      - Who gave you these concert tickets? Paul gave them to us.
+      - Who gave you those concert tickets? It was Paul who gave them to us.
+    grammar: [relative-pronouns]
+    explain: nous before les. The participle agrees with les (the tickets) → donnés.
+
+  - id: dbl-13
+    fr: Quand mon fils me demande des bonbons, je ne {lui en|to him, some} donne jamais avant le dîner.
+    en:
+      - When my son asks me for sweets, I never give him any before dinner.
+      - When my son asks me for candy, I never give him any before dinner.
+    grammar: [negation, y-en]
+    explain: lui before en. ne goes before both pronouns.
+
+  - id: dbl-14
+    fr: Julie veut voir tes photos de vacances, tu {les lui|them, to her} montreras dimanche ?
+    en:
+      - Julie wants to see your holiday photos, will you show them to her on Sunday?
+      - Julie wants to see your vacation pictures, can you show them to her on Sunday?
+    register: informal
+    grammar: [futur-simple]
+    explain: les before lui.
+
+  - id: dbl-15
+    fr: Ma voisine m'a demandé ma recette de tarte, alors je {la lui|it, to her} ai écrite sur une carte.
+    en:
+      - My neighbour asked me for my tart recipe, so I wrote it down for her on a card.
+      - My neighbor asked for my pie recipe, so I wrote it for her on a card.
+    grammar: [passe-compose-avoir]
+    explain: la before lui. The participle agrees with la (the recipe) → écrite, and you can hear the t.
+
+  - id: dbl-16
+    fr: Les enfants adorent ce livre, alors je {le leur|it, to them} lis tous les soirs.
+    en:
+      - The children love this book, so I read it to them every evening.
+      - The kids love that book, so I read it to them every night.
+    explain: le before leur.
