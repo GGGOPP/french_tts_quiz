@@ -221,7 +221,8 @@ Status key: `[not started]` · `[in progress]` · `[done]`. Each step is committ
     - **Flags:** 71 of 687 items, 31 mismatch and 40 close. The first pass flagged 87; 16 were false alarms from times written as `8h15` / `7h` and `weekend` / `email`, now handled. The remaining mismatches are a mix of Whisper mishearing (Haute-Canada for *août qu'en mai*) and possible voice slips; listening decides.
     - **Report:** `pipeline/qa_out/index.html` (gitignored) lists only the flagged items, worst first, each with players for both clips, what Whisper heard at each speed, and a word diff.
     - **Tests:** 165 pass (65 new, with a fake transcriber): cardinals and ordinals, number spelling in transcripts, normalisation, sound-alike endings, `compare`, `word_diff`, flagging order, one-speed runs, the transcript cache, the report page, and ffmpeg decoding.
-12. `[not started]` **Checkpoint:** the user listens to the flagged clips and fixes them with per-item `tts_text` / `voice` overrides.
+12. `[done]` **Checkpoint:** the user listens to the flagged clips and fixes them with per-item `tts_text` / `voice` overrides.
+    *Result:* the user listened to the 71 flagged items and found them all fine: every flag was Whisper mishearing or a spelling-only difference, so no `tts_text` / `voice` overrides were needed and the audio from step 10 stands.
 
 ### Phase 5: Core app
 13. `[not started]` `french.ts` + tests: normalisation, strict compare with accent detection, word-level dictée diff.
