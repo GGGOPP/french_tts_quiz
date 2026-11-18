@@ -284,7 +284,23 @@ Status key: `[not started]` · `[in progress]` · `[done]`. Each step is committ
         - chosen cards: 2 blanks with an alternative answer, 3 blanks with Enter moving between them, the accent bar typing into the focused blank, an accent-only miss (amber, rule closed), and a table rule card.
       - All 471 drills render at 400 px with their longest answers typed, with no overflow and every hint beside its box. All 29 rule cards open at 400 px with no page scroll; the widest table scrolls inside its card.
       - Light and dark at 400 px and 1280 px, with no console errors.
-17. `[not started]` Dictée mode (audio → type the French → word diff + English).
+17. `[done]` Dictée mode (audio → type the French → word diff + English).
+    *Result:*
+    - **`modes/dictee.ts`:** `createDicteeMode()` returns the `ModeModule`. The instruction is "Type what you hear", the clip autoplays while asking (▶ / 🐢 as in step 15), and the answer box is French with the accent bar.
+    - **`gradeDictee`:** runs `diffWords` against `fr`. The answer is `correct` if every word is right. It is `accent` if no word is missing, extra or wrong and at least one is off only by its accents. It is `wrong` otherwise. Nothing typed (or only punctuation) counts as don't-know. Case and punctuation never count.
+    - **Feedback:**
+      - The sentence is shown **with its own punctuation**. `sentenceGaps` finds the text between the words, and `layoutSentence` puts extra typed words where they were typed: after a comma, before the final `.`/`?`. With no gap after an elision, `l'ai` stays joined.
+      - A wrong word shows what you typed struck through, then the answer underlined in red (amber for accent slips). A missing word gets a dashed red underline, and an extra word is struck through.
+      - The space before `? ! : ; »` (and after `«`) is non-breaking, so a `?` never wraps alone onto a new line.
+      - A count line such as "1 wrong word · 2 accents · 1 extra word", then the English, `explain` and `notes`.
+      - On don't-know it shows just the sentence, not every word marked missing.
+      - Screen-reader text says "you typed / answer / missing word / extra word".
+    - **Styles:** the cloze `.blank-mark` rules are shared with `.word-mark`.
+    - **`main.ts`:** has a "Try Dictée" button.
+    - **Checks:**
+      - 189 Vitest tests pass (16 new). Every real sentence grades correct against itself, also with curly apostrophes and with the punctuation stripped and lowercased. Every real sentence's words are found in place, so the feedback rebuilds it exactly. `npm run build` is clean.
+      - In Chromium via Playwright at 400 px, a correct answer, an accent-only miss (amber), a missing + extra word, and don't-know by Enter all show the right heading and feedback. The focus stays in the answer box, and ↓ plays the slow clip.
+      - In dark mode, a full 10-card session mixing wrong words, stripped accents and an é typed with the accent bar showed the right marks, the score went back to the home screen, and there was no horizontal scroll and no console errors.
 18. `[not started]` Listen→meaning and English→French modes, with local matching and the self-mark fallback (the LLM is wired in at step 24).
 19. `[not started]` Start screen: pick the mode, then filter by topic, grammar point or level (A1/A2/B1), choose the question count, plus custom lists (ported from `lists.ts`). Rule-card browser screen.
 20. `[not started]` Feedback, summary and retry-missed (ported), plus responsive styling checked at 400px and on desktop, in light and dark.

@@ -2,6 +2,7 @@ import './style.css'
 import { cardsFor, MODE_TITLES, MODES, type Card } from './cards'
 import { loadItems, type ItemBank } from './items'
 import { createClozeMode } from './modes/cloze'
+import { createDicteeMode } from './modes/dictee'
 import { renderQuiz, type Modes } from './quiz'
 import { scoreText, tally } from './session'
 import { store } from './storage'
@@ -73,7 +74,7 @@ async function init(): Promise<void> {
   app.innerHTML = '<main><p>Loading sentences…</p></main>'
   try {
     const bank = await loadItems()
-    const modes: Modes = { cloze: createClozeMode(bank.grammarPoints) }
+    const modes: Modes = { cloze: createClozeMode(bank.grammarPoints), dictee: createDicteeMode() }
     showHome(bank, modes)
   } catch (err) {
     app.innerHTML = '<main><h1>French Practice</h1><p class="error"></p></main>'

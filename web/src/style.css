@@ -499,38 +499,50 @@ input[type='radio'] {
   color: var(--muted);
 }
 
-/* The sentence in the feedback, each blank marked. */
-.feedback .cloze-result {
+/* The sentence in the feedback, each blank (cloze) or mistaken word (dictée) marked. */
+.feedback .cloze-result,
+.feedback .dictee-result {
   font-size: 1.15rem;
 }
 
-.blank-mark {
+.blank-mark,
+.word-mark {
   font-weight: 600;
 }
 
 .blank-mark.correct,
-.blank-mark ins {
+.blank-mark ins,
+.word-mark ins {
   color: var(--right);
   text-decoration: none;
 }
 
 /* A correction is underlined, so a missed blank stands apart from a right one. */
-.blank-mark:not(.correct) ins {
+.blank-mark:not(.correct) ins,
+.word-mark ins {
   text-decoration: underline 2px var(--wrong);
   text-underline-offset: 0.2em;
 }
 
-.blank-mark.accent ins {
+/* A word left out: a dashed underline, as nothing was typed in its place. */
+.word-mark.missing ins {
+  text-decoration-style: dashed;
+}
+
+.blank-mark.accent ins,
+.word-mark.accent ins {
   text-decoration-color: var(--warn);
 }
 
-.blank-mark del {
+.blank-mark del,
+.word-mark del {
   color: var(--wrong);
   font-weight: 400;
   text-decoration-thickness: 2px;
 }
 
-.blank-mark.accent del {
+.blank-mark.accent del,
+.word-mark.accent del {
   color: var(--warn);
 }
 
