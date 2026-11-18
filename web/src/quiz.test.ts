@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { audioUrl, keysText, replayKey, tone, VERDICTS } from './quiz'
+import { audioUrl, keysText, replayKey, selfMarkKey, tone, VERDICTS } from './quiz'
 
 const key = (key: string, code: string, mods: Partial<Record<'ctrlKey' | 'metaKey' | 'altKey' | 'shiftKey', boolean>> = {}) => ({
   key,
@@ -64,7 +64,25 @@ describe('keysText', () => {
     expect(keysText('feedback', true)).toBe('Ctrl+Space or ↑ replays · Ctrl+Shift+Space or ↓ slowly · Enter for the next question')
   })
 
+  it('lists Y and N while you mark your own answer', () => {
+    expect(keysText('marking', true)).toBe('Ctrl+Space or ↑ replays · Ctrl+Shift+Space or ↓ slowly · Y if you were right · N if not')
+  })
+
   it('explains Enter with several blanks', () => {
     expect(keysText('asking', false, 2)).toMatch(/^Enter moves to the next blank, then checks/)
+  })
+})
+
+describe('selfMarkKey', () => {
+  it('marks right on Y and wrong on N, either case', () => {
+    expect(selfMarkKey(key('y', 'KeyY'))).toBe('right')
+    expect(selfMarkKey(key('Y', 'KeyY', { shiftKey: true }))).toBe('right')
+    expect(selfMarkKey(key('n', 'KeyN'))).toBe('wrong')
+  })
+
+  it('ignores other keys and shortcuts', () => {
+    expect(selfMarkKey(key('Enter', 'Enter'))).toBeUndefined()
+    expect(selfMarkKey(key('n', 'KeyN', { ctrlKey: true }))).toBeUndefined()
+    expect(selfMarkKey(key('y', 'KeyY', { altKey: true }))).toBeUndefined()
   })
 })

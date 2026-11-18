@@ -17,7 +17,11 @@ import type { Store } from './storage'
 
 /** A graded answer: the outcome, and how to show the feedback for it. */
 export interface Graded {
-  outcome: Outcome
+  /**
+   * `self-mark`: the answer couldn't be checked (no match, and no LLM grader to
+   * ask), so the feedback shows the answer and you say whether you were right.
+   */
+  outcome: Outcome | 'self-mark'
   /** Fill the feedback panel under its heading: the answer, a word diff, the rule… */
   show(body: HTMLElement): void
 }
@@ -76,6 +80,21 @@ export const VERDICTS: Record<Outcome, string> = {
   'dont-know': '✗ The answer was',
 }
 
+/** The feedback heading while you mark your own answer, and once you have. */
+export const SELF_MARK = {
+  ask: 'Were you right?',
+  right: '✓ Marked right',
+  wrong: '✗ Marked wrong',
+} as const
+
+/** Which self-mark a key gives: Y for right, N for wrong. Undefined for any other key. */
+export function selfMarkKey(e: KeyLike): 'right' | 'wrong' | undefined {
+  if (e.ctrlKey || e.altKey || e.metaKey) return undefined
+  if (e.key === 'y' || e.key === 'Y') return 'right'
+  if (e.key === 'n' || e.key === 'N') return 'wrong'
+  return undefined
+}
+
 /** The tone of the feedback panel: green, amber for accent-only mistakes, red. */
 export function tone(outcome: Outcome): 'right' | 'accent' | 'wrong' {
   if (isRight(outcome)) return 'right'
@@ -83,8 +102,9 @@ export function tone(outcome: Outcome): 'right' | 'accent' | 'wrong' {
 }
 
 /** The keyboard help line under the quiz (hidden on touch screens). */
-export function keysText(phase: 'asking' | 'feedback', withAudio: boolean, blanks = 1): string {
+export function keysText(phase: 'asking' | 'marking' | 'feedback', withAudio: boolean, blanks = 1): string {
   const replay = withAudio ? ['Ctrl+Space or ↑ replays', 'Ctrl+Shift+Space or ↓ slowly'] : []
+  if (phase === 'marking') return [...replay, 'Y if you were right', 'N if not'].join(' · ')
   if (phase === 'feedback') return [...replay, 'Enter for the next question'].join(' · ')
   const enter = blanks > 1 ? ['Enter moves to the next blank, then checks'] : ['Enter checks']
   return [...replay, ...enter, 'Enter with nothing typed if you don’t know'].join(' · ')
@@ -139,6 +159,10 @@ export function renderQuiz(
       <section class="feedback" aria-live="polite" hidden>
         <h2 class="verdict"></h2>
         <div class="feedback-body"></div>
+        <div class="self-mark" role="group" aria-label="Mark your answer" hidden>
+          <button type="button" class="mark-right" aria-pressed="false">✓ I was right</button>
+          <button type="button" class="mark-wrong" aria-pressed="false">✗ I was wrong</button>
+        </div>
       </section>
       <p class="keys"></p>
     </main>`
@@ -161,6 +185,9 @@ export function renderQuiz(
   const feedback = $('.feedback')
   const verdict = $('.verdict')
   const feedbackBody = $('.feedback-body')
+  const selfMark = $('.self-mark')
+  const markRight = $<HTMLButtonElement>('.mark-right')
+  const markWrong = $<HTMLButtonElement>('.mark-wrong')
   const keys = $('.keys')
 
   // The answer box and its accent bar stay for the whole session, so the phone
@@ -180,7 +207,8 @@ export function renderQuiz(
   const { signal } = listeners
 
   let index = 0
-  let phase: 'asking' | 'grading' | 'feedback' | 'done' = 'asking'
+  /** `marking`: the feedback is up, waiting for you to mark your own answer. */
+  let phase: 'asking' | 'grading' | 'marking' | 'feedback' | 'done' = 'asking'
   /** Bumped per answer, so a late grade for an earlier card (or after leaving) is dropped. */
   let ticket = 0
   let module: ModeModule
@@ -190,7 +218,7 @@ export function renderQuiz(
   const results: CardResult[] = []
 
   const card = () => cards[index]
-  const audioNow = () => module.audioWhen === 'ask' || phase === 'feedback'
+  const audioNow = () => module.audioWhen === 'ask' || phase === 'marking' || phase === 'feedback'
 
   function setHint(text: string, needsTap = false): void {
     hint.textContent = text
@@ -287,7 +315,10 @@ export function renderQuiz(
     for (const box of boxes) box.readOnly = true // keeps the focus (and the phone keyboard), so Enter moves on
 
     const settle = (graded: Graded) => {
-      current = { card: now, typed: blank ? [] : typed, outcome: graded.outcome }
+      const result: CardResult = { card: now, typed: blank ? [] : typed, outcome: 'wrong' } // until you mark it
+      if (graded.outcome === 'self-mark') result.selfMarked = true
+      else result.outcome = graded.outcome
+      current = result
       toFeedback(graded)
     }
 
@@ -328,17 +359,21 @@ export function renderQuiz(
   }
 
   function toFeedback(graded: Graded): void {
-    phase = 'feedback'
-    screen.dataset.phase = phase
+    const marking = graded.outcome === 'self-mark'
+    phase = marking ? 'marking' : 'feedback'
+    screen.dataset.phase = 'feedback'
     checkButton.textContent = index === cards.length - 1 ? 'Finish' : 'Next'
-    checkButton.disabled = false
+    checkButton.disabled = marking
     dontKnow.hidden = true
     barSlot.hidden = true
-    keys.textContent = keysText('feedback', true)
+    keys.textContent = keysText(phase, true)
 
     feedback.hidden = false
-    feedback.dataset.outcome = tone(graded.outcome)
-    verdict.textContent = VERDICTS[graded.outcome]
+    feedback.dataset.outcome = graded.outcome === 'self-mark' ? 'unsure' : tone(graded.outcome)
+    verdict.textContent = graded.outcome === 'self-mark' ? SELF_MARK.ask : VERDICTS[graded.outcome]
+    selfMark.hidden = !marking
+    markRight.setAttribute('aria-pressed', 'false')
+    markWrong.setAttribute('aria-pressed', 'false')
     feedbackBody.replaceChildren()
     graded.show(feedbackBody)
     feedback.scrollIntoView?.({ block: 'nearest' })
@@ -348,6 +383,20 @@ export function renderQuiz(
       play() // the clip was held back while asking
     }
     if (!boxes.includes(document.activeElement as HTMLInputElement)) focusAnswer()
+  }
+
+  /** Mark your own answer. It can be changed until you move on. */
+  function mark(right: boolean): void {
+    if (!current?.selfMarked || (phase !== 'marking' && phase !== 'feedback')) return
+    current.outcome = right ? 'correct' : 'wrong'
+    phase = 'feedback'
+    verdict.textContent = right ? SELF_MARK.right : SELF_MARK.wrong
+    feedback.dataset.outcome = tone(current.outcome)
+    markRight.setAttribute('aria-pressed', String(right))
+    markWrong.setAttribute('aria-pressed', String(!right))
+    checkButton.disabled = false
+    setHint('')
+    keys.textContent = keysText('feedback', true)
   }
 
   function next(): void {
@@ -377,14 +426,17 @@ export function renderQuiz(
   }
   audio.addEventListener('error', () => setHint("Couldn't load this sentence's audio."), { signal })
 
-  // Tapping ▶ or 🐢 shouldn't take the focus off the answer box (that would close the phone keyboard).
-  for (const button of [playButton, slowButton]) {
+  // Tapping ▶, 🐢 or a self-mark button shouldn't take the focus off the answer
+  // box (that would close the phone keyboard).
+  for (const button of [playButton, slowButton, markRight, markWrong]) {
     for (const type of ['pointerdown', 'mousedown'] as const) {
       button.addEventListener(type, (e) => e.preventDefault(), { signal })
     }
   }
   playButton.addEventListener('click', () => play(false), { signal })
   slowButton.addEventListener('click', () => play(true), { signal })
+  markRight.addEventListener('click', () => mark(true), { signal })
+  markWrong.addEventListener('click', () => mark(false), { signal })
   $('.quit').addEventListener('click', () => handlers.onQuit(), { signal })
 
   document.addEventListener(
@@ -394,15 +446,28 @@ export function renderQuiz(
       if (replay && audioNow() && phase !== 'done') {
         e.preventDefault()
         play(replay === 'slow')
+        return
+      }
+      const marked = current?.selfMarked && (phase === 'marking' || phase === 'feedback') ? selfMarkKey(e) : undefined
+      if (marked) {
+        e.preventDefault()
+        mark(marked === 'right')
       }
     },
     { signal },
   )
 
-  // Enter in a blank that isn't the last moves on to the next blank.
+  // Enter in a blank that isn't the last moves on to the next blank; while you
+  // still have to mark your own answer, it says so.
   form.addEventListener(
     'keydown',
     (e) => {
+      if (e.key === 'Enter' && phase === 'marking') {
+        // Next is disabled until you mark your answer, so the form won't submit: say why.
+        e.preventDefault()
+        setHint('Mark your answer first: were you right?')
+        return
+      }
       if (e.key !== 'Enter' || phase !== 'asking' || boxes.length < 2) return
       const at = boxes.indexOf(e.target as HTMLInputElement)
       if (at < 0 || at === boxes.length - 1) return

@@ -3,6 +3,8 @@ import { cardsFor, MODE_TITLES, MODES, type Card } from './cards'
 import { loadItems, type ItemBank } from './items'
 import { createClozeMode } from './modes/cloze'
 import { createDicteeMode } from './modes/dictee'
+import { createMeaningMode } from './modes/meaning'
+import { createProduceMode } from './modes/produce'
 import { renderQuiz, type Modes } from './quiz'
 import { scoreText, tally } from './session'
 import { store } from './storage'
@@ -74,7 +76,12 @@ async function init(): Promise<void> {
   app.innerHTML = '<main><p>Loading sentences…</p></main>'
   try {
     const bank = await loadItems()
-    const modes: Modes = { cloze: createClozeMode(bank.grammarPoints), dictee: createDicteeMode() }
+    const modes: Modes = {
+      cloze: createClozeMode(bank.grammarPoints),
+      dictee: createDicteeMode(),
+      meaning: createMeaningMode(),
+      produce: createProduceMode(),
+    }
     showHome(bank, modes)
   } catch (err) {
     app.innerHTML = '<main><h1>French Practice</h1><p class="error"></p></main>'

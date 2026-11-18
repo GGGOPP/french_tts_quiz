@@ -10,6 +10,7 @@
 
 import { compare } from '../french'
 import { blanksOf, type ClozePart, type GrammarPoint, type Item } from '../items'
+import { el, srOnly } from '../dom'
 import type { Graded, ModeModule } from '../quiz'
 import { ruleCard } from '../rules'
 import { isBlankAnswer, type Outcome } from '../session'
@@ -61,18 +62,6 @@ export function gradeCloze(cloze: readonly ClozePart[], typed: readonly string[]
 /** Width for a blank holding `text`: room for the text plus a little, never narrower than a short word. */
 export function blankWidth(text: string): string {
   return `${Math.max(Array.from(text).length, 4) + 1.5}ch`
-}
-
-function el<K extends keyof HTMLElementTagNameMap>(tag: K, className?: string, text?: string): HTMLElementTagNameMap[K] {
-  const node = document.createElement(tag)
-  if (className) node.className = className
-  if (text !== undefined) node.textContent = text
-  return node
-}
-
-/** Text for screen readers only, e.g. "you typed". */
-function srOnly(text: string): HTMLElement {
-  return el('span', 'sr-only', text)
 }
 
 /** A blank in the feedback sentence: the answer, after what was typed if that was wrong. */

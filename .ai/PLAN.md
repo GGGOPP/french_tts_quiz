@@ -301,7 +301,37 @@ Status key: `[not started]` · `[in progress]` · `[done]`. Each step is committ
       - 189 Vitest tests pass (16 new). Every real sentence grades correct against itself, also with curly apostrophes and with the punctuation stripped and lowercased. Every real sentence's words are found in place, so the feedback rebuilds it exactly. `npm run build` is clean.
       - In Chromium via Playwright at 400 px, a correct answer, an accent-only miss (amber), a missing + extra word, and don't-know by Enter all show the right heading and feedback. The focus stays in the answer box, and ↓ plays the slow clip.
       - In dark mode, a full 10-card session mixing wrong words, stripped accents and an é typed with the accent bar showed the right marks, the score went back to the home screen, and there was no horizontal scroll and no console errors.
-18. `[not started]` Listen→meaning and English→French modes, with local matching and the self-mark fallback (the LLM is wired in at step 24).
+18. `[done]` Listen→meaning and English→French modes, with local matching and the self-mark fallback (the LLM is wired in at step 24).
+    *Result:*
+    - **`english.ts`** (ported from the Greek `grading.ts`, for sentences):
+      - `clean` also expands contractions (I'd = I would, don't = do not, can't = cannot = can not, it's / let's), folds British spellings to American (colour, favourite, travelled, centre, grey, mum…), and turns number words into digits (nine = 9, twenty-five = 25, eight fifteen = 8:15).
+      - The leading word it drops is now only the/a/an/to: dropping "I" would be wrong for sentences.
+      - **Typos are allowed per word, not across the sentence:** the same number of words, at most 2 of them off. Words of up to 4 letters and numbers must be exact, so `he`/`she`, `went`/`want`, `walk`/`talk` and `nine`/`five` aren't excused as typos. Words of 5–7 letters allow 1 edit and 8+ allow 2.
+      - Every real `en` entry grades correct against itself.
+    - **Self-marking in `quiz.ts`:** a mode's `grade` can return `outcome: 'self-mark'`.
+      - The feedback then has a neutral blue "Were you right?" heading, the answer to compare against, and "✓ I was right" / "✗ I was wrong" buttons. Y / N on the keyboard do the same.
+      - Next stays disabled until you choose, and Enter shows "Mark your answer first". You can change your mark until you move on.
+      - The heading becomes "✓ Marked right" / "✗ Marked wrong", with a green or red panel. The buttons keep the focus in the answer box, as ▶ does.
+      - `CardResult.selfMarked` records it, for the summary and stats later.
+      - Step 24 sends these answers to the LLM first, and self-marking stays as the fallback.
+    - **`modes/meaning.ts`:**
+      - "What does it mean? Type it in English". The clip plays while asking, and the answer box is English, so there's no accent bar.
+      - `gradeMeaning`: a match is correct, a typo counts as right with "Spelled: …", nothing typed is don't-know, and anything else goes to self-marking.
+      - The feedback shows the French sentence, what you wrote, the answer, "Also accepted", then `explain` / `notes`.
+    - **`modes/produce.ts`:**
+      - "Write it in French" under the English (`en[0]`). A tag on its own line says "formal: vous" / "informal: tu" when `register` is set. The clip comes with the feedback only.
+      - `gradeProduce` uses strict `compare` against `fr` + `altFr`: an exact match is correct, accents-only is amber with the word diff, and anything else goes to self-marking.
+      - Self-marking picks the closest model answer by word diff (`closestAnswer`: an accent slip costs 0.5, any other mistake 1, and the first listed wins a tie).
+      - Your answer is shown as a word diff against it when at least half the model's words are there (`worthDiffing`). Otherwise "You wrote" and the answer are shown one above the other, since a mostly red diff doesn't help.
+      - The other accepted answers follow as "Also correct" / "Also accepted".
+    - **Shared code:** `dom.ts` (`el`, `srOnly`, `labelled`) is now used by every mode. `dictee.ts` exports `markedSentence` and `keepPunctuationTogether` for reuse.
+    - **`main.ts`:** all four modes have Try buttons.
+    - **Checks:**
+      - 257 Vitest tests pass (68 new: `clean`, contractions, spellings, numbers, the per-word typo rules, meaning and produce grading, `closestAnswer`, `worthDiffing`, self-mark keys, and every real item's `fr` / `altFr` / `en` accepted as itself). `npm run build` is clean.
+      - In Chromium via Playwright:
+        - Meaning: an exact match, a typo (wokring → "Spelled: working"), a self-mark with Enter blocked and then Y, N to change it, and the button, plus don't-know and the score.
+        - Production: exact and alternative answers, an accent-only miss (amber, with the diff), and a near miss and a far-off answer going to self-marking. The register tag shows, and no clip plays while asking; it plays with the feedback.
+        - 400×800 light and dark, plus 400×440 and 1280×800, with no horizontal scroll and no console errors.
 19. `[not started]` Start screen: pick the mode, then filter by topic, grammar point or level (A1/A2/B1), choose the question count, plus custom lists (ported from `lists.ts`). Rule-card browser screen.
 20. `[not started]` Feedback, summary and retry-missed (ported), plus responsive styling checked at 400px and on desktop, in light and dark.
 21. `[not started]` Deploy workflow → GitHub Pages. **This uses a different GitHub account from the Greek app.**

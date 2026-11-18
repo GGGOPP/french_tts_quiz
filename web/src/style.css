@@ -438,8 +438,67 @@ input[type='radio'] {
   --tone: var(--wrong);
 }
 
+/* Couldn't be checked: neutral until you mark your answer. */
+.feedback[data-outcome='unsure'] {
+  --tone: var(--accent);
+}
+
 .feedback p {
   margin: 0.35rem 0;
+}
+
+/* ---------- Self-marking ---------- */
+.self-mark {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.self-mark[hidden] {
+  display: none;
+}
+
+.self-mark button {
+  flex: 1;
+  min-height: 2.75rem;
+  font-weight: 600;
+}
+
+.mark-right[aria-pressed='true'] {
+  border-color: var(--right);
+  background: color-mix(in srgb, var(--right) 18%, var(--surface));
+  color: var(--right);
+}
+
+.mark-wrong[aria-pressed='true'] {
+  border-color: var(--wrong);
+  background: color-mix(in srgb, var(--wrong) 18%, var(--surface));
+  color: var(--wrong);
+}
+
+/* ---------- Meaning and production ---------- */
+.feedback .label {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.feedback .source {
+  font-size: 1.15rem;
+}
+
+.en-prompt {
+  margin: 0;
+}
+
+/* Whether tu or vous is expected: a small tag on its own line under the prompt. */
+.prompt .register {
+  display: table;
+  margin-top: 0.35rem;
+  padding: 0.05rem 0.5rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--fg);
+  font-size: 0.8rem;
 }
 
 .verdict {

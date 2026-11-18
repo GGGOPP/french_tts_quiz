@@ -15,6 +15,8 @@ export interface CardResult {
   /** What was typed, one entry per answer box ([] for "Don't know"). */
   typed: string[]
   outcome: Outcome
+  /** The answer couldn't be checked, so you marked it yourself (`outcome` is then correct or wrong). */
+  selfMarked?: boolean
 }
 
 export interface Score {

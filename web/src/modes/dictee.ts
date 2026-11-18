@@ -8,6 +8,7 @@
 // it, missing words underlined, extra words struck through. Then the English.
 
 import { diffWords, tokenize, type DiffWord } from '../french'
+import { el, srOnly } from '../dom'
 import type { Graded, ModeModule } from '../quiz'
 import type { Outcome } from '../session'
 
@@ -64,17 +65,6 @@ export function mistakeSummary(words: readonly DiffWord[]): string {
     })
     .filter(Boolean)
     .join(' · ')
-}
-
-function el<K extends keyof HTMLElementTagNameMap>(tag: K, className?: string, text?: string): HTMLElementTagNameMap[K] {
-  const node = document.createElement(tag)
-  if (className) node.className = className
-  if (text !== undefined) node.textContent = text
-  return node
-}
-
-function srOnly(text: string): HTMLElement {
-  return el('span', 'sr-only', text)
 }
 
 /** One word of the sentence (or an extra typed word), marked. */
@@ -148,7 +138,7 @@ export function keepPunctuationTogether(text: string): string {
 }
 
 /** The sentence with its own punctuation and every mistake marked in place. */
-function markedSentence(sentence: string, words: readonly DiffWord[]): HTMLElement {
+export function markedSentence(sentence: string, words: readonly DiffWord[]): HTMLElement {
   const p = el('p', 'dictee-result')
   p.lang = 'fr'
   for (const part of layoutSentence(sentence, words)) {
